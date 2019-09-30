@@ -1,0 +1,66 @@
+#服务器配置
+server:
+  port: 7301
+#Spring Bean
+spring:
+  mvc:
+    view:
+      suffix: .html
+  redis:
+    database: 1
+    host: 47.98.165.84
+    port: 6379
+    password: Object971103.
+    timeout: 3000
+    jedis:
+      pool:
+        max-wait: 30000
+        max-active: 500
+        max-idle: 50
+        min-idle: 0
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      #监控统计拦截的filters
+      filters: stat
+      driverClassName: com.mysql.cj.jdbc.Driver
+      #配置基本属性
+      url: jdbc:mysql://47.98.165.84:3306/Coorperation?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+      username: ObjectSpace
+      password: Object971103.
+      #配置初始化大小/最小/最大
+      initialSize: 1
+      minIdle: 1
+      maxActive: 20
+      #获取连接等待超时时间
+      maxWait: 60000
+      #间隔多久进行一次检测，检测需要关闭的空闲连接
+      timeBetweenEvictionRunsMillis: 60000
+      #一个连接在池中最小生存的时间
+      minEvictableIdleTimeMillis: 300000
+      #用来验证数据库连接的SQL
+      validationQuery: select 1
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
+      poolPreparedStatements: false
+      maxPoolPreparedStatementPerConnectionSize: 20
+
+
+#MyBatis配置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    #开启二级缓存
+    cache-enabled: true
+    #别名
+  type-aliases-package: com.objectspace.coorperation.entity
+
+#日志配置
+logging:
+  config: classpath:config/logback.xml
+  level:
+    org.springframework.boot.autoconfigure: ERROR
+    org.mybatis.spring.SqlSessionUtils: ERROR

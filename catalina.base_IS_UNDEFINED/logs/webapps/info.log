@@ -1,0 +1,23 @@
+2019-09-30 16:26:54 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Starting CoorperationApplicationTests on LAPTOP-T3O4NLF3 with PID 10248 (started by NoCortY in G:\Program\coorperation)
+2019-09-30 16:26:54 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| No active profile set, falling back to default profiles: default
+2019-09-30 16:28:57 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Starting CoorperationApplicationTests on LAPTOP-T3O4NLF3 with PID 20300 (started by NoCortY in G:\Program\coorperation)
+2019-09-30 16:28:57 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| No active profile set, falling back to default profiles: default
+2019-09-30 16:32:12 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Starting CoorperationApplicationTests on LAPTOP-T3O4NLF3 with PID 4496 (started by NoCortY in G:\Program\coorperation)
+2019-09-30 16:32:12 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| No active profile set, falling back to default profiles: default
+2019-09-30 16:33:05 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Starting CoorperationApplicationTests on LAPTOP-T3O4NLF3 with PID 18212 (started by NoCortY in G:\Program\coorperation)
+2019-09-30 16:33:06 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| No active profile set, falling back to default profiles: default
+2019-09-30 16:34:17 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Starting CoorperationApplicationTests on LAPTOP-T3O4NLF3 with PID 15236 (started by NoCortY in G:\Program\coorperation)
+2019-09-30 16:34:17 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| No active profile set, falling back to default profiles: default
+2019-09-30 16:34:22 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-09-30 16:37:43 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Starting CoorperationApplicationTests on LAPTOP-T3O4NLF3 with PID 18916 (started by NoCortY in G:\Program\coorperation)
+2019-09-30 16:37:43 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| No active profile set, falling back to default profiles: default
+2019-09-30 16:37:48 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-09-30 16:37:55 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Started CoorperationApplicationTests in 12.384 seconds (JVM running for 13.907)
+2019-09-30 16:39:32 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Starting CoorperationApplicationTests on LAPTOP-T3O4NLF3 with PID 14488 (started by NoCortY in G:\Program\coorperation)
+2019-09-30 16:39:32 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| No active profile set, falling back to default profiles: default
+2019-09-30 16:39:37 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-09-30 16:39:42 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Started CoorperationApplicationTests in 10.651 seconds (JVM running for 12.571)
+2019-09-30 16:41:46 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Starting CoorperationApplicationTests on LAPTOP-T3O4NLF3 with PID 14100 (started by NoCortY in G:\Program\coorperation)
+2019-09-30 16:41:46 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| No active profile set, falling back to default profiles: default
+2019-09-30 16:41:51 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-09-30 16:41:57 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Started CoorperationApplicationTests in 12.131 seconds (JVM running for 13.667)

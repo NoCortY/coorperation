@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.objectspace.coorperation.UserDao">
+    <resultMap type="com.objectspace.coorperation.entity.User" id="User">
+        <id property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+        <result property="password" column="password"/>
+        <result property="userGender" column="user_gender"/>
+        <result property="userStatus" column="user_status"/>
+        <result property="userPhoneNumber" column="user_phone_number"/>
+        <result property="userEmail" column="user_email"/>
+        <result property="registerTime" column="register_time"/>
+        <result property="userDesc" column="user_desc"/>
+        <result property="salt" column="salt"/>
+        <result property="userProfile" column="user_profile"/>
+    </resultMap>
+    <select id="queryUserByUserAccount" parameterType="com.objectspace.coorperation.entity.User" resultMap="User">
+        SELECT *
+        FROM
+        tb_sdzs_user
+        <where>
+            user_account = #{userAccount}
+        </where>
+    </select>
+    <insert id="insertUser" parameterType="com.objectspace.coorperation.entity.User">
+        INSERT INTO
+        tb_sdzs_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId!=null and userId!=''">
+                user_id,
+            </if>
+            <if test="userAccount!=null and userAccount!=''">
+                user_account,
+            </if>
+            <if test="password!=null and password!=''">
+                password,
+            </if>
+            <if test="salt!=null and salt!=''">
+                salt,
+            </if>
+            <if test="userName!=null and userName!=''">
+                user_name,
+            </if>
+            <if test="userGender!=null and userGender!=''">
+                user_gender,
+            </if>
+            <if test="userStatus!=null and userStatus!=''">
+                user_status,
+            </if>
+            <if test="userPhoneNumber!=null and userPhoneNumber!=''">
+                user_phone_number,
+            </if>
+            <if test="userEmail!=null and userEmail!=''">
+                user_email,
+            </if>
+            <if test="userDesc!=null and userDesc!=''">
+                user_desc,
+            </if>
+            <if test="userProfile!=null and userProfile!=''">
+                user_profile,
+            </if>
+            register_time
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId!=null and userId!=''">
+                #{userId},
+            </if>
+            <if test="userAccount!=null and userAccount!=''">
+                #{userAccount},
+            </if>
+            <if test="password!=null and password!=''">
+                #{password},
+            </if>
+            <if test="salt!=null and salt!=''">
+                #{salt},
+            </if>
+            <if test="userName!=null and userName!=''">
+                #{userName},
+            </if>
+            <if test="userGender!=null and userGender!=''">
+                #{userGender},
+            </if>
+            <if test="userStatus!=null and userStatus!=''">
+                #{userStatus},
+            </if>
+            <if test="userPhoneNumber!=null and userPhoneNumber!=''">
+                #{userPhoneNumber},
+            </if>
+            <if test="userEmail!=null and userEmail!=''">
+                #{userEmail},
+            </if>
+            <if test="userDesc!=null and userDesc!=''">
+                #{userDesc},
+            </if>
+            <if test="userProfile!=null and userProfile!=''">
+                #{userProfile},
+            </if>
+            sysdate
+        </trim>
+    </insert>
+</mapper>

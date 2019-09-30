@@ -1,0 +1,56 @@
+2019-09-30 16:38:00 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 往Redis中存入String过程出现异常!
+2019-09-30 16:38:00 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:02 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 从缓存中取K,V时出现异常!
+2019-09-30 16:38:02 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:04 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 从缓存中取K,V时出现异常!
+2019-09-30 16:38:04 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:06 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 往Redis中存入list过程出现异常(lpush)!
+2019-09-30 16:38:06 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:08 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 从Redis中获取list过程出现异常(lpop)!
+2019-09-30 16:38:08 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:10 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 从Redis中获取list过程出现异常(lpop)!
+2019-09-30 16:38:10 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:12 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 从Redis中获取list过程出现异常(lpop)!
+2019-09-30 16:38:12 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:14 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 往Redis中存入list过程出现异常(rpush)!
+2019-09-30 16:38:14 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:16 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 获取指定list多个元素过程出现异常!
+2019-09-30 16:38:16 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:18 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 排序出现异常!
+2019-09-30 16:38:18 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:20 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 从Redis中获取list过程出现异常(lpop)!
+2019-09-30 16:38:20 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:22 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 从Redis中获取list过程出现异常(lpop)!
+2019-09-30 16:38:22 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:24 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 从Redis中获取list过程出现异常(lpop)!
+2019-09-30 16:38:24 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:26 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| sadd出现异常!
+2019-09-30 16:38:26 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:28 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| smembers出现异常!
+2019-09-30 16:38:28 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:30 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| srem出现异常!
+2019-09-30 16:38:30 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:32 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| smembers出现异常!
+2019-09-30 16:38:32 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:34 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| zadd出现异常!
+2019-09-30 16:38:34 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:36 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| zadd出现异常!
+2019-09-30 16:38:36 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:38 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| zadd出现异常!
+2019-09-30 16:38:38 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:40 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| zrange出现异常!
+2019-09-30 16:38:40 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:42 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| hmset出现异常!
+2019-09-30 16:38:42 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:44 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| hmset出现异常!
+2019-09-30 16:38:44 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:46 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| hmset出现异常!
+2019-09-30 16:38:46 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:48 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| hmget出现异常!
+2019-09-30 16:38:48 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:38:50 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| hgetAll出现异常!
+2019-09-30 16:38:50 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:39:02 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| keys出现异常!
+2019-09-30 16:39:02 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-09-30 16:39:04 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| scan发生异常!
+2019-09-30 16:39:04 ||| [main] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
