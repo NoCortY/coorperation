@@ -1,6 +1,7 @@
 package com.objectspace.coorperation.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class Permission implements Serializable {
     private static final long serialVersionUID = -2550095162237578681L;
@@ -8,6 +9,8 @@ public class Permission implements Serializable {
     private String permissionName;
     private String permissionDesc;
     private String permissionUrl;
+    private Date createTime;
+    private Date lastModifyDate;
     public Integer getPermissionId() {
         return permissionId;
     }
@@ -31,6 +34,22 @@ public class Permission implements Serializable {
     }
     public void setPermissionUrl(String permissionUrl) {
         this.permissionUrl = permissionUrl;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getLastModifyDate() {
+        return lastModifyDate;
+    }
+
+    public void setLastModifyDate(Date lastModifyDate) {
+        this.lastModifyDate = lastModifyDate;
     }
 
     @Override

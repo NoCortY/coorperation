@@ -16,6 +16,11 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/** 
+* @Description: 这是一个自动打印日志的类，基于Spring AOP技术，对Controller层的所有控制器进行日志打印
+* @Author: Object
+* @Date: 2019/9/30 
+*/ 
 @Aspect
 public class AutoLogAop {
     private Logger logger = LoggerFactory.getLogger(AutoLogAop.class);
@@ -25,6 +30,7 @@ public class AutoLogAop {
      * @return
      * @throws Throwable
      */
+
     @Around("execution(* com.objectspace.coorperation.web.*.*.*(..))")
     public Object aroundLog(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         System.out.println();

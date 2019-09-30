@@ -9,7 +9,7 @@ import java.util.Set;
 
 @Mapper
 public interface ShiroDao {
-    public Set<Permission> queryPermissionByUserAccount(User user);
+    public Set<Permission> queryPermissionByUserName(User user);
     public List<Permission> listPermission();
-    public User queryUserByUserAccount(User user);
+    public User queryUserByUserName(User user);
 }

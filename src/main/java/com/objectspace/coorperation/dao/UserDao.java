@@ -5,6 +5,6 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface UserDao {
-    public User queryUserByUserAccount(User user);
+    public User queryUserByUserName(User user);
     public Integer insertUser(User user) throws Exception;
 }

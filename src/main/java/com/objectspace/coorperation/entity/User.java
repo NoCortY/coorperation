@@ -1,6 +1,8 @@
 package com.objectspace.coorperation.entity;
 
 import java.io.Serializable;
+import java.util.Date;
+
 /**
 * @Description:  用户实体类
 * @Author: Object
@@ -11,12 +13,14 @@ public class User implements Serializable {
     private Integer userId;
     private String userName;
     private String password;
-    private String userEmail;
+    private String userGender;
+    private Boolean userStatus;
     private String userPhoneNumber;
+    private String userEmail;
+    private Date registerDate;
     private String realName;
     private String profileImg;
     private String userType;
-    private Boolean userStatus;
     private String salt;
 
     public String getSalt() {
@@ -98,6 +102,22 @@ public class User implements Serializable {
 
     public void setUserStatus(Boolean userStatus) {
         this.userStatus = userStatus;
+    }
+
+    public String getUserGender() {
+        return userGender;
+    }
+
+    public void setUserGender(String userGender) {
+        this.userGender = userGender;
+    }
+
+    public Date getRegisterDate() {
+        return registerDate;
+    }
+
+    public void setRegisterDate(Date registerDate) {
+        this.registerDate = registerDate;
     }
 
     @Override
