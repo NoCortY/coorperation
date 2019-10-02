@@ -42,9 +42,9 @@ import java.lang.annotation.Target;
  * 如果一个注解被定义为RetentionPolicy.CLASS，则它将被编译到Class文件中，那么编译器可以在编译时根据注解做一些处理动作，但是运行时JVM（Java虚拟机）会忽略它，我们在运行期也不能读取到；
  * 如果一个注解被定义为RetentionPolicy.RUNTIME，那么这个注解可以在运行期的加载阶段被加载到Class对象中。那么在程序运行阶段，我们可以通过反射得到这个注解，并通过判断是否有这个注解或这个注解中属性的值，从而执行不同的程序代码段。我们实际开发中的自定义注解几乎都是使用的RetentionPolicy.RUNTIME；
  * */
+
 @Retention(RetentionPolicy.RUNTIME)
 public @interface EnCache {
-
     String key();		//定义key值
     int index();		//定义参数位置  用户传多参时用
     Class<?> targetClass(); //定义目标类型

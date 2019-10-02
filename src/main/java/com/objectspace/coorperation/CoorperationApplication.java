@@ -7,8 +7,6 @@ import org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfigura
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
-
-
 @MapperScan("com.objectspace.coorperation.dao")
 @SpringBootApplication(exclude = {MultipartAutoConfiguration.class})
 public class CoorperationApplication {

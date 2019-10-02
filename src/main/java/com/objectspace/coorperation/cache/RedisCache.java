@@ -94,5 +94,4 @@ public class RedisCache implements Cache {
         // TODO Auto-generated method stub
         return readWriteLock;
     }
-
 }

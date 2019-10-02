@@ -1,23 +1,327 @@
-2019-09-30 16:26:54 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Starting CoorperationApplicationTests on LAPTOP-T3O4NLF3 with PID 10248 (started by NoCortY in G:\Program\coorperation)
-2019-09-30 16:26:54 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| No active profile set, falling back to default profiles: default
-2019-09-30 16:28:57 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Starting CoorperationApplicationTests on LAPTOP-T3O4NLF3 with PID 20300 (started by NoCortY in G:\Program\coorperation)
-2019-09-30 16:28:57 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| No active profile set, falling back to default profiles: default
-2019-09-30 16:32:12 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Starting CoorperationApplicationTests on LAPTOP-T3O4NLF3 with PID 4496 (started by NoCortY in G:\Program\coorperation)
-2019-09-30 16:32:12 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| No active profile set, falling back to default profiles: default
-2019-09-30 16:33:05 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Starting CoorperationApplicationTests on LAPTOP-T3O4NLF3 with PID 18212 (started by NoCortY in G:\Program\coorperation)
-2019-09-30 16:33:06 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| No active profile set, falling back to default profiles: default
-2019-09-30 16:34:17 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Starting CoorperationApplicationTests on LAPTOP-T3O4NLF3 with PID 15236 (started by NoCortY in G:\Program\coorperation)
-2019-09-30 16:34:17 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| No active profile set, falling back to default profiles: default
-2019-09-30 16:34:22 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
-2019-09-30 16:37:43 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Starting CoorperationApplicationTests on LAPTOP-T3O4NLF3 with PID 18916 (started by NoCortY in G:\Program\coorperation)
-2019-09-30 16:37:43 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| No active profile set, falling back to default profiles: default
-2019-09-30 16:37:48 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
-2019-09-30 16:37:55 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Started CoorperationApplicationTests in 12.384 seconds (JVM running for 13.907)
-2019-09-30 16:39:32 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Starting CoorperationApplicationTests on LAPTOP-T3O4NLF3 with PID 14488 (started by NoCortY in G:\Program\coorperation)
-2019-09-30 16:39:32 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| No active profile set, falling back to default profiles: default
-2019-09-30 16:39:37 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
-2019-09-30 16:39:42 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Started CoorperationApplicationTests in 10.651 seconds (JVM running for 12.571)
-2019-09-30 16:41:46 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Starting CoorperationApplicationTests on LAPTOP-T3O4NLF3 with PID 14100 (started by NoCortY in G:\Program\coorperation)
-2019-09-30 16:41:46 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| No active profile set, falling back to default profiles: default
-2019-09-30 16:41:51 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
-2019-09-30 16:41:57 ||| [main] ||| INFO  ||| c.o.coorperation.CoorperationApplicationTests ||| Started CoorperationApplicationTests in 12.131 seconds (JVM running for 13.667)
+2019-10-02 09:09:43 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 8020 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 09:09:43 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 09:10:10 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 1620 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 09:10:10 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 09:10:22 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 09:10:33 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 25.416 seconds (JVM running for 27.712)
+2019-10-02 09:14:12 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 3232 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 09:14:12 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 09:14:21 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 09:14:28 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 18.824 seconds (JVM running for 20.698)
+2019-10-02 09:17:45 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 540 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 09:17:45 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 09:17:54 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 09:17:59 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 16.184 seconds (JVM running for 17.511)
+2019-10-02 09:21:21 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 4568 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 09:21:21 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 09:21:31 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 09:21:42 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 24.09 seconds (JVM running for 26.443)
+2019-10-02 09:25:42 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 8708 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 09:25:42 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 09:25:52 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 09:26:01 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 21.897 seconds (JVM running for 23.603)
+2019-10-02 09:30:00 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 3580 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 09:30:00 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 09:30:08 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 09:30:15 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 15.695 seconds (JVM running for 17.082)
+2019-10-02 12:32:35 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 4000 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 12:32:35 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 12:32:45 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 12:32:54 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 20.914 seconds (JVM running for 26.576)
+2019-10-02 12:33:55 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 6432 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 12:33:55 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 12:34:03 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 12:34:08 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 14.403 seconds (JVM running for 15.715)
+2019-10-02 13:00:20 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 8172 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 13:00:20 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 13:00:35 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 13:00:58 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 40.108 seconds (JVM running for 47.325)
+2019-10-02 13:02:25 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 11276 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 13:02:26 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 13:02:41 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 13:02:56 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 33.78 seconds (JVM running for 36.946)
+2019-10-02 13:11:10 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 7404 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 13:11:10 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 13:11:23 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 13:11:36 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 29.659 seconds (JVM running for 33.36)
+2019-10-02 13:12:37 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 3512 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 13:12:37 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 13:13:03 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 13:13:18 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 45.432 seconds (JVM running for 51.066)
+2019-10-02 13:27:00 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 8948 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 13:27:00 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 13:27:10 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 13:27:16 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 17.453 seconds (JVM running for 19.232)
+2019-10-02 13:45:31 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 6316 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 13:45:31 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 13:45:40 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 13:45:48 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 18.612 seconds (JVM running for 22.352)
+2019-10-02 13:48:56 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 7896 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 13:48:56 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 13:49:03 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 13:49:12 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 17.419 seconds (JVM running for 18.677)
+2019-10-02 13:57:52 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 3968 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 13:57:52 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 13:58:02 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 13:58:11 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 20.545 seconds (JVM running for 22.625)
+2019-10-02 14:16:54 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 1132 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 14:16:54 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 14:17:00 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 14:17:04 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 11.097 seconds (JVM running for 13.28)
+2019-10-02 14:19:19 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 3404 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 14:19:19 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 14:19:25 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 14:19:30 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 11.719 seconds (JVM running for 14.136)
+2019-10-02 14:31:53 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 9640 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 14:31:53 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 14:32:01 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 14:32:10 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 17.565 seconds (JVM running for 21.216)
+2019-10-02 14:36:09 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 11292 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 14:36:09 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 14:36:16 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 14:36:21 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 13.755 seconds (JVM running for 17.597)
+2019-10-02 14:38:59 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 404 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 14:38:59 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 14:39:05 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 14:39:10 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 12.104 seconds (JVM running for 14.723)
+2019-10-02 14:46:50 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 10188 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 14:46:50 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 14:46:56 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 14:47:02 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 13.432 seconds (JVM running for 15.782)
+2019-10-02 14:49:04 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 12340 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 14:49:04 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 14:49:11 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 14:49:15 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 12.874 seconds (JVM running for 16.18)
+2019-10-02 14:49:25 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 14:49:25 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 14:49:25 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 14:49:25 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 14:49:25 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:23:59 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 8248 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 15:23:59 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 15:24:06 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 15:24:13 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 15.252 seconds (JVM running for 33.172)
+2019-10-02 15:24:16 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:24:16 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 15:24:16 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 15:24:16 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 15:24:16 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:26:36 ||| [http-nio-7301-exec-8] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:26:36 ||| [http-nio-7301-exec-8] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 15:26:36 ||| [http-nio-7301-exec-8] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 15:26:36 ||| [http-nio-7301-exec-8] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 15:26:36 ||| [http-nio-7301-exec-8] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:26:38 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:26:38 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 15:26:38 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 15:26:38 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 15:26:38 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:26:39 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:26:39 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 15:26:39 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 15:26:39 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 15:26:39 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:27:02 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:27:02 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 15:27:02 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 15:27:02 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 15:27:02 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:27:04 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:27:04 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 15:27:04 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 15:27:04 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 15:27:04 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:27:06 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:27:06 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 15:27:06 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 15:27:06 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 15:27:06 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:27:17 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:27:17 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 15:27:17 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 15:27:17 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 15:27:17 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:27:18 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:27:18 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 15:27:18 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 15:27:18 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 15:27:18 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:27:20 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:27:20 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 15:27:20 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 15:27:20 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 15:27:20 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:33:07 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:33:07 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 15:33:07 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 15:33:07 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 15:33:07 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:33:10 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:33:10 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 15:33:10 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 15:33:10 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 15:33:10 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:35:34 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Starting CoorperationApplication on DESKTOP-URDLGQF with PID 9712 (C:\NoCortY_Pad\WorkSpace\github\coorperation\target\classes started by nocor in C:\NoCortY_Pad\WorkSpace\github\coorperation)
+2019-10-02 15:35:34 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| No active profile set, falling back to default profiles: default
+2019-10-02 15:35:43 ||| [main] ||| INFO  ||| com.objectspace.coorperation.cache.RedisCache ||| MyBatis开启二级缓存!
+2019-10-02 15:35:52 ||| [main] ||| INFO  ||| c.objectspace.coorperation.CoorperationApplication ||| Started CoorperationApplication in 19.936 seconds (JVM running for 21.881)
+2019-10-02 15:35:55 ||| [http-nio-7301-exec-4] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:35:55 ||| [http-nio-7301-exec-4] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 15:35:55 ||| [http-nio-7301-exec-4] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 15:35:55 ||| [http-nio-7301-exec-4] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 15:35:55 ||| [http-nio-7301-exec-4] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:35:55 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:35:55 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 15:35:55 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 15:35:55 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 15:35:55 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:36:54 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 15:36:54 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 15:36:54 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 15:36:54 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 15:36:54 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:02:13 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:02:13 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:02:13 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:02:13 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:02:13 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:02:14 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:02:14 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:02:14 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:02:14 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:02:14 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:02:15 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:02:15 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:02:15 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:02:15 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:02:15 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:02:16 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:02:16 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:02:16 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:02:16 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:02:16 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:02:17 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:02:17 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:02:17 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:02:17 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:02:17 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:02:55 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:02:55 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:02:55 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:02:55 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:02:55 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:11 ||| [http-nio-7301-exec-8] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:11 ||| [http-nio-7301-exec-8] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:03:11 ||| [http-nio-7301-exec-8] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:03:11 ||| [http-nio-7301-exec-8] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:03:11 ||| [http-nio-7301-exec-8] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:12 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:12 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:03:12 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:03:12 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:03:12 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:12 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:12 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:03:12 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:03:12 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:03:12 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:12 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:12 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:03:12 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:03:12 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:03:12 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:13 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:13 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:03:13 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:03:13 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:03:13 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:14 ||| [http-nio-7301-exec-5] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:14 ||| [http-nio-7301-exec-5] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:03:14 ||| [http-nio-7301-exec-5] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:03:14 ||| [http-nio-7301-exec-5] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:03:14 ||| [http-nio-7301-exec-5] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:15 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:15 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:03:15 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:03:15 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:03:15 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:17 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:17 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:03:17 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:03:17 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:03:17 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:37 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:37 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:03:37 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:03:37 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:03:37 ||| [http-nio-7301-exec-7] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:38 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:38 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:03:38 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:03:38 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:03:38 ||| [http-nio-7301-exec-3] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:39 ||| [http-nio-7301-exec-8] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:39 ||| [http-nio-7301-exec-8] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:03:39 ||| [http-nio-7301-exec-8] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:03:39 ||| [http-nio-7301-exec-8] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:03:39 ||| [http-nio-7301-exec-8] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:40 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:40 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:03:40 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:03:40 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:03:40 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:40 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:40 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:03:40 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:03:40 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:03:40 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:46 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:46 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:03:46 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:03:46 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:03:46 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:48 ||| [http-nio-7301-exec-4] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:48 ||| [http-nio-7301-exec-4] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:03:48 ||| [http-nio-7301-exec-4] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:03:48 ||| [http-nio-7301-exec-4] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:03:48 ||| [http-nio-7301-exec-4] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:50 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:03:50 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:03:50 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:03:50 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:03:50 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:04:04 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:04:04 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:04:04 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:04:04 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:04:04 ||| [http-nio-7301-exec-2] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:04:05 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:04:05 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:04:05 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:04:05 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:04:05 ||| [http-nio-7301-exec-6] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:04:06 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:04:06 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:04:06 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:04:06 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:04:06 ||| [http-nio-7301-exec-9] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:04:08 ||| [http-nio-7301-exec-4] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:04:08 ||| [http-nio-7301-exec-4] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:04:08 ||| [http-nio-7301-exec-4] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:04:08 ||| [http-nio-7301-exec-4] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:04:08 ||| [http-nio-7301-exec-4] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:04:26 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:04:26 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 16:04:26 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:04:26 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 16:04:26 ||| [http-nio-7301-exec-10] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:05:37 ||| [http-nio-7301-exec-5] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:05:37 ||| [http-nio-7301-exec-5] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/login
+2019-10-02 16:05:37 ||| [http-nio-7301-exec-5] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:05:37 ||| [http-nio-7301-exec-5] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/login"
+2019-10-02 16:05:37 ||| [http-nio-7301-exec-5] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:08:55 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-02 16:08:55 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 请求地址:/frontend/register
+2019-10-02 16:08:55 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 用户名:游客
+2019-10-02 16:08:55 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| 返回信息:"/frontend/register"
+2019-10-02 16:08:55 ||| [http-nio-7301-exec-1] ||| INFO  ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================

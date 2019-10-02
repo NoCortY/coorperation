@@ -6,7 +6,6 @@ import com.objectspace.coorperation.dto.UserExecution;
 import com.objectspace.coorperation.entity.User;
 import com.objectspace.coorperation.enums.UserStateEnum;
 import com.objectspace.coorperation.service.UserService;
-import com.objectspace.coorperation.util.UUIDUtil;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.DisabledAccountException;
@@ -38,7 +37,7 @@ public class UserServiceImpl implements UserService {
             userExecution = new UserExecution(UserStateEnum.ISUSERNULL);
             return userExecution;
         }
-        userExecution = new UserExecution(UserStateEnum.QUERYUSERINFOSUCCESS,userDao.queryUserByUserAccount(user));
+        userExecution = new UserExecution(UserStateEnum.QUERYUSERINFOSUCCESS,userDao.queryUserByUserName(user));
         return userExecution;
     }
 

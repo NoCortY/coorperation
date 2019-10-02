@@ -20,7 +20,7 @@ public class ShiroServiceImpl implements ShiroService {
     public Set<Permission> getPermissionByUserAccount(User user) {
         if(user==null || "".equals(user.getUserId()))
             return null;
-        Set<Permission> permissions = shiroDao.queryPermissionByUserAccount(user);
+        Set<Permission> permissions = shiroDao.queryPermissionByUserName(user);
         return permissions;
     }
     /*@Override
@@ -40,7 +40,7 @@ public class ShiroServiceImpl implements ShiroService {
         if(user == null || "".equals(user.getUserName())){
             logger.debug("权限验证：用户账户不能为空");
         }
-        User result = shiroDao.queryUserByUserAccount(user);
+        User result = shiroDao.queryUserByUserName(user);
         return result;
     }
 

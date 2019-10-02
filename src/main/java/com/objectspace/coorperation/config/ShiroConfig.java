@@ -48,13 +48,16 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setUnauthorizedUrl("/403");
         //设置免认证url
         LinkedHashMap<String,String> filterChainDefinitionMap = new LinkedHashMap<String,String>();
-        filterChainDefinitionMap.put("/index", "anon");
+        filterChainDefinitionMap.put("/frontend/index", "anon");
+        filterChainDefinitionMap.put("/frontend/register","anon");
         filterChainDefinitionMap.put("/usercontroller/registeruser", "anon");
         filterChainDefinitionMap.put("/usercontroller/login", "anon");
-        filterChainDefinitionMap.put("/login", "anon");
+        filterChainDefinitionMap.put("/frontend/login", "anon");
         filterChainDefinitionMap.put("/unauthorized", "anon");
         filterChainDefinitionMap.put("/static/**", "anon");
         filterChainDefinitionMap.put("../static/**", "anon");
+        filterChainDefinitionMap.put("/views/**","anon");
+        filterChainDefinitionMap.put("/assets/**","anon");
         //配置退出
         filterChainDefinitionMap.put("/logout", "logout");
         //除以上以外所有url都必须通过认证才可以访问

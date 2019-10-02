@@ -24,7 +24,6 @@
     <cache eviction="LRU" type="com.objectspace.coorperation.cache.RedisCache"></cache>
 
 
-
     <resultMap type="com.objectspace.coorperation.entity.Permission" id="PermissionMap">
         <id property="permissionId" column="permission_id"/>
         <result property="permissionName" column="permission_name"/>
@@ -35,44 +34,39 @@
     </resultMap>
     <resultMap type="com.objectspace.coorperation.entity.User" id="User">
         <id property="userId" column="user_id"/>
-        <result property="userAccount" column="user_account"/>
-        <result property="password" column="password"/>
         <result property="userName" column="user_name"/>
+        <result property="password" column="password"/>
         <result property="userGender" column="user_gender"/>
         <result property="userStatus" column="user_status"/>
+        <result property="userType" column="user_type"/>
         <result property="userPhoneNumber" column="user_phone_number"/>
         <result property="userEmail" column="user_email"/>
-        <result property="registerTime" column="register_time"/>
-        <result property="userDesc" column="user_desc"/>
+        <result property="registerDate" column="register_date"/>
+        <result property="realName" column="real_name"/>
+        <result property="profileImg" column="profile_img"/>
         <result property="salt" column="salt"/>
-        <result property="userProfile" column="user_profile"/>
     </resultMap>
-    <select id="queryPermissionByUserAccount" parameterType="com.objectspace.coorperation.entity.User" resultMap="PermissionMap">
+    <select id="queryPermissionByUserName" parameterType="com.objectspace.coorperation.entity.User" resultMap="PermissionMap">
         SELECT
-        p.permission_id,
-        p.permission_name,
-        p.permission_desc,
-        p.permission_url,
-        p.create_date,
-        p.last_modify_date
+        *
         FROM
-        tb_sdzs_user u
-        LEFT JOIN tb_sdzs_user_role_map ur ON u.user_id = ur.user_id
-        LEFT JOIN tb_sdzs_role r ON ur.role_id = r.role_id
-        LEFT JOIN tb_sdzs_role_permission_map rp ON  r.role_id = rp.role_id
-        LEFT JOIN tb_sdzs_permission p ON rp.permission_id = p.permission_id
+        tb_user u
+        LEFT JOIN tb_user_role ur ON u.user_id = ur.user_id
+        LEFT JOIN tb_role r ON ur.role_id = r.role_id
+        LEFT JOIN tb_role_permission rp ON  r.role_id = rp.role_id
+        LEFT JOIN tb_permission p ON rp.permission_id = p.permission_id
         <where>
-            u.user_account = #{userAccount}
+            u.user_name = #{userName}
         </where>
     </select>
     <select id="listPermission" resultMap="PermissionMap">
-		SELECT * FROM tb_sdzs_permission
+		SELECT * FROM tb_permission
 	</select>
-    <select id="queryUserByUserAccount" parameterType="com.objectspace.coorperation.entity.User" resultMap = "User">
+    <select id="queryUserByUserName" parameterType="com.objectspace.coorperation.entity.User" resultMap = "User">
         SELECT *
-        FROM tb_sdzs_user
+        FROM tb_user
         <where>
-            user_account = #{userAccount}
+            user_name = #{userName}
         </where>
     </select>
 </mapper>

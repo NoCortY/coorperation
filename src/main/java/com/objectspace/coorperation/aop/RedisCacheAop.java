@@ -13,22 +13,35 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+* @Description: 该类为Redis缓存AOP，使用AOP技术在切入带EnCache注解的方法时，自动访问缓存。
+* @Author: Object
+* @Date: 2019/10/1
+*/
 @Component
 @Aspect
 public class RedisCacheAop {
-    @SuppressWarnings("unused")
     private Logger logger = LoggerFactory.getLogger(RedisCacheAop.class);
     @Autowired
     private RedisUtil redisUtil;
     private ObjectMapper objectMapper = new ObjectMapper();
     /**
-     * 拦截所有EnCache注解的方法
+     * @Description: 自动拦截带有EnCache注解的方法
+     * @Param:
+     * @return:
+     * @Author: Object
+     * @Date: 2019/10/1
      */
     @Pointcut("@annotation(com.objectspace.coorperation.annotation.EnCache)")
-    public void redisServicePoint(){
+    public void redisServicePoint(){}
 
-    }
-
+    /**
+     * @Description: 该方法使用环绕通知，切入带EnCache注解的方法前，先访问一次缓存，如果缓存中有则直接返回，没有则执行方法，最后回写缓存。
+     * @Param: [joinPoint] 切入点
+     * @return: java.lang.Object 切入点返回值
+     * @Author: Object
+     * @Date: 2019/10/1
+     */
     @Around(value="redisServicePoint()")
     public Object around(ProceedingJoinPoint joinPoint) {
         //获取自定义注解
@@ -67,13 +80,20 @@ public class RedisCacheAop {
             redisUtil.del(redisKey);
             object = joinPoint.proceed();
             System.out.println("更新数据，删除Redis缓存");
-        }catch(Throwable e) {
+        } catch (Throwable e) {
             System.out.println("删除缓存时出现异常");
             System.out.println(e.getMessage());
         }
         return object;
 
     }
+    /**
+     * @Description:  该方法用于在执行切入点之前检查Redis中是否有数据
+     * @Param: [joinPoint, redisKey] 切入点，Redis中存的key
+     * @return: java.lang.Object 切入点返回值
+     * @Author: Object
+     * @Date: 2019/10/1
+     */
     private Object findObject(ProceedingJoinPoint joinPoint, String redisKey, Class<?> targetClass) {
         //检查缓存中是否有数据
         String result = redisUtil.get(redisKey);

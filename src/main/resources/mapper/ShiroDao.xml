@@ -24,7 +24,6 @@
     <cache eviction="LRU" type="com.objectspace.coorperation.cache.RedisCache"></cache>
 
 
-
     <resultMap type="com.objectspace.coorperation.entity.Permission" id="PermissionMap">
         <id property="permissionId" column="permission_id"/>
         <result property="permissionName" column="permission_name"/>

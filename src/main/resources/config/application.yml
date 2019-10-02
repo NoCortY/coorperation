@@ -6,6 +6,7 @@ spring:
   mvc:
     view:
       suffix: .html
+      prefix: /views
   redis:
     database: 1
     host: 47.98.165.84
@@ -47,16 +48,18 @@ spring:
       #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
       poolPreparedStatements: false
       maxPoolPreparedStatementPerConnectionSize: 20
+  aop:
+    auto: true
 
 
 #MyBatis配置
 mybatis:
-  mapper-locations: classpath:mapper/*.xml
   configuration:
     #开启二级缓存
     cache-enabled: true
     #别名
   type-aliases-package: com.objectspace.coorperation.entity
+  mapper-locations: classpath:mapper/*.xml
 
 #日志配置
 logging:

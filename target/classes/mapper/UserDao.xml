@@ -9,39 +9,27 @@
         <result property="password" column="password"/>
         <result property="userGender" column="user_gender"/>
         <result property="userStatus" column="user_status"/>
+        <result property="userType" column="user_type"/>
         <result property="userPhoneNumber" column="user_phone_number"/>
         <result property="userEmail" column="user_email"/>
-        <result property="registerTime" column="register_time"/>
-        <result property="userDesc" column="user_desc"/>
+        <result property="registerDate" column="register_date"/>
+        <result property="realName" column="real_name"/>
+        <result property="profileImg" column="profile_img"/>
         <result property="salt" column="salt"/>
-        <result property="userProfile" column="user_profile"/>
     </resultMap>
-    <select id="queryUserByUserAccount" parameterType="com.objectspace.coorperation.entity.User" resultMap="User">
-        SELECT *
-        FROM
-        tb_sdzs_user
-        <where>
-            user_account = #{userAccount}
-        </where>
-    </select>
+
     <insert id="insertUser" parameterType="com.objectspace.coorperation.entity.User">
         INSERT INTO
         tb_sdzs_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="userId!=null and userId!=''">
+           <!-- <if test="userId!=null and userId!=''">
                 user_id,
-            </if>
-            <if test="userAccount!=null and userAccount!=''">
-                user_account,
+            </if>-->
+            <if test="userName!=null and userName!=''">
+                user_name,
             </if>
             <if test="password!=null and password!=''">
                 password,
-            </if>
-            <if test="salt!=null and salt!=''">
-                salt,
-            </if>
-            <if test="userName!=null and userName!=''">
-                user_name,
             </if>
             <if test="userGender!=null and userGender!=''">
                 user_gender,
@@ -55,50 +43,64 @@
             <if test="userEmail!=null and userEmail!=''">
                 user_email,
             </if>
-            <if test="userDesc!=null and userDesc!=''">
-                user_desc,
+            <if test="realName!=null and realName!=''">
+                real_name,
             </if>
-            <if test="userProfile!=null and userProfile!=''">
-                user_profile,
+            <if test="prifileImg!=null and profileImg!=''">
+                profile_img,
             </if>
-            register_time
+            <if test="userType!=null and userType!=''">
+                user_type,
+            </if>
+            <if test="salt!=null and salt!=''">
+                salt,
+            </if>
+            register_date
         </trim>
         VALUES
         <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="userId!=null and userId!=''">
+            <!--<if test="userId!=null and userId!=''">
                 #{userId},
-            </if>
-            <if test="userAccount!=null and userAccount!=''">
-                #{userAccount},
+            </if>-->
+            <if test="userName!=null and userName!=''">
+                userName,
             </if>
             <if test="password!=null and password!=''">
-                #{password},
-            </if>
-            <if test="salt!=null and salt!=''">
-                #{salt},
-            </if>
-            <if test="userName!=null and userName!=''">
-                #{userName},
+                password,
             </if>
             <if test="userGender!=null and userGender!=''">
-                #{userGender},
+                userGender,
             </if>
             <if test="userStatus!=null and userStatus!=''">
-                #{userStatus},
+                userStatus,
             </if>
             <if test="userPhoneNumber!=null and userPhoneNumber!=''">
-                #{userPhoneNumber},
+                userPhoneNumber,
             </if>
             <if test="userEmail!=null and userEmail!=''">
-                #{userEmail},
+                userEmail,
             </if>
-            <if test="userDesc!=null and userDesc!=''">
-                #{userDesc},
+            <if test="realName!=null and realName!=''">
+                realName,
             </if>
-            <if test="userProfile!=null and userProfile!=''">
-                #{userProfile},
+            <if test="prifileImg!=null and profileImg!=''">
+                prifileImg,
             </if>
-            sysdate
+            <if test="userType!=null and userType!=''">
+                userType,
+            </if>
+            <if test="salt!=null and salt!=''">
+                salt,
+            </if>
+            select current_date
         </trim>
     </insert>
+    <select id="queryUserByUserName" parameterType="com.objectspace.coorperation.entity.User" resultMap="User">
+        SELECT *
+        FROM
+        tb_sdzs_user
+        <where>
+            user_name = #{userName}
+        </where>
+    </select>
 </mapper>
