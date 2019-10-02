@@ -27,9 +27,9 @@ spring:
       filters: stat
       driverClassName: com.mysql.cj.jdbc.Driver
       #配置基本属性
-      url: jdbc:mysql://47.98.165.84:3306/Coorperation?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
-      username: ObjectSpace
-      password: Object971103.
+      url: jdbc:mysql://rm-bp1capfjz96r8hhm6go.mysql.rds.aliyuncs.com:3306/coorperation?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+      username: testsqlobject
+      password: TestObject971103
       #配置初始化大小/最小/最大
       initialSize: 1
       minIdle: 1

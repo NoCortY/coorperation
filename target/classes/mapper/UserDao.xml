@@ -17,10 +17,9 @@
         <result property="profileImg" column="profile_img"/>
         <result property="salt" column="salt"/>
     </resultMap>
-
     <insert id="insertUser" parameterType="com.objectspace.coorperation.entity.User">
         INSERT INTO
-        tb_sdzs_user
+        tb_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
            <!-- <if test="userId!=null and userId!=''">
                 user_id,

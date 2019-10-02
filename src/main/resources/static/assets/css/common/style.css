@@ -2378,8 +2378,8 @@ color: rgba(255, 255, 255, 0.71) !important;
 	border: 1px solid #e5e9ec;
 	background: #f8fafb;
 	text-shadow: none !important;
-	height: 2.75 rem;
-	padding: 0 1.25 rem;
+	height: 2.75rem;
+	padding: 0 1.25rem;
 	outline: none !important;
 	font-size: .9rem;
 }
@@ -2617,7 +2617,7 @@ color: rgba(255, 255, 255, 0.71) !important;
 	border-radius: .25rem;
 }
 .custom-file-control:lang(en)::before {
-	content: "Browse";
+	content: "浏览";
 }
 .custom-file-control::before {
 	position: absolute;
@@ -2635,7 +2635,7 @@ color: rgba(255, 255, 255, 0.71) !important;
 	border-radius: 0 .25rem .25rem 0;
 }
 .custom-file-control:lang(en):empty::after {
-	content: "Choose file...";
+	content: "请上传一张迷人的头像";
 }
 .custom-radio .custom-control-input:checked~
 .custom-control-indicator {

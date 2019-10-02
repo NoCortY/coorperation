@@ -4,25 +4,25 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Register</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/common/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/common/favicon.png">
-    <!-- google font -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
-    <link href="../assets/css/common/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/common/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/common/ionicons.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/common/simple-line-icons.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/common/jquery.mCustomScrollbar.css" rel="stylesheet">
-    <link href="../assets/css/common/style.css" rel="stylesheet">
-    <link href="../assets/css/common/responsive.css" rel="stylesheet">
-</head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>注册-万物</title>
+        <link rel="shortcut icon" type="image/x-icon" href="../assets/images/common/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="../assets/images/common/favicon.png">
+        <!-- google font -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/common/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/common/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/common/ionicons.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/common/simple-line-icons.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/common/jquery.mCustomScrollbar.css" rel="stylesheet">
+        <link href="../assets/css/common/style.css" rel="stylesheet">
+        <link href="../assets/css/common/responsive.css" rel="stylesheet">
+        </head>
 
-<body class="bg_darck">
+        <body class="bg_darck">
 
-<div class="sufee-login d-flex align-content-center flex-wrap">
-    <div class="container">
+        <div class="sufee-login d-flex align-content-center flex-wrap">
+            <div class="container">
         <div class="login-content">
 
             <div class="login-form">
@@ -32,33 +32,37 @@
                 <form>
                     <div class="form-group">
                         <label>用户名:</label>
-                        <input type="email" class="form-control" placeholder="用户名">
-                    </div>
-                    <div class="form-group">
-                        <label>E-mail:</label>
-                        <input type="email" class="form-control" placeholder="E-Mail">
+                        <input id=”username“ type="email" class="form-control" placeholder="用户名">
                     </div>
                     <div class="form-group">
                         <label>密码:</label>
-                        <input type="password" class="form-control" placeholder="密码">
+                        <input id="password" type="password" class="form-control" placeholder="密码">
                     </div>
+                    <div class="form-group">
+                        <label>邮箱:</label>
+                        <input id="email" type="email" class="form-control" placeholder="邮箱">
+                    </div>
+                    <div class="form-group">
+                        <label>验证码:</label>
+                        <div class="input-group">
+                            <input id="captcha" type="text" class="form-control" placeholder="请输入邮箱内的验证码">
+                            <input type="button" class="input-group-addon" value="获取验证码" id="getcaptcha">
+                        </div>
+                    </div>
+                    <label>头像:</label>
+                    <label class="custom-file">
+                        <input id="userprofile" type="file" id="file" class="custom-file-input" accept="image/png,image/jpeg" required>
+                        <span class="custom-file-control"></span>
+                    </label>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox"> 同意条款和政策
+                            <input type="checkbox" id="agree"> 同意条款和政策
                         </label>
                     </div>
                     <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">注册</button>
-                    <div class="social-login-content">
-                        <div class="social-button">
-                            <button type="button" class="btn social facebook btn-flat btn-addon mb-3">
-                                <i class="fa fa-facebook"></i>Register with facebook</button>
-                            <button type="button" class="btn social twitter btn-flat btn-addon mt-2">
-                                <i class="fa fa-twitter"></i>Register with twitter</button>
-                        </div>
-                    </div>
                     <div class="register-link m-t-15 text-center">
                         <p>已有账号 ?
-                            <a href="#"> 登录</a>
+                            <a href="/frontend/login"> 登录</a>
                         </p>
                     </div>
                 </form>
