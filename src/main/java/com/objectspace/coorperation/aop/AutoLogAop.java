@@ -48,7 +48,7 @@ public class AutoLogAop {
         RequestAttributes ra = RequestContextHolder.getRequestAttributes();
         ServletRequestAttributes sra = (ServletRequestAttributes)ra;
         HttpServletRequest request = sra.getRequest();
-        String loginInfo = (String) request.getSession().getAttribute("username");
+        String loginInfo = (String) request.getSession().getAttribute("shiroSessionId");
         if(loginInfo == null || "".equals(loginInfo)) {
             userName = "游客";
         }else {

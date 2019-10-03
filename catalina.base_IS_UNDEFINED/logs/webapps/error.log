@@ -42,3 +42,44 @@
 2019-10-03 13:41:12 ||| [http-nio-7301-exec-7] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| 错误信息:用户在输入一个库中已存在的UserAccount
 2019-10-03 13:48:01 ||| [http-nio-7301-exec-2] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| UserAccount重复
 2019-10-03 13:48:01 ||| [http-nio-7301-exec-2] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| 错误信息:用户在输入一个库中已存在的UserAccount
+2019-10-03 18:34:02 ||| [http-nio-7301-exec-6] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 18:34:02 ||| [http-nio-7301-exec-6] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在类:com.objectspace.coorperation.web.controller.CaptchaController
+2019-10-03 18:34:02 ||| [http-nio-7301-exec-6] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在方法:getCaptcha
+2019-10-03 18:34:02 ||| [http-nio-7301-exec-6] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常原因:
+### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'rec_user_email' at row 1
+### The error may involve com.objectspace.coorperation.dao.CaptchaDao.insertCaptcha-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO        tb_captcha         ( code,                                        rec_user_email,                        create_date )         VALUES         ( ?,                                        ?,                        (select current_timestamp()) )
+### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'rec_user_email' at row 1
+; Data truncation: Data too long for column 'rec_user_email' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'rec_user_email' at row 1
+2019-10-03 18:34:02 ||| [http-nio-7301-exec-6] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 18:35:29 ||| [http-nio-7301-exec-7] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 18:35:29 ||| [http-nio-7301-exec-7] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在类:com.objectspace.coorperation.web.controller.CaptchaController
+2019-10-03 18:35:29 ||| [http-nio-7301-exec-7] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在方法:getCaptcha
+2019-10-03 18:35:29 ||| [http-nio-7301-exec-7] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常原因:The MimeMessage is already built.
+2019-10-03 18:35:29 ||| [http-nio-7301-exec-7] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 18:35:41 ||| [http-nio-7301-exec-1] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 18:35:41 ||| [http-nio-7301-exec-1] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在类:com.objectspace.coorperation.web.controller.CaptchaController
+2019-10-03 18:35:41 ||| [http-nio-7301-exec-1] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在方法:getCaptcha
+2019-10-03 18:35:41 ||| [http-nio-7301-exec-1] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常原因:The MimeMessage is already built.
+2019-10-03 18:35:41 ||| [http-nio-7301-exec-1] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-10] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-10] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在类:com.objectspace.coorperation.web.controller.CaptchaController
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-10] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在方法:getCaptcha
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-10] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常原因:The MimeMessage is already built.
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-10] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-3] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-3] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在类:com.objectspace.coorperation.web.controller.CaptchaController
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-3] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在方法:getCaptcha
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-3] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常原因:The MimeMessage is already built.
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-3] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-8] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-8] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在类:com.objectspace.coorperation.web.controller.CaptchaController
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-8] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在方法:getCaptcha
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-8] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常原因:The MimeMessage is already built.
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-8] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-2] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-2] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在类:com.objectspace.coorperation.web.controller.CaptchaController
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-2] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在方法:getCaptcha
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-2] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常原因:The MimeMessage is already built.
+2019-10-03 18:35:42 ||| [http-nio-7301-exec-2] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================

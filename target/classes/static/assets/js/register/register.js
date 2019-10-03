@@ -128,8 +128,12 @@ $(function(){
                 processData:false,
                 cache:false,
                 success:function (data) {
-                    alert(data.message);
-                    window.location.href = "/frontend/index";
+                    if(data.successFlag == true) {
+                        alert(data.message);
+                        window.location.href = "/frontend/index";
+                    }else{
+                        alert(data.message);
+                    }
                 }
             });
         }

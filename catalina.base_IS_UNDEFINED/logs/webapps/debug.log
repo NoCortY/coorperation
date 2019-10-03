@@ -510,3 +510,83 @@
 2019-10-03 13:49:45 ||| [http-nio-7301-exec-5] ||| DEBUG ||| c.objectspace.coorperation.dao.UserDao.insertUser ||| ==>  Preparing: INSERT INTO tb_user ( user_name, password, user_status, user_email, user_type, salt, register_date ) VALUES ( ?, ?, ?, ?, ?, ?, (select current_timestamp()) ) 
 2019-10-03 13:49:45 ||| [http-nio-7301-exec-5] ||| DEBUG ||| c.objectspace.coorperation.dao.UserDao.insertUser ||| ==> Parameters: test123(String), 39f9d5556b457bb3d8197948ed7b63be(String), true(Boolean), 610063090@qq.com(String), 0(String), j5I+VNXzh9TiRyjAmwSGAw==(String)
 2019-10-03 13:49:45 ||| [http-nio-7301-exec-5] ||| DEBUG ||| c.objectspace.coorperation.dao.UserDao.insertUser ||| <==    Updates: 1
+2019-10-03 16:33:05 ||| [main] ||| DEBUG ||| c.objectspace.coorperation.CoorperationApplication ||| Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-03 16:33:58 ||| [http-nio-7301-exec-1] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 16:33:58 ||| [http-nio-7301-exec-1] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 18 ms
+2019-10-03 16:37:22 ||| [http-nio-7301-exec-8] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 16:37:22 ||| [http-nio-7301-exec-8] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 0 ms
+2019-10-03 18:05:23 ||| [http-nio-7301-exec-9] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 18:05:23 ||| [http-nio-7301-exec-9] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 1 ms
+2019-10-03 18:10:16 ||| [http-nio-7301-exec-4] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 18:10:16 ||| [http-nio-7301-exec-4] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 0 ms
+2019-10-03 18:32:33 ||| [http-nio-7301-exec-3] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 18:32:33 ||| [http-nio-7301-exec-3] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 1 ms
+2019-10-03 18:32:42 ||| [http-nio-7301-exec-9] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 18:32:42 ||| [http-nio-7301-exec-9] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 0 ms
+2019-10-03 18:32:43 ||| [http-nio-7301-exec-8] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 18:32:43 ||| [http-nio-7301-exec-8] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 0 ms
+2019-10-03 18:32:44 ||| [http-nio-7301-exec-5] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 18:32:44 ||| [http-nio-7301-exec-5] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 0 ms
+2019-10-03 18:32:45 ||| [http-nio-7301-exec-1] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 18:32:45 ||| [http-nio-7301-exec-1] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 0 ms
+2019-10-03 18:32:46 ||| [http-nio-7301-exec-8] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 18:32:46 ||| [http-nio-7301-exec-8] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 0 ms
+2019-10-03 18:33:12 ||| [http-nio-7301-exec-1] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.register() is starting.
+2019-10-03 18:33:12 ||| [http-nio-7301-exec-1] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.register() running time is 21 ms
+2019-10-03 18:33:44 ||| [http-nio-7301-exec-4] ||| DEBUG ||| c.o.coorperation.web.controller.UserController ||| 验证码错误
+2019-10-03 18:34:01 ||| [http-nio-7301-exec-6] ||| DEBUG ||| c.o.coorperation.dao.CaptchaDao.insertCaptcha ||| ==>  Preparing: INSERT INTO tb_captcha ( code, rec_user_email, create_date ) VALUES ( ?, ?, (select current_timestamp()) ) 
+2019-10-03 18:34:01 ||| [http-nio-7301-exec-6] ||| DEBUG ||| c.o.coorperation.dao.CaptchaDao.insertCaptcha ||| ==> Parameters: 421727(String), 610063090@163.com(String)
+2019-10-03 18:36:09 ||| [main] ||| DEBUG ||| c.objectspace.coorperation.CoorperationApplication ||| Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-03 18:36:34 ||| [http-nio-7301-exec-1] ||| DEBUG ||| c.o.coorperation.dao.CaptchaDao.insertCaptcha ||| ==>  Preparing: INSERT INTO tb_captcha ( code, rec_user_email, create_date ) VALUES ( ?, ?, (select current_timestamp()) ) 
+2019-10-03 18:36:34 ||| [http-nio-7301-exec-1] ||| DEBUG ||| c.o.coorperation.dao.CaptchaDao.insertCaptcha ||| ==> Parameters: 52059(String), 610063090@qq.com(String)
+2019-10-03 18:36:34 ||| [http-nio-7301-exec-1] ||| DEBUG ||| c.o.coorperation.dao.CaptchaDao.insertCaptcha ||| <==    Updates: 1
+2019-10-03 18:36:45 ||| [http-nio-7301-exec-4] ||| DEBUG ||| c.objectspace.coorperation.dao.UserDao.insertUser ||| ==>  Preparing: INSERT INTO tb_user ( user_name, password, user_status, user_email, user_type, salt, register_date ) VALUES ( ?, ?, ?, ?, ?, ?, (select current_timestamp()) ) 
+2019-10-03 18:36:45 ||| [http-nio-7301-exec-4] ||| DEBUG ||| c.objectspace.coorperation.dao.UserDao.insertUser ||| ==> Parameters: ObjectTest(String), a1d3aeaf9a6b79ed2795c141913c2bb5(String), true(Boolean), 610063090@qq.com(String), 0(String), Qw4QvC8TosQZ1jiFWmUlQA==(String)
+2019-10-03 18:36:45 ||| [http-nio-7301-exec-4] ||| DEBUG ||| c.objectspace.coorperation.dao.UserDao.insertUser ||| <==    Updates: 1
+2019-10-03 18:36:47 ||| [http-nio-7301-exec-5] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.index() is starting.
+2019-10-03 18:36:47 ||| [http-nio-7301-exec-5] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.index() running time is 31 ms
+2019-10-03 18:36:47 ||| [http-nio-7301-exec-7] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 18:36:47 ||| [http-nio-7301-exec-7] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 0 ms
+2019-10-03 18:39:04 ||| [main] ||| DEBUG ||| c.objectspace.coorperation.CoorperationApplication ||| Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-03 18:39:23 ||| [http-nio-7301-exec-9] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 18:39:24 ||| [http-nio-7301-exec-9] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 9 ms
+2019-10-03 18:39:37 ||| [http-nio-7301-exec-3] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 18:39:37 ||| [http-nio-7301-exec-3] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 0 ms
+2019-10-03 18:39:42 ||| [http-nio-7301-exec-10] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 18:39:42 ||| [http-nio-7301-exec-10] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 0 ms
+2019-10-03 18:39:43 ||| [http-nio-7301-exec-2] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 18:39:43 ||| [http-nio-7301-exec-2] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 0 ms
+2019-10-03 18:42:04 ||| [http-nio-7301-exec-4] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 18:42:04 ||| [http-nio-7301-exec-4] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 0 ms
+2019-10-03 18:43:27 ||| [http-nio-7301-exec-7] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.register() is starting.
+2019-10-03 18:43:27 ||| [http-nio-7301-exec-7] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.register() running time is 0 ms
+2019-10-03 18:43:29 ||| [http-nio-7301-exec-2] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 18:43:29 ||| [http-nio-7301-exec-2] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 0 ms
+2019-10-03 18:46:02 ||| [http-nio-7301-exec-9] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() is starting.
+2019-10-03 18:46:02 ||| [http-nio-7301-exec-9] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.login() running time is 0 ms
+2019-10-03 18:46:09 ||| [http-nio-7301-exec-5] ||| DEBUG ||| com.objectspace.coorperation.dao.ShiroDao ||| Cache Hit Ratio [com.objectspace.coorperation.dao.ShiroDao]: 0.0
+2019-10-03 18:46:09 ||| [http-nio-7301-exec-5] ||| DEBUG ||| c.o.coorperation.dao.ShiroDao.queryUserByUserName ||| ==>  Preparing: SELECT * FROM tb_user WHERE user_name = ? 
+2019-10-03 18:46:09 ||| [http-nio-7301-exec-5] ||| DEBUG ||| c.o.coorperation.dao.ShiroDao.queryUserByUserName ||| ==> Parameters: ObjectTest(String)
+2019-10-03 18:46:10 ||| [http-nio-7301-exec-5] ||| DEBUG ||| c.o.coorperation.dao.ShiroDao.queryUserByUserName ||| <==      Total: 1
+2019-10-03 18:46:12 ||| [http-nio-7301-exec-10] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.index() is starting.
+2019-10-03 18:46:12 ||| [http-nio-7301-exec-10] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.index() running time is 0 ms
+2019-10-03 18:46:12 ||| [http-nio-7301-exec-6] ||| DEBUG ||| com.objectspace.coorperation.dao.ShiroDao ||| Cache Hit Ratio [com.objectspace.coorperation.dao.ShiroDao]: 0.0
+2019-10-03 18:46:12 ||| [http-nio-7301-exec-6] ||| DEBUG ||| c.o.c.dao.ShiroDao.queryPermissionByUserName ||| ==>  Preparing: SELECT * FROM tb_user u LEFT JOIN tb_user_role ur ON u.user_id = ur.user_id LEFT JOIN tb_role r ON ur.role_id = r.role_id LEFT JOIN tb_role_permission rp ON r.role_id = rp.role_id LEFT JOIN tb_permission p ON rp.permission_id = p.permission_id WHERE u.user_name = ? 
+2019-10-03 18:46:12 ||| [http-nio-7301-exec-6] ||| DEBUG ||| c.o.c.dao.ShiroDao.queryPermissionByUserName ||| ==> Parameters: ObjectTest(String)
+2019-10-03 18:56:57 ||| [main] ||| DEBUG ||| c.objectspace.coorperation.CoorperationApplication ||| Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-03 18:59:01 ||| [http-nio-7301-exec-4] ||| DEBUG ||| com.objectspace.coorperation.dao.ShiroDao ||| Cache Hit Ratio [com.objectspace.coorperation.dao.ShiroDao]: 1.0
+2019-10-03 19:00:08 ||| [http-nio-7301-exec-3] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.index() is starting.
+2019-10-03 19:00:08 ||| [http-nio-7301-exec-3] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.index() running time is 37 ms
+2019-10-03 19:00:42 ||| [http-nio-7301-exec-2] ||| DEBUG ||| com.objectspace.coorperation.dao.ShiroDao ||| Cache Hit Ratio [com.objectspace.coorperation.dao.ShiroDao]: 0.5
+2019-10-03 19:01:27 ||| [http-nio-7301-exec-2] ||| DEBUG ||| c.o.c.dao.ShiroDao.queryPermissionByUserName ||| ==>  Preparing: SELECT * FROM tb_user u LEFT JOIN tb_user_role ur ON u.user_id = ur.user_id LEFT JOIN tb_role r ON ur.role_id = r.role_id LEFT JOIN tb_role_permission rp ON r.role_id = rp.role_id LEFT JOIN tb_permission p ON rp.permission_id = p.permission_id WHERE u.user_name = ? 
+2019-10-03 19:01:27 ||| [http-nio-7301-exec-8] ||| DEBUG ||| com.objectspace.coorperation.dao.ShiroDao ||| Cache Hit Ratio [com.objectspace.coorperation.dao.ShiroDao]: 0.6666666666666666
+2019-10-03 19:02:00 ||| [http-nio-7301-exec-2] ||| DEBUG ||| c.o.c.dao.ShiroDao.queryPermissionByUserName ||| ==> Parameters: ObjectTest(String)
+2019-10-03 19:02:08 ||| [http-nio-7301-exec-2] ||| DEBUG ||| c.o.c.dao.ShiroDao.queryPermissionByUserName ||| <==      Total: 1
+2019-10-03 19:02:10 ||| [http-nio-7301-exec-3] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.index() is starting.
+2019-10-03 19:02:10 ||| [http-nio-7301-exec-3] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.index() running time is 0 ms
+2019-10-03 19:03:55 ||| [http-nio-7301-exec-7] ||| DEBUG ||| com.objectspace.coorperation.dao.ShiroDao ||| Cache Hit Ratio [com.objectspace.coorperation.dao.ShiroDao]: 0.75
+2019-10-03 19:04:09 ||| [http-nio-7301-exec-8] ||| DEBUG ||| com.objectspace.coorperation.dao.ShiroDao ||| Cache Hit Ratio [com.objectspace.coorperation.dao.ShiroDao]: 0.8
+2019-10-03 19:04:22 ||| [http-nio-7301-exec-3] ||| DEBUG ||| com.objectspace.coorperation.dao.ShiroDao ||| Cache Hit Ratio [com.objectspace.coorperation.dao.ShiroDao]: 0.8333333333333334
+2019-10-03 19:04:26 ||| [http-nio-7301-exec-7] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.index() is starting.
+2019-10-03 19:04:26 ||| [http-nio-7301-exec-7] ||| DEBUG ||| com.objectspace.coorperation.aop.AutoLogAop ||| com.objectspace.coorperation.web.mapping.FrontendMapping.index() running time is 0 ms
+2019-10-03 19:04:56 ||| [http-nio-7301-exec-9] ||| DEBUG ||| com.objectspace.coorperation.dao.ShiroDao ||| Cache Hit Ratio [com.objectspace.coorperation.dao.ShiroDao]: 0.8571428571428571
