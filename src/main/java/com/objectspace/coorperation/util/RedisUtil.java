@@ -28,6 +28,21 @@ public class RedisUtil{
 
     private Logger logger = LoggerFactory.getLogger(RedisUtil.class);
 
+    public String set(String key,String value,int expireSecond){
+        Jedis jedis = null;
+        try{
+            jedis = jedisPool.getResource();
+            return jedis.setex(key,expireSecond,value);
+        }catch (Exception e){
+            logger.error("往Redis中存入key出现异常（有过期时间）");
+            logger.error("异常信息："+e.getMessage());
+            return "failure";
+        }finally {
+            if(jedis!=null)
+                jedis.close();
+        }
+
+    }
     /**
      * 通常是MyBatis二级缓存调用，功能和String类型的set相同
      * @param key

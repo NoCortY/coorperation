@@ -6,6 +6,7 @@ import com.objectspace.coorperation.dto.UserExecution;
 import com.objectspace.coorperation.entity.User;
 import com.objectspace.coorperation.enums.UserStateEnum;
 import com.objectspace.coorperation.service.UserService;
+import com.objectspace.coorperation.util.RedisUtil;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.DisabledAccountException;
@@ -28,7 +29,8 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     UserDao userDao;
-
+    @Autowired
+    RedisUtil redisUtil;
     Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
     @Override
     public UserExecution getUserByUserAccount(User user) {
@@ -43,13 +45,21 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public UserExecution addUser(User user, CommonsMultipartFile userProfile) {
+    public UserExecution addUser(User user,String captchaCode, CommonsMultipartFile userProfile) {
         // TODO 注册用户
         UserExecution userExecution = null;
         if (user == null || "".equals(user.getUserName())) {
             userExecution = new UserExecution(UserStateEnum.ISUSERNULL);
             return userExecution;
         }
+        String code = redisUtil.get("captcha:"+user.getUserEmail());
+        if(!captchaCode.equals(code))
+        {
+            userExecution = new UserExecution(UserStateEnum.VIRIFYCODEERROR);
+            return userExecution;
+        }
+        //账号默认正常
+        user.setUserStatus(ConstantValue.NORMAL_ACCOUNT);
         //以普通方式注册
         user.setUserType(ConstantValue.SIMPLE_USER);
         // 获取盐
@@ -108,6 +118,7 @@ public class UserServiceImpl implements UserService {
         try{
             effectiveCount = userDao.insertUser(user);
         }catch(Exception e) {
+            e.printStackTrace();
             logger.error("UserAccount重复");
             logger.error("错误信息:用户在输入一个库中已存在的UserAccount");
             userExecution = new UserExecution(UserStateEnum.USERACCOUNTREPEAT);

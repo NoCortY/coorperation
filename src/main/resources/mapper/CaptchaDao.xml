@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.objectspace.coorperation.dao.CaptchaDao">
+   <insert id="insertCaptcha" parameterType="com.objectspace.coorperation.entity.Captcha">
+       INSERT INTO
+       tb_captcha
+       <trim prefix="(" suffix=")" suffixOverrides=",">
+           <if test="code!=null and code!=''">
+               code,
+           </if>
+           <if test="recUserEmail!=null and recUserEmail!=''">
+               rec_user_email,
+           </if>
+           create_date
+       </trim>
+       VALUES
+       <trim prefix="(" suffix=")" suffixOverrides=",">
+           <if test="code!=null and code!=''">
+               #{code},
+           </if>
+           <if test="recUserEmail!=null and recUserEmail!=''">
+               #{recUserEmail},
+           </if>
+           (select current_timestamp())
+       </trim>
+   </insert>
+</mapper>

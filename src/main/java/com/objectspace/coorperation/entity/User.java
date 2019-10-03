@@ -15,21 +15,13 @@ public class User implements Serializable {
     private String password;
     private String userGender;
     private Boolean userStatus;
+    private String userType;
     private String userPhoneNumber;
     private String userEmail;
     private Date registerDate;
     private String realName;
     private String profileImg;
-    private String userType;
     private String salt;
-
-    public String getSalt() {
-        return salt;
-    }
-
-    public void setSalt(String salt) {
-        this.salt = salt;
-    }
 
     public Integer getUserId() {
         return userId;
@@ -55,10 +47,21 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public String getUserEmail() {
-        return userEmail;
+    public String getUserGender() {
+        return userGender;
     }
 
+    public void setUserGender(String userGender) {
+        this.userGender = userGender;
+    }
+
+    public Boolean getUserStatus() {
+        return userStatus;
+    }
+
+    public void setUserStatus(Boolean userStatus) {
+        this.userStatus = userStatus;
+    }
 
     public String getUserPhoneNumber() {
         return userPhoneNumber;
@@ -68,8 +71,20 @@ public class User implements Serializable {
         this.userPhoneNumber = userPhoneNumber;
     }
 
+    public String getUserEmail() {
+        return userEmail;
+    }
+
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
+    }
+
+    public Date getRegisterDate() {
+        return registerDate;
+    }
+
+    public void setRegisterDate(Date registerDate) {
+        this.registerDate = registerDate;
     }
 
     public String getRealName() {
@@ -96,28 +111,12 @@ public class User implements Serializable {
         this.userType = userType;
     }
 
-    public Boolean getUserStatus() {
-        return userStatus;
+    public String getSalt() {
+        return salt;
     }
 
-    public void setUserStatus(Boolean userStatus) {
-        this.userStatus = userStatus;
-    }
-
-    public String getUserGender() {
-        return userGender;
-    }
-
-    public void setUserGender(String userGender) {
-        this.userGender = userGender;
-    }
-
-    public Date getRegisterDate() {
-        return registerDate;
-    }
-
-    public void setRegisterDate(Date registerDate) {
-        this.registerDate = registerDate;
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 
     @Override

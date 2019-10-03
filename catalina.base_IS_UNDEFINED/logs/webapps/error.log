@@ -1,1 +1,44 @@
-2019-10-02 14:17:46 ||| [http-nio-7301-exec-2] ||| ERROR ||| c.o.coorperation.web.mapping.FrontendMapping ||| 打印日志====================================
+2019-10-03 11:41:18 ||| [http-nio-7301-exec-4] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 11:41:18 ||| [http-nio-7301-exec-4] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在类:com.objectspace.coorperation.web.controller.CaptchaController
+2019-10-03 11:41:18 ||| [http-nio-7301-exec-4] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在方法:getCaptcha
+2019-10-03 11:41:18 ||| [http-nio-7301-exec-4] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常原因:
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select current_date )' at line 15
+### The error may involve com.objectspace.coorperation.dao.CaptchaDao.insertCaptcha-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO        tb_captcha         ( code,                                        rec_user_email,                        create_date )         VALUES         ( ?,                                        ?,                        select current_date )
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select current_date )' at line 15
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select current_date )' at line 15
+2019-10-03 11:41:18 ||| [http-nio-7301-exec-4] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 12:54:55 ||| [http-nio-7301-exec-1] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 12:54:55 ||| [http-nio-7301-exec-1] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在类:com.objectspace.coorperation.web.controller.CaptchaController
+2019-10-03 12:54:55 ||| [http-nio-7301-exec-1] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在方法:getCaptcha
+2019-10-03 12:54:55 ||| [http-nio-7301-exec-1] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常原因:The MimeMessage is already built.
+2019-10-03 12:54:55 ||| [http-nio-7301-exec-1] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 12:56:53 ||| [http-nio-7301-exec-6] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 12:56:53 ||| [http-nio-7301-exec-6] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在类:com.objectspace.coorperation.web.controller.CaptchaController
+2019-10-03 12:56:53 ||| [http-nio-7301-exec-6] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在方法:getCaptcha
+2019-10-03 12:56:53 ||| [http-nio-7301-exec-6] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常原因:The MimeMessage is already built.
+2019-10-03 12:56:53 ||| [http-nio-7301-exec-6] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 13:13:58 ||| [http-nio-7301-exec-3] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 13:13:58 ||| [http-nio-7301-exec-3] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在类:com.objectspace.coorperation.web.controller.CaptchaController
+2019-10-03 13:13:58 ||| [http-nio-7301-exec-3] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常所在方法:getCaptcha
+2019-10-03 13:13:58 ||| [http-nio-7301-exec-3] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| 异常原因:The MimeMessage is already built.
+2019-10-03 13:13:58 ||| [http-nio-7301-exec-3] ||| ERROR ||| com.objectspace.coorperation.aop.AutoLogAop ||| ===================================================================================
+2019-10-03 13:22:48 ||| [http-nio-7301-exec-9] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| UserAccount重复
+2019-10-03 13:22:48 ||| [http-nio-7301-exec-9] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| 错误信息:用户在输入一个库中已存在的UserAccount
+2019-10-03 13:24:30 ||| [http-nio-7301-exec-1] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 从缓存中取K,V时出现异常!
+2019-10-03 13:24:30 ||| [http-nio-7301-exec-1] ||| ERROR ||| com.objectspace.coorperation.util.RedisUtil ||| 异常信息:Could not get a resource from the pool
+2019-10-03 13:27:49 ||| [http-nio-7301-exec-2] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| UserAccount重复
+2019-10-03 13:27:49 ||| [http-nio-7301-exec-2] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| 错误信息:用户在输入一个库中已存在的UserAccount
+2019-10-03 13:29:41 ||| [http-nio-7301-exec-10] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| UserAccount重复
+2019-10-03 13:29:41 ||| [http-nio-7301-exec-10] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| 错误信息:用户在输入一个库中已存在的UserAccount
+2019-10-03 13:34:37 ||| [http-nio-7301-exec-2] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| UserAccount重复
+2019-10-03 13:34:37 ||| [http-nio-7301-exec-2] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| 错误信息:用户在输入一个库中已存在的UserAccount
+2019-10-03 13:37:48 ||| [http-nio-7301-exec-2] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| UserAccount重复
+2019-10-03 13:37:48 ||| [http-nio-7301-exec-2] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| 错误信息:用户在输入一个库中已存在的UserAccount
+2019-10-03 13:38:52 ||| [http-nio-7301-exec-2] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| UserAccount重复
+2019-10-03 13:38:52 ||| [http-nio-7301-exec-2] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| 错误信息:用户在输入一个库中已存在的UserAccount
+2019-10-03 13:41:12 ||| [http-nio-7301-exec-7] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| UserAccount重复
+2019-10-03 13:41:12 ||| [http-nio-7301-exec-7] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| 错误信息:用户在输入一个库中已存在的UserAccount
+2019-10-03 13:48:01 ||| [http-nio-7301-exec-2] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| UserAccount重复
+2019-10-03 13:48:01 ||| [http-nio-7301-exec-2] ||| ERROR ||| c.o.coorperation.service.impl.UserServiceImpl ||| 错误信息:用户在输入一个库中已存在的UserAccount

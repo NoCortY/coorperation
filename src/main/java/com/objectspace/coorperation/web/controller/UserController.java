@@ -46,6 +46,7 @@ public class UserController {
         CommonsMultipartFile userProfile = null;
         User user = null;
         UserExecution userExecution = null;
+        String captchaCode = request.getParameter("captcha");
         try {
             //将前台传送的JSON串转换为User对象
             user = objectMapper.readValue(request.getParameter("userInfo"), User.class);
@@ -73,7 +74,7 @@ public class UserController {
             MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest) request;
             userProfile = (CommonsMultipartFile) multipartHttpServletRequest.getFile("userProfile");
         }
-        userExecution = userService.addUser(user, userProfile);
+        userExecution = userService.addUser(user, captchaCode,userProfile);
         if(userExecution.getUserState()== UserStateEnum.REGISTERSUCCESS) {
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG, true);
             modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE, "注册成功!");

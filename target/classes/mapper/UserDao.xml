@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.objectspace.coorperation.UserDao">
+<mapper namespace="com.objectspace.coorperation.dao.UserDao">
     <resultMap type="com.objectspace.coorperation.entity.User" id="User">
         <id property="userId" column="user_id"/>
         <result property="userName" column="user_name"/>
@@ -45,7 +45,7 @@
             <if test="realName!=null and realName!=''">
                 real_name,
             </if>
-            <if test="prifileImg!=null and profileImg!=''">
+            <if test="profileImg!=null and profileImg!=''">
                 profile_img,
             </if>
             <if test="userType!=null and userType!=''">
@@ -62,36 +62,36 @@
                 #{userId},
             </if>-->
             <if test="userName!=null and userName!=''">
-                userName,
+                #{userName},
             </if>
             <if test="password!=null and password!=''">
-                password,
+                #{password},
             </if>
             <if test="userGender!=null and userGender!=''">
-                userGender,
+                #{userGender},
             </if>
             <if test="userStatus!=null and userStatus!=''">
-                userStatus,
+                #{userStatus},
             </if>
             <if test="userPhoneNumber!=null and userPhoneNumber!=''">
-                userPhoneNumber,
+                #{userPhoneNumber},
             </if>
             <if test="userEmail!=null and userEmail!=''">
-                userEmail,
+                #{userEmail},
             </if>
             <if test="realName!=null and realName!=''">
-                realName,
+                #{realName},
             </if>
-            <if test="prifileImg!=null and profileImg!=''">
-                prifileImg,
+            <if test="profileImg!=null and profileImg!=''">
+                #{profileImg},
             </if>
             <if test="userType!=null and userType!=''">
-                userType,
+                #{userType},
             </if>
             <if test="salt!=null and salt!=''">
-                salt,
+                #{salt},
             </if>
-            select current_date
+            (select current_timestamp())
         </trim>
     </insert>
     <select id="queryUserByUserName" parameterType="com.objectspace.coorperation.entity.User" resultMap="User">

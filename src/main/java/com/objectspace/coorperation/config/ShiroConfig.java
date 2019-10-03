@@ -52,6 +52,8 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/frontend/register","anon");
         filterChainDefinitionMap.put("/usercontroller/registeruser", "anon");
         filterChainDefinitionMap.put("/usercontroller/login", "anon");
+        filterChainDefinitionMap.put("/captchacontroller/getcaptcha","anon");
+        filterChainDefinitionMap.put("/captchacontroller/iscaptchaexist","anon");
         filterChainDefinitionMap.put("/frontend/login", "anon");
         filterChainDefinitionMap.put("/unauthorized", "anon");
         filterChainDefinitionMap.put("/static/**", "anon");

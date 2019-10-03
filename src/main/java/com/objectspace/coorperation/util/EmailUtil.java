@@ -9,15 +9,21 @@ import java.util.Properties;
 import java.util.Random;
 
 /**
- * @author NoCortY 发送邮件验证码工具
- */
+* @Description: 原来是专用于发送邮件验证码的Util，现在用来发送任何邮件。
+* @Author: Object
+* @Date: 2019/10/3
+*/
 public class EmailUtil {
     private static Properties properties;
+    private static HtmlEmail httpEmail;
     static {
-        InputStream in = EmailUtil.class.getResourceAsStream("/email.properties");
+        InputStream in = EmailUtil.class.getResourceAsStream("/config/config.properties");
         properties = new Properties();
+        httpEmail = new HtmlEmail();
         try {
             properties.load(in);
+            httpEmail.setHostName(properties.getProperty("emailHost"));
+            httpEmail.setCharset("utf-8");
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -31,24 +37,17 @@ public class EmailUtil {
      * @return 发送的随机邮件验证码
      * @throws EmailException
      */
-    public static int sendVerifyCodeEMail(String userEmail) throws EmailException {
-        HtmlEmail httpEmail = new HtmlEmail();
-        httpEmail.setHostName(properties.getProperty("emailHost"));
-        httpEmail.setCharset("utf-8");
-        // 生成六位随机数
-        int randomVerifyCode = new Random().nextInt(999999);
+    public static synchronized void sendEmail(String userEmail,String emailTitle,String emailContent) throws EmailException {
+        //设置邮箱名
         String emailName = properties.getProperty("emailName");
         emailName = emailName.substring(0, emailName.length() - 1);
         httpEmail.addTo(userEmail);
         httpEmail.setFrom(properties.getProperty("emailAddress"), emailName, "utf-8");
         httpEmail.setAuthentication(properties.getProperty("emailAddress"),
                 properties.getProperty("emailAuthentication"));
-        httpEmail.setSubject("注册验证信息");
-        httpEmail.setMsg(
-                "尊敬的Coorperation用户:\n" + "    您好！感谢您注册Coorperation，您的邮箱验证码为:" + randomVerifyCode + "，提示：请勿泄露邮箱验证码");
+        httpEmail.setSubject(emailTitle);
+        httpEmail.setMsg(emailContent);
         httpEmail.send();
-
-        return randomVerifyCode;
     }
 }
 

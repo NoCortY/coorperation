@@ -12,10 +12,13 @@ public final class ConstantValue {
     public final static String SIMPLE_USER = "0";
 
     /**
-     * 用户：已经被封禁的用户
+     * 账号状态：正常
      */
-    public final static String BINDED_USER = "-1";
-
+    public final static boolean NORMAL_ACCOUNT = true;
+    /**
+     * 账号状态：被封禁
+     */
+    public final static boolean BINDED_ACCOUNT = false;
     /**
      * 密码加密类型
      */
