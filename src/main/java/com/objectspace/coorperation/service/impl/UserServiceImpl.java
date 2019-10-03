@@ -1,5 +1,6 @@
 package com.objectspace.coorperation.service.impl;
 
+import com.google.code.kaptcha.Constants;
 import com.objectspace.coorperation.config.ConstantValue;
 import com.objectspace.coorperation.dao.UserDao;
 import com.objectspace.coorperation.dto.UserExecution;
@@ -13,6 +14,7 @@ import org.apache.shiro.authc.DisabledAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 import org.apache.shiro.crypto.hash.SimpleHash;
+import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -134,9 +136,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserExecution userLogin(User user) {
+    public UserExecution userLogin(User user,String captcha) {
         // TODO Auto-generated method stub
         UserExecution userExecution = null;
+        //获取验证码
+        Session session = SecurityUtils.getSubject().getSession();
+        String rightCaptcha = (String) session.getAttribute(Constants.KAPTCHA_SESSION_KEY);
+        if(captcha==null||"".equals(captcha)||!rightCaptcha.equals(captcha)){
+            userExecution = new UserExecution(UserStateEnum.VIRIFYCODEERROR);
+            return userExecution;
+        }
         if (user.getUserName() == null || "".equals(user.getUserName())) {
             userExecution = new UserExecution(UserStateEnum.ISUSERNULL);
             return userExecution;

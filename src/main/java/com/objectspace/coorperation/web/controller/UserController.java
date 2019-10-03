@@ -92,6 +92,7 @@ public class UserController {
         ObjectMapper objectMapper = new ObjectMapper();
         User user = null;
         UserExecution userExecution= null;
+        String captcha = request.getParameter("captcha");
         try {
             user = objectMapper.readValue(request.getParameter("userInfo"),User.class);
         }  catch (JsonParseException e) {
@@ -113,7 +114,7 @@ public class UserController {
             modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE, "系统错误，请稍后再试");
             return modelMap;
         }
-        userExecution = userService.userLogin(user);
+        userExecution = userService.userLogin(user,captcha);
         if(userExecution.getUserState() == UserStateEnum.LOGINSUCCESS) {
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG, true);
             modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE, userExecution.getUserState().getStateInfo());

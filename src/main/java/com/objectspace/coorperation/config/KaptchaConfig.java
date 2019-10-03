@@ -23,9 +23,9 @@ public class KaptchaConfig {
                 new KaptchaServlet(), "/captcha/kaptcha.jpg");
         registrationBean.addInitParameter(Constants.KAPTCHA_SESSION_CONFIG_KEY, Constants.KAPTCHA_SESSION_KEY);
         //图形宽度
-        registrationBean.addInitParameter(Constants.KAPTCHA_IMAGE_WIDTH, "200");
+        registrationBean.addInitParameter(Constants.KAPTCHA_IMAGE_WIDTH, "150");
         //图形高度
-        registrationBean.addInitParameter(Constants.KAPTCHA_IMAGE_HEIGHT, "60");
+        registrationBean.addInitParameter(Constants.KAPTCHA_IMAGE_HEIGHT, "40");
         //有边框
         registrationBean.addInitParameter(Constants.KAPTCHA_BORDER, "yes");
         //边框粗细度
@@ -37,7 +37,7 @@ public class KaptchaConfig {
         //噪点颜色
         registrationBean.addInitParameter(Constants.KAPTCHA_NOISE_COLOR, "blue");
         //文字大小
-        registrationBean.addInitParameter(Constants.KAPTCHA_TEXTPRODUCER_FONT_SIZE, "50");
+        registrationBean.addInitParameter(Constants.KAPTCHA_TEXTPRODUCER_FONT_SIZE, "37");
         //文字颜色
         registrationBean.addInitParameter(Constants.KAPTCHA_TEXTPRODUCER_FONT_COLOR, "red");
         //文字长度

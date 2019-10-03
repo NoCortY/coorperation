@@ -39,7 +39,10 @@
                     </div>
                     <div class="form-group">
                         <label>验证码:</label>
-                        <input id="captcha" type="text" class="form-control" placeholder="验证码">
+                        <div class="input-group">
+                            <input id="captcha" type="text" class="form-control" placeholder="验证码">
+                            <img src="/captcha/kaptcha.jpg" onclick="changeCaptcha(this)"  id="captchaImg">
+                        </div>
                     </div>
                     <div class="checkbox">
                         <label>
@@ -73,7 +76,8 @@
 <script type="text/javascript" src="../assets/js/common/popper.min.js"></script>
 <script type="text/javascript" src="../assets/js/common/bootstrap.min.js"></script>
 <script type="text/javascript" src="../assets/js/common/jquery.dcjqaccordion.2.7.js"></script>
-<script src="../assets/js/common/custom.js" type="text/javascript"></script>'
+<script src="../assets/js/common/custom.js" type="text/javascript"></script>
+<script src="../assets/js/common/common.js" type="text/javascript"></script>
 <script src="../assets/js/login/login.js" type="text/javascript"></script>
 </body>
 
