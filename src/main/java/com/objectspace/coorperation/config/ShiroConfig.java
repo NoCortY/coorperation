@@ -59,6 +59,7 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/static/**", "anon");
         filterChainDefinitionMap.put("../static/**", "anon");
         filterChainDefinitionMap.put("/views/**","anon");
+        filterChainDefinitionMap.put("/captcha/**","anon");
         filterChainDefinitionMap.put("/assets/**","anon");
         //配置退出
         filterChainDefinitionMap.put("/logout", "logout");
