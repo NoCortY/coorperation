@@ -12,11 +12,23 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+* @Description: 邮箱验证码控制器
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 @Controller
 @RequestMapping("/captchacontroller")
 public class CaptchaController {
     @Autowired
     private CaptchaService captchaService;
+    /**
+     * @Description:  获取邮箱验证码
+     * @Param: [request]
+     * @return: java.util.Map<java.lang.String,java.lang.Object>
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     @RequestMapping("/getcaptcha")
     @ResponseBody
     public Map<String,Object> getCaptcha(HttpServletRequest request){
@@ -34,6 +46,13 @@ public class CaptchaController {
         }
         return modelMap;
     }
+    /**
+     * @Description:  查看验证码是否已经发送
+     * @Param: [request]
+     * @return: java.util.Map<java.lang.String,java.lang.Object>
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     @RequestMapping("/iscaptchaexist")
     @ResponseBody
     public Map<String,Object> isCaptchaExist(HttpServletRequest request){

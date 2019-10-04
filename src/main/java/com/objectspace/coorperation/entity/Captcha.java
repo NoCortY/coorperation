@@ -2,7 +2,7 @@ package com.objectspace.coorperation.entity;
 
 /**
 * @Description: 邮件验证码实体类
-* @Author: Object
+* @Author: NoCortY
 * @Date: 2019/10/3
 */
 public class Captcha {

@@ -6,7 +6,6 @@ import org.apache.commons.mail.HtmlEmail;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
-import java.util.Random;
 
 /**
 * @Description: 原来是专用于发送邮件验证码的Util，现在用来发送任何邮件。
@@ -29,13 +28,12 @@ public class EmailUtil {
             e.printStackTrace();
         }
     }
-
     /**
-     * 发送验证码
-     *
-     * @param userEmail 用户邮箱
-     * @return 发送的随机邮件验证码
-     * @throws EmailException
+     * @Description: 发送邮件
+     * @Param: [userEmail用户邮箱, emailTitle邮件名, emailContent邮件内容]
+     * @return: void
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public static synchronized void sendEmail(String userEmail,String emailTitle,String emailContent) throws EmailException {
         //设置邮箱名

@@ -1,5 +1,10 @@
 package com.objectspace.coorperation.config;
 
+/**
+* @Description: 项目常量池，需要大量使用的并且重复的常量直接定义在这里
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 public final class ConstantValue {
 
     /**

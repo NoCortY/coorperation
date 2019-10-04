@@ -9,7 +9,11 @@ import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-
+/**
+* @Description: RedisCache作为MyBatis的二级缓存
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 public class RedisCache implements Cache {
     private SerializeUtil serializeUtil = new SerializeUtil();
     private final ReadWriteLock readWriteLock = new ReentrantReadWriteLock();

@@ -4,11 +4,10 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-
 /**
- * 自定义注解
- * @author NoCortY
- *
+ * @Description: 自定义注解，作用是为com.object.coorperation.aop.RedisCacheAop进行标记，带该注解的方法，即自动使用RedisCacheAop
+ * @Author: NoCortY
+ * @Date: 2019/10/4
  */
 /*@Tartget定义：
  * public enum ElementType {
@@ -42,7 +41,6 @@ import java.lang.annotation.Target;
  * 如果一个注解被定义为RetentionPolicy.CLASS，则它将被编译到Class文件中，那么编译器可以在编译时根据注解做一些处理动作，但是运行时JVM（Java虚拟机）会忽略它，我们在运行期也不能读取到；
  * 如果一个注解被定义为RetentionPolicy.RUNTIME，那么这个注解可以在运行期的加载阶段被加载到Class对象中。那么在程序运行阶段，我们可以通过反射得到这个注解，并通过判断是否有这个注解或这个注解中属性的值，从而执行不同的程序代码段。我们实际开发中的自定义注解几乎都是使用的RetentionPolicy.RUNTIME；
  * */
-
 @Retention(RetentionPolicy.RUNTIME)
 public @interface EnCache {
     String key();		//定义key值
@@ -52,7 +50,7 @@ public @interface EnCache {
 
     /**
      * 查找和更新缓存的处理方法不一样，更新逻辑为先删除再同步数据到缓存
-     * @author Administrator
+     * @author NoCortY
      *
      */
     enum CACHE_TYPE{

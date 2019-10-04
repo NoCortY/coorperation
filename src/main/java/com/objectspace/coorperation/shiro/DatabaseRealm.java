@@ -10,16 +10,27 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
-import org.apache.shiro.authc.AuthenticationInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.HashSet;
 import java.util.Set;
-
+/**
+* @Description:  Shiro核心：自定义Realm 用于身份认证和权限认证
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 public class DatabaseRealm extends AuthorizingRealm {
 
     @Autowired
     private ShiroService shiroService;
+
+    /**
+     * @Description:  权限认证
+     * @Param: [principalCollection]
+     * @return: org.apache.shiro.authz.AuthorizationInfo
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         //获取用户账户名
@@ -27,7 +38,7 @@ public class DatabaseRealm extends AuthorizingRealm {
         User user = new User();
         user.setUserName(userName);
         //从数据库中获取角色和权限
-        Set<Permission> permissions = shiroService.getPermissionByUserAccount(user);
+        Set<Permission> permissions = shiroService.getPermissionByUserName(user);
         Set<String> stringPermissions = new HashSet<String>();
         if(permissions == null || permissions.size()<=0) {
             System.out.println("权限列表为空");
@@ -45,13 +56,20 @@ public class DatabaseRealm extends AuthorizingRealm {
         return s;
     }
 
+    /**
+     * @Description:  用户认证
+     * @Param: [token]
+     * @return: org.apache.shiro.authc.AuthenticationInfo
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         UsernamePasswordToken t = (UsernamePasswordToken) token;
         String userName = t.getUsername();
         User u = new User();
         u.setUserName(userName);
-        User user = shiroService.getUserByUserAccount(u);
+        User user = shiroService.getUserByUserName(u);
         if("-1".equals(user.getUserStatus())) {
             System.out.println("账号:"+user.getUserName()+"已经被禁止登录!");
             throw new DisabledAccountException();

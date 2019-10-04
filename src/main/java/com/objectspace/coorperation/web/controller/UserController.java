@@ -24,7 +24,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 /** 
-* @Description: 
+* @Description: 用户控制器
 * @Author: Object
 * @Date: 2019/10/2
 */
@@ -34,6 +34,13 @@ public class UserController {
     @Autowired
     UserService userService;
     Logger logger = LoggerFactory.getLogger(UserController.class);
+    /**
+     * @Description:  用户注册
+     * @Param: [request]
+     * @return: java.util.Map<java.lang.String,java.lang.Object>
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     @RequestMapping(value="/registeruser",method= RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> registerUser(HttpServletRequest request){
@@ -85,6 +92,13 @@ public class UserController {
         }
         return modelMap;
     }
+    /**
+     * @Description:  用户登录
+     * @Param: [request]
+     * @return: java.util.Map<java.lang.String,java.lang.Object>
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> login(HttpServletRequest request){

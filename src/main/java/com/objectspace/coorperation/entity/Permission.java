@@ -3,6 +3,11 @@ package com.objectspace.coorperation.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+* @Description: 权限实体类
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 public class Permission implements Serializable {
     private static final long serialVersionUID = -2550095162237578681L;
     private Integer permissionId;

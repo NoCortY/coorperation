@@ -7,10 +7,30 @@ import org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfigura
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
+/**
+* @Description: Spring Boot主启动类，内置Tomcat 请使用 Debug as application方式启动项目调试
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 @MapperScan("com.objectspace.coorperation.dao")
 @SpringBootApplication(exclude = {MultipartAutoConfiguration.class})
 public class CoorperationApplication {
+
+    /**
+     * @Description: 主方法
+     * @Param: [args]
+     * @return: void
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     public static void main(String[] args) {SpringApplication.run(CoorperationApplication.class, args);}
+    /**
+     * @Description: 文件接收器
+     * @Param: []
+     * @return: org.springframework.web.multipart.MultipartResolver
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     @Bean(name = "multipartResolver")
     public MultipartResolver multipartResolver() {
         CommonsMultipartResolver resolver = new CommonsMultipartResolver();

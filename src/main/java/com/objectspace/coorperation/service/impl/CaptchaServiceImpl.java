@@ -13,6 +13,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.Random;
 
+/**
+* @Description: 验证码业务逻辑实现类
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 @Service
 public class CaptchaServiceImpl implements CaptchaService {
     @Autowired
@@ -20,6 +25,13 @@ public class CaptchaServiceImpl implements CaptchaService {
     @Autowired
     private RedisUtil redisUtil;
     private Logger logger = LoggerFactory.getLogger(CaptchaServiceImpl.class);
+    /**
+     * @Description:  发送验证码
+     * @Param: [captcha]
+     * @return: boolean
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     @Override
     public boolean sendCaptcha(Captcha captcha) {
         if(captcha==null||captcha.getRecUserEmail()==null||"".equals(captcha.getRecUserEmail()))

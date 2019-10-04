@@ -11,13 +11,11 @@ import redis.clients.jedis.ScanParams;
 import redis.clients.jedis.ScanResult;
 
 import java.util.*;
-
 /**
- * Redis操作工具类
- *
- * @author Object
- *
- */
+* @Description: Redis操作工具类
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 @Component
 @Lazy(false)
 public class RedisUtil{
@@ -28,6 +26,13 @@ public class RedisUtil{
 
     private Logger logger = LoggerFactory.getLogger(RedisUtil.class);
 
+    /**
+     * @Description:  设置有过期时间的String key value
+     * @Param: [key, value, expireSecond过期时间]
+     * @return: java.lang.String
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     public String set(String key,String value,int expireSecond){
         Jedis jedis = null;
         try{
@@ -44,10 +49,11 @@ public class RedisUtil{
 
     }
     /**
-     * 通常是MyBatis二级缓存调用，功能和String类型的set相同
-     * @param key
-     * @param value
-     * @return
+     * @Description:  设置序列化String key value，通常二级缓存调用
+     * @Param: [key, value]
+     * @return: java.lang.String
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public String set(byte[] key,byte[] value) {
         Jedis jedis = null;
@@ -64,9 +70,11 @@ public class RedisUtil{
         }
     }
     /**
-     * 通常是MyBatis二级缓存调用，功能和String类型的get相同
-     * @param key
-     * @return
+     * @Description:  通常是MyBatis二级缓存调用，功能和String类型的get相同
+     * @Param: [key]
+     * @return: byte[]
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public byte[] get(byte[] key) {
         Jedis jedis = null;
@@ -84,11 +92,11 @@ public class RedisUtil{
     }
 
     /**
-     * 设置String类型的值，无过期时间
-     *
-     * @param key
-     * @param value
-     * @return
+     * @Description:  设置String类型的值，无过期时间
+     * @Param: [key, value]
+     * @return: java.lang.String
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public String set(String key, String value) {
         Jedis jedis = null;
@@ -106,10 +114,11 @@ public class RedisUtil{
     }
 
     /**
-     * 获取KEY = key的Value,类型为String
-     *
-     * @param key
-     * @return
+     * @Description:  获取KEY = key的Value,类型为String
+     * @Param: [key]
+     * @return: java.lang.String
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public String get(String key) {
         Jedis jedis = null;
@@ -125,6 +134,13 @@ public class RedisUtil{
                 jedis.close();
         }
     }
+    /**
+     * @Description: 删除key
+     * @Param: [key]
+     * @return: java.lang.Long
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     public Long del(String key) {
         Jedis jedis = null;
         try {
@@ -140,11 +156,11 @@ public class RedisUtil{
         }
     }
     /**
-     * 往Redis List左侧Push元素
-     *
-     * @param listName
-     * @param values
-     * @return
+     * @Description:  往Redis List左侧Push元素
+     * @Param: [listName, values]
+     * @return: java.lang.Long
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public Long lpush(String listName, String... values) {
         Jedis jedis = null;
@@ -162,10 +178,11 @@ public class RedisUtil{
     }
 
     /**
-     * 弹出Redis List左侧元素
-     *
-     * @param listName
-     * @return
+     * @Description:  弹出Redis List左侧元素
+     * @Param: [listName]
+     * @return: java.lang.String
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public String lpop(String listName) {
         Jedis jedis = null;
@@ -183,10 +200,11 @@ public class RedisUtil{
     }
 
     /**
-     * 往redis右侧push元素
-     * @param listName
-     * @param values
-     * @return
+     * @Description:  往redis右侧push元素
+     * @Param: [listName, values]
+     * @return: java.lang.Long
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public Long rpush(String listName, String... values) {
         Jedis jedis = null;
@@ -203,9 +221,11 @@ public class RedisUtil{
         }
     }
     /**
-     * 从Redis右侧弹出元素
-     * @param listName
-     * @return
+     * @Description:  从Redis右侧弹出元素
+     * @Param: [listName]
+     * @return: java.lang.String
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public String rpop(String listName) {
         Jedis jedis = null;
@@ -222,11 +242,11 @@ public class RedisUtil{
         }
     }
     /**
-     * 遍历list中的start —— end 的元素
-     * @param listName
-     * @param start
-     * @param end
-     * @return
+     * @Description:  遍历list中的start —— end 的元素
+     * @Param: [listName, start, end]
+     * @return: java.util.List<java.lang.String>
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public List<String> lrange(String listName, long start, long end) {
         Jedis jedis = null;
@@ -243,9 +263,11 @@ public class RedisUtil{
         }
     }
     /**
-     * 排序，默认将values指定为double进行排序，如果无法转换则抛出异常
-     * @param listName
-     * @return
+     * @Description: 排序，默认将values指定为double进行排序，如果无法转换则抛出异常
+     * @Param: [listName]
+     * @return: java.util.List<java.lang.String>
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public List<String> sort(String listName){
         Jedis jedis = null;
@@ -262,11 +284,11 @@ public class RedisUtil{
         }
     }
     /**
-     * 往Redis Set中存入数据
-     * Set中的数据不保证有序性，且不可重复 重复返回0
-     * @param setName
-     * @param members
-     * @return
+     * @Description: 往Redis Set中存入数据 Set中的数据不保证有序性，且不可重复 重复返回0
+     * @Param: [setName, members]
+     * @return: java.lang.Long
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public Long sadd(String setName,String... members) {
         Jedis jedis = null;
@@ -283,10 +305,11 @@ public class RedisUtil{
         }
     }
     /**
-     * 通过setName和members对SET中的元素进行删除操作
-     * @param setName
-     * @param members
-     * @return
+     * @Description:  通过setName和members对SET中的元素进行删除操作
+     * @Param: [setName, members]
+     * @return: java.lang.Long
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public Long srem(String setName,String...members) {
         Jedis jedis = null;
@@ -303,9 +326,11 @@ public class RedisUtil{
         }
     }
     /**
-     * 遍历SET
-     * @param setName
-     * @return
+     * @Description:  遍历SET
+     * @Param: [setName]
+     * @return: java.util.Set<java.lang.String>
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public Set<String> smembers(String setName){
         Jedis jedis = null;
@@ -322,12 +347,11 @@ public class RedisUtil{
         }
     }
     /**
-     *
-     * 将元素加入排序队列，按score进行排序
-     * @param setName 集合名
-     * @param score 权重
-     * @param member 成员
-     * @return
+     * @Description:  将元素加入排序队列，按score进行排序
+     * @Param: [setName, score, member]
+     * @return: java.lang.Long
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public Long zadd(String setName,Double score,String member) {
         Jedis jedis = null;
@@ -345,11 +369,11 @@ public class RedisUtil{
     }
 
     /**
-     * 遍历有序集合Sorted Set
-     * @param setName
-     * @param start
-     * @param end
-     * @return
+     * @Description:  遍历有序集合Sorted Set
+     * @Param: [setName, start, end]
+     * @return: java.util.Set<java.lang.String>
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public Set<String> zrange(String setName,Long start,Long end){
         Jedis jedis = null;
@@ -366,11 +390,11 @@ public class RedisUtil{
         }
     }
     /**
-     * 往Redis中添加类似HashMap的数据结构，适合存对象，如果存入相同的键值对，后写入的将会把前写入的覆盖
-     * @param mapName
-     * @param key
-     * @param value
-     * @return
+     * @Description:  往Redis中添加类似HashMap的数据结构，适合存对象，如果存入相同的键值对，后写入的将会把前写入的覆盖
+     * @Param: [mapName, key, value]
+     * @return: java.lang.String
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public String hmset(String mapName,String key,String value) {
         Jedis jedis = null;
@@ -389,10 +413,11 @@ public class RedisUtil{
         }
     }
     /**
-     * 从Hash中取某个属性值
-     * @param mapName
-     * @param keys
-     * @return
+     * @Description:  从Hash中取某个属性值
+     * @Param: [mapName, keys]
+     * @return: java.util.List<java.lang.String>
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public List<String> hmget(String mapName,String... keys) {
         Jedis jedis = null;
@@ -409,9 +434,11 @@ public class RedisUtil{
         }
     }
     /**
-     * 获取Hash中的所有属性
-     * @param mapName
-     * @return
+     * @Description:  获取Hash中的所有属性
+     * @Param: [mapName]
+     * @return: java.util.Map<java.lang.String,java.lang.String>
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public Map<String,String> hgetAll(String mapName){
         Jedis jedis = null;
@@ -428,9 +455,11 @@ public class RedisUtil{
         }
     }
     /**
-     * 返回所有符合pattern条件的key
-     * @param pattern
-     * @return
+     * @Description:  返回所有符合pattern条件的key
+     * @Param: [pattern]
+     * @return: java.util.Set<java.lang.String>
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public Set<String> keys(String pattern){
         Jedis jedis = null;
@@ -447,10 +476,11 @@ public class RedisUtil{
         }
     }
     /**
-     * 遍历符合pattern条件的key 使用 scan cursor MATCH pattern COUNT count
-     * @param pattern
-     * @param count
-     * @return
+     * @Description:  遍历符合pattern条件的key 使用 scan cursor MATCH pattern COUNT count
+     * @Param: [pattern, count]
+     * @return: java.util.Set<java.lang.String>
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public Set<String> scan(String pattern,Integer count){
         Jedis jedis = null;
@@ -483,8 +513,11 @@ public class RedisUtil{
         }
     }
     /**
-     * 删库跑路，没把握千万别调！
-     * @return
+     * @Description: 删库跑路，家里没矿千万别调！
+     * @Param: []
+     * @return: java.lang.String
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public String flushAll() {
         Jedis jedis = null;

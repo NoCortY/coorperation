@@ -9,6 +9,11 @@ import org.apache.shiro.web.util.WebUtils;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
+/**
+* @Description: 自定义URL过滤器，基于url进行权限控制
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 public class URLPathMatchingFilter extends PathMatchingFilter {
     /*
      * 由于过滤器不能交由Spring Boot进行管理，所以不能依赖注入

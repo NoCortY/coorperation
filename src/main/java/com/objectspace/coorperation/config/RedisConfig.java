@@ -6,6 +6,11 @@ import org.springframework.context.annotation.Configuration;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
+/**
+* @Description: Redis配置类
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 @Configuration
 public class RedisConfig {
 

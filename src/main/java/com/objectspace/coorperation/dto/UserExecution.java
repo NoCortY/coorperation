@@ -6,11 +6,10 @@ import com.objectspace.coorperation.enums.UserStateEnum;
 import java.util.List;
 
 /**
- * 用户数据传输类
- * 用来在web层传输用户信息
- * @author Object
- *
- */
+* @Description: DTO类，用于Service层和Web层之间数据的交互
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 public class UserExecution {
     //用户（增删改时会使用到）
     private User user;
@@ -20,29 +19,42 @@ public class UserExecution {
     private UserStateEnum userState;
     //用户数量
     private Integer userCount;
-
+    /**
+     * @Description:  默认构造器
+     * @Param:
+     * @return:
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     public UserExecution() 	{}
 
     /**
-     * 注册失败的构造器
-     * @param stateEnum
+     * @Description: 失败的构造器，注册失败或者登录失败时使用，直接返回一个错误枚举
+     * @Param: [stateEnum] 状态枚举
+     * @return: DTO对象，里面封装了一个错误信息
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public UserExecution(UserStateEnum stateEnum) {
         this.userState = stateEnum;
     }
     /**
-     * 注册成功的构造器
-     * @param stateEnum
-     * @param user
+     * @Description: 成功的构造器，登陆成功或者注册成功时使用
+     * @Param: [stateEnum, user] 状态枚举，用户对象
+     * @return: DTO
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public UserExecution(UserStateEnum stateEnum,User user) {
         this.userState = stateEnum;
         this.user = user;
     }
     /**
-     * 获取用户列表
-     * @param stateEnum
-     * @param userList
+     * @Description: 返回用户列表时使用
+     * @Param: [stateEnum, userList]
+     * @return: 返回Web层的DTO，封装状态码和用户列表
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public UserExecution(UserStateEnum stateEnum,List<User> userList) {
         this.userState = stateEnum;

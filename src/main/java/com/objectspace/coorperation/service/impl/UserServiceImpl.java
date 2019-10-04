@@ -26,6 +26,11 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import java.io.*;
 import java.util.Properties;
 
+/**
+* @Description: 用户业务逻辑实现类
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -34,8 +39,15 @@ public class UserServiceImpl implements UserService {
     @Autowired
     RedisUtil redisUtil;
     Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
+    /**
+     * @Description:  通过用户名获取用户信息
+     * @Param: [user]
+     * @return: com.objectspace.coorperation.dto.UserExecution
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     @Override
-    public UserExecution getUserByUserAccount(User user) {
+    public UserExecution getUserByUserName(User user) {
         UserExecution userExecution = null;
         if (user == null || "".equals(user.getUserName())) {
             userExecution = new UserExecution(UserStateEnum.ISUSERNULL);
@@ -45,6 +57,13 @@ public class UserServiceImpl implements UserService {
         return userExecution;
     }
 
+    /**
+     * @Description:  添加一个用户
+     * @Param: [user, captchaCode, userProfile]
+     * @return: com.objectspace.coorperation.dto.UserExecution
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     @Override
     @Transactional
     public UserExecution addUser(User user,String captchaCode, CommonsMultipartFile userProfile) {
@@ -135,6 +154,13 @@ public class UserServiceImpl implements UserService {
         return userExecution;
     }
 
+    /**
+     * @Description: 用户登录
+     * @Param: [user, captcha]
+     * @return: com.objectspace.coorperation.dto.UserExecution
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     @Override
     public UserExecution userLogin(User user,String captcha) {
         // TODO Auto-generated method stub
@@ -168,7 +194,13 @@ public class UserServiceImpl implements UserService {
         userExecution = new UserExecution(UserStateEnum.LOGINSUCCESS,user);
         return userExecution;
     }
-
+    /**
+     * @Description: 获取config.properties文件
+     * @Param: []
+     * @return: java.util.Properties
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     public Properties getConfigProperties() {
         Properties pro = new Properties();
         InputStream inStream = this.getClass().getResourceAsStream("/config/config.properties");
@@ -180,7 +212,13 @@ public class UserServiceImpl implements UserService {
         }
         return pro;
     }
-
+    /**
+     * @Description:  如果文件不存在则直接从根路径一路创建
+     * @Param: [path]
+     * @return: void
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     public void createFolders(String path) {
         File file = new File(path);
         if (!file.exists()) {

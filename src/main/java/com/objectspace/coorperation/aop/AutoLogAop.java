@@ -1,8 +1,7 @@
 package com.objectspace.coorperation.aop;
 
 
-import javax.servlet.http.HttpServletRequest;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -15,11 +14,11 @@ import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import javax.servlet.http.HttpServletRequest;
 
 /** 
 * @Description: 这是一个自动打印日志的类，基于Spring AOP技术，对Controller层的所有控制器进行日志打印
-* @Author: Object
+* @Author: NoCortY
 * @Date: 2019/9/30 
 */
 @Component
@@ -67,18 +66,13 @@ public class AutoLogAop {
         return object;
     }
     /**
-     * 抛出异常自动打印日志
-     * @param joinPoint
-     * @param e
-     */
-    @AfterThrowing(value="execution(* com.objectspace.coorperation.web.*.*.*(..))",throwing="e")
-    /**
-     * @Description:  该方法为异常后通知，抛出异常自动打印日志
+     * @Description:  该方法为异常后通知，如果切入点抛出异常则自动打印日志
      * @Param: [joinPoint, e] 切入点，异常对象
      * @return: void
      * @Author: Object
      * @Date: 2019/10/1
      */
+    @AfterThrowing(value="execution(* com.objectspace.coorperation.web.*.*.*(..))",throwing="e")
     public void afterThrowingLog(JoinPoint joinPoint,Exception e) {
         logger.error("===================================================================================");
         logger.error("异常所在类:"+joinPoint.getTarget().getClass().getName());

@@ -1,5 +1,10 @@
 package com.objectspace.coorperation.enums;
 
+/**
+* @Description: 用户状态枚举
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 public enum UserStateEnum {
     REGISTERSUCCESS("1001","注册成功"),
     LOGINSUCCESS("1002","登录成功"),
@@ -13,7 +18,6 @@ public enum UserStateEnum {
     USERPHONEREPEAT("-1007","手机号重复"),
     USERISBINDED("-1008","用户已被封禁"),
     SYSTEMERROR("-1010","系统错误");
-
     private String state;
     private String stateInfo;
     private UserStateEnum(String state,String stateInfo) {

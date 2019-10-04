@@ -2,12 +2,19 @@ package com.objectspace.coorperation.util;
 
 import java.io.*;
 
+/**
+* @Description: 序列化工具类,必须实现了Serializable接口的对象才可以进行序列化
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 public class SerializeUtil {
 
     /**
-     * 序列化对象
-     * @param obj
-     * @return
+     * @Description:  序列化对象
+     * @Param: [obj]
+     * @return: byte[]
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public byte[] serialize(Object obj){
         ObjectOutputStream oos = null;
@@ -26,10 +33,13 @@ public class SerializeUtil {
         return null;
     }
 
+
     /**
-     * 反序列化对象
-     * @param byteArray
-     * @return
+     * @Description:  反序列化对象
+     * @Param: [byteArray]
+     * @return: java.lang.Object
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     public Object unSerialize(byte[] byteArray){
         ByteArrayInputStream bais = null;

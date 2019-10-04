@@ -4,9 +4,9 @@ import com.objectspace.coorperation.dao.ShiroDao;
 import com.objectspace.coorperation.entity.UrlFilter;
 import com.objectspace.coorperation.shiro.DatabaseRealm;
 import com.objectspace.coorperation.shiro.URLPathMatchingFilter;
-import com.objectspace.coorperation.util.RedisUtil;
 import com.objectspace.coorperation.util.SpringUtil;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
+import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.session.mgt.ExecutorServiceSessionValidationScheduler;
 import org.apache.shiro.session.mgt.SessionManager;
 import org.apache.shiro.session.mgt.ValidatingSessionManager;
@@ -21,7 +21,6 @@ import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
 import org.springframework.beans.factory.config.MethodInvokingFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.apache.shiro.mgt.SecurityManager;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.Lazy;
 
@@ -31,18 +30,20 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Shiro的配置类
- * @author Object
- *
- */
+* @Description: Shiro框架配置类
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 @Configuration
 public class ShiroConfig {
-    /**
-     * 配置shiro的过滤器工厂类
-     * @param securityManager
-     * @return
-     */
 
+    /**
+     * @Description: 配置Shiro的过滤器工厂，包含url默认过滤器和安全管理器
+     * @Param: [securityManager, filterChainDefinitionMap]
+     * @return: org.apache.shiro.spring.web.ShiroFilterFactoryBean
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     @Bean(name="shiroFilter")
     public ShiroFilterFactoryBean shiroFilterFactoryBean(SecurityManager securityManager,LinkedHashMap<String,String> filterChainDefinitionMap) {
         //配置shiro的过滤器工厂类
@@ -81,42 +82,52 @@ public class ShiroConfig {
         return shiroFilterFactoryBean;
     }
 
-    /**
-     * 配置退出过滤器
-     * @return
-     */
-    public LogoutFilter logoutFilter() {
-        LogoutFilter logoutFilter = new LogoutFilter();
-        logoutFilter.setRedirectUrl("/index");
-        return logoutFilter;
-    }
     /**为logoutFilter创建注册bean(将该过滤器交由shiro管理)
-     *
+     * 2019.08.26脱离SpringBoot进行独立配置
      * SpringBoot文档:任何Servlet或Filter bean都将自动注册到servlet容器中。
      * 要禁用特定Filter或Servlet bean的注册，请为其创建注册bean并将其标记为禁用。
      * @param logoutFilter
      * @return
      */
     /**
-     * 路径匹配过滤器 所有需要授权的请求都将被过滤
-     * @return
+     * @Description: 退出登录的拦截器
+     * @Param: []
+     * @return: org.apache.shiro.web.filter.authc.LogoutFilter
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
+    public LogoutFilter logoutFilter() {
+        LogoutFilter logoutFilter = new LogoutFilter();
+        logoutFilter.setRedirectUrl("/index");
+        return logoutFilter;
+    }
     /*开启注释会产生循环重定向问题
      * 症结大概存在于SpringBoot和Shiro会为该拦截器都加载到自己的容器中
      * 导致有些页面先走anno拦截器再走该自定义拦截器
      * 而该拦截器内部逻辑是未登录自动跳转到登陆界面
      * 于是每次在访问login页面时都会产生循环重定向问题
-     *
+     *@Bean(name="urlPathMatchingFilter")
      * 解决方案：配置时直接new而不使用 @Bean方式配置。*/
-    //@Bean(name="urlPathMatchingFilter")
+
+    /**
+     * @Description: 自定义url拦截器Bean，只要不存在于FilterChainDefinitionMap中value为anon的url，都需要到这个拦截器进行权限验证
+     * @Param: []
+     * @return: com.objectspace.coorperation.shiro.URLPathMatchingFilter
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     public URLPathMatchingFilter URLPathMatchingFilter() {
         URLPathMatchingFilter urlPathMatchingFilter = new URLPathMatchingFilter();
         return urlPathMatchingFilter;
     }
 
+
     /**
-     * 配置会话ID生成器
-     * @return
+     * @Description:会话ID生成器
+     * @Param: []
+     * @return: org.apache.shiro.session.mgt.eis.JavaUuidSessionIdGenerator
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     @Bean(name="sessionIdGenerator")
     public JavaUuidSessionIdGenerator javaUuidSessionIdGenerator() {
@@ -124,8 +135,11 @@ public class ShiroConfig {
         return javaUuidSessionIdGenerator;
     }
     /**
-     * 会话Cookie模板 关闭浏览器立即失效
-     * @return
+     * @Description:会话Cookie模板 关闭浏览器立即失效
+     * @Param: []
+     * @return: org.apache.shiro.web.servlet.SimpleCookie
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     @Bean(name="sessionIdCookie")
     public SimpleCookie simpleCookie() {
@@ -136,9 +150,11 @@ public class ShiroConfig {
         return simpleCookie;
     }
     /**
-     * 配置会话DAO
-     * @param sessionIdGenerator
-     * @return
+     * @Description:  会话DAO
+     * @Param: [sessionIdGenerator]
+     * @return: org.apache.shiro.session.mgt.eis.EnterpriseCacheSessionDAO
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     @Bean(name="sessionDAO")
     public EnterpriseCacheSessionDAO enterpriseCacheSessionDAO(JavaUuidSessionIdGenerator sessionIdGenerator) {
@@ -147,9 +163,11 @@ public class ShiroConfig {
         return enterpriseCacheSessionDAO;
     }
     /**
-     * 会话验证调度器，每30分钟执行一次验证 ，设定会话超时及保存
-     * @param sessionManager
-     * @return
+     * @Description:  会话验证调度器，每30分钟执行一次验证 ，设定会话超时及保存
+     * @Param: [sessionManager]
+     * @return: org.apache.shiro.session.mgt.ExecutorServiceSessionValidationScheduler
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     @Bean(name="sessionValidateionScheduler")
     public ExecutorServiceSessionValidationScheduler executorServiceSessionValidationScheduler(SessionManager sessionManager) {
@@ -159,12 +177,11 @@ public class ShiroConfig {
         return executorServiceSessionValidationScheduler;
     }
     /**
-     * 会话管理器
-     * 参数必须配置懒加载，否则判定为循环依赖
-     * @param sessionValidationScheduler
-     * @param sessionDAO
-     * @param sessionIdCookie
-     * @return
+     * @Description: 会话管理器 参数必须配置懒加载，否则判定为循环依赖
+     * @Param: [sessionDAO, sessionIdCookie, sessionValidationScheduler]
+     * @return: org.apache.shiro.web.session.mgt.DefaultWebSessionManager
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     @Bean(name="sessionManager")
     public DefaultWebSessionManager defaultWebSessionManager(EnterpriseCacheSessionDAO sessionDAO,SimpleCookie sessionIdCookie,@Lazy ExecutorServiceSessionValidationScheduler sessionValidationScheduler) {
@@ -180,8 +197,11 @@ public class ShiroConfig {
         return defaultWebSessionManager;
     }
     /**
-     * 安全管理器
-     * @return
+     * @Description:  安全管理器
+     * @Param: [databaseRealm, sessionManager]
+     * @return: org.apache.shiro.mgt.SecurityManager
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     @Bean(name="securityManager")
     public SecurityManager securityManager(DatabaseRealm databaseRealm, DefaultWebSessionManager sessionManager) {
@@ -203,8 +223,11 @@ public class ShiroConfig {
         return methodInvokingFactoryBean;
     }
     /**
-     * 密码匹配器
-     * @return
+     * @Description: 密码匹配器
+     * @Param: []
+     * @return: org.apache.shiro.authc.credential.HashedCredentialsMatcher
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     @Bean(name="credentialsMatcher")
     public HashedCredentialsMatcher credentialsMatcher() {
@@ -215,9 +238,11 @@ public class ShiroConfig {
         return hashedCredentialsMatcher;
     }
     /**
-     * 授权/认证器
-     * @param credentialsMatcher
-     * @return
+     * @Description:  授权/认证器
+     * @Param: [credentialsMatcher]
+     * @return: com.objectspace.coorperation.shiro.DatabaseRealm
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     @Bean("databaseRealm")
     public DatabaseRealm databaseRealm(HashedCredentialsMatcher credentialsMatcher) {
@@ -226,14 +251,24 @@ public class ShiroConfig {
         return databaseRealm;
     }
     /**
-     * 保证实现了Shiro内部lifecycle函数的bean执行
-     * @return
+     * @Description: 保证实现了Shiro内部lifecycle函数的bean执行
+     * @Param: []
+     * @return: org.apache.shiro.spring.LifecycleBeanPostProcessor
+     * @Author: NoCortY
+     * @Date: 2019/10/4
      */
     @Bean("lifecycleBeanPostProcessor")
     public LifecycleBeanPostProcessor lifecycleBeanPostProcessor() {
         LifecycleBeanPostProcessor lifecycleBeanPostProcessor = new LifecycleBeanPostProcessor();
         return lifecycleBeanPostProcessor;
     }
+    /**
+     * @Description:  配置FilterChainDefinitionMap 服务器启动时从服务器读取url对应的过滤器
+     * @Param: []
+     * @return: java.util.LinkedHashMap<java.lang.String,java.lang.String>
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     @Bean("filterChainDefinitionMap")
     @DependsOn({"shiroDao","springUtil"})
     LinkedHashMap<String,String> filterChainDefinitionMap(){

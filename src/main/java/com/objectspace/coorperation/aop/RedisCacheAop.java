@@ -73,16 +73,23 @@ public class RedisCacheAop {
         }
         return object;
     }
+    /**
+     * @Description:若方法为更新操作，则直接删除缓存相应的数据
+     * @Param: [joinPoint, redisKey]
+     * @return: java.lang.Object
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     private Object updateObject(ProceedingJoinPoint joinPoint, String redisKey) {
         //更新缓存，删除即可
         Object object = null;
         try {
             redisUtil.del(redisKey);
             object = joinPoint.proceed();
-            System.out.println("更新数据，删除Redis缓存");
+            logger.info("更新数据，删除Redis缓存");
         } catch (Throwable e) {
-            System.out.println("删除缓存时出现异常");
-            System.out.println(e.getMessage());
+            logger.error("删除缓存时出现异常");
+            logger.error("异常信息:"+e.getMessage());
         }
         return object;
 
@@ -106,16 +113,13 @@ public class RedisCacheAop {
                 //将查询出的数据序列化放入缓存
                 String objectJsonData = objectMapper.writeValueAsString(object);
                 redisUtil.set(redisKey, objectJsonData);
-                System.out.println("该操作通过查询SQL数据库获取");
-                System.out.println("以将结果存入缓存");
             }else {
                 //表示缓存中有数据,查询缓存
                 object = objectMapper.readValue(result, targetClass);
-                System.out.println("该操作通过命中Redis直接获取");
             }
         }catch(Throwable e) {
-            System.out.println("Redis查询操作出现错误");
-            System.out.println(e.getMessage());
+            logger.error("Redis查询操作出现异常");
+            logger.error("异常信息:"+e.getMessage());
         }
         return object;
     }

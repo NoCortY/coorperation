@@ -14,7 +14,9 @@ public class User implements Serializable {
     private String userName;
     private String password;
     private String userGender;
+    //用户状态：true正常，false被封禁
     private Boolean userStatus;
+    //用户类型
     private String userType;
     private String userPhoneNumber;
     private String userEmail;

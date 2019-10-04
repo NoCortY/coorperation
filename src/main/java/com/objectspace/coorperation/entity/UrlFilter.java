@@ -2,6 +2,11 @@ package com.objectspace.coorperation.entity;
 
 import java.io.Serializable;
 
+/** 
+* @Description: FilterChainDefinitionMap的数据库配置对象类
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 public class UrlFilter implements Serializable {
 
     private static final long serialVersionUID = 1976428971042800899L;

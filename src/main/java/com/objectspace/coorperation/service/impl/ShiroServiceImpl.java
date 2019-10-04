@@ -11,13 +11,25 @@ import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+/**
+* @Description: Shiro框架业务逻辑实现类
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 @Service
 public class ShiroServiceImpl implements ShiroService {
     @Autowired
     ShiroDao shiroDao;
     Logger logger = LoggerFactory.getLogger(ShiroServiceImpl.class);
+    /**
+     * @Description: 使用用户名获取该用户下的所有权限
+     * @Param: [user]
+     * @return: java.util.Set<com.objectspace.coorperation.entity.Permission>
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     @Override
-    public Set<Permission> getPermissionByUserAccount(User user) {
+    public Set<Permission> getPermissionByUserName(User user) {
         if(user==null || "".equals(user.getUserId()))
             return null;
         Set<Permission> permissions = shiroDao.queryPermissionByUserName(user);
@@ -34,8 +46,15 @@ public class ShiroServiceImpl implements ShiroService {
         }
         return false;
     }*/
+    /**
+     * @Description: 通过用户名获取用户信息
+     * @Param: [user]
+     * @return: com.objectspace.coorperation.entity.User
+     * @Author: NoCortY
+     * @Date: 2019/10/4
+     */
     @Override
-    public User getUserByUserAccount(User user) {
+    public User getUserByUserName(User user) {
         // TODO Auto-generated method stub
         if(user == null || "".equals(user.getUserName())){
             logger.debug("权限验证：用户账户不能为空");

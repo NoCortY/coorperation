@@ -3,6 +3,11 @@ package com.objectspace.coorperation.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+/** 
+* @Description: 角色实体类
+* @Author: NoCortY
+* @Date: 2019/10/4
+*/
 class Role implements Serializable {
 
     private static final long serialVersionUID = 1443597119445907446L;
