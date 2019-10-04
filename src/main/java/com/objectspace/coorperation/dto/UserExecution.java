@@ -6,7 +6,7 @@ import com.objectspace.coorperation.enums.UserStateEnum;
 import java.util.List;
 
 /**
-* @Description: DTO类，用于Service层和Web层之间数据的交互
+* @Description: 用户DTO类，用于Service层和Web层之间数据的交互
 * @Author: NoCortY
 * @Date: 2019/10/4
 */

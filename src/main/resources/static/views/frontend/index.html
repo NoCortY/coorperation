@@ -1,0 +1,533 @@
+<!DOCTYPE html> <html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>首页-万物</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/common/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/common/favicon.png">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/common/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common/line-awesome.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common/ionicons.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="../assets/css/common/weather-icons.min.css" rel="stylesheet">
+    <!--Morris Chart -->
+    <link rel="stylesheet" href="../assets/js/index/morris-chart/morris.css">
+    <!-- owl_carousel -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/common/owl.carousel.min.css">
+
+    <link href="../assets/css/common/style.css" rel="stylesheet">
+    <link href="../assets/css/common/responsive.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="loader_wrpper">
+    <div class="loader_style"></div>
+</div>
+
+<div class="wrapper">
+    <!-- header -->
+    <header class="main-header">
+        <div class="container_header">
+            <div class="logo d-flex align-items-center">
+                <a href="#"> <strong class="logo_icon"> <img src="../assets/images/common/small-logo.png" alt=""> </strong> <span class="logo-default">
+							<img src="../assets/images/common/logo2.png" alt=""> </span> </a>
+                <div class="icon_menu full_menu">
+                    <a href="#!" class="menu-toggler sidebar-toggler"></a>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+    <!-- header_End -->
+    <!-- Content_right -->
+    <div class="container_full">
+
+        <div class="side_bar dark_blue side_bg_img scroll_auto">
+            <div class="user-panel">
+                <div class="user_image">
+                    <!--头像-->
+                    <img src="../assets/images/common/about-1.jpg" class="img-circle mCS_img_loaded" alt="User Image">
+                </div>
+                <div class="info">
+                    <p>
+                        Alexander Pierce
+                    </p>
+                    <a href="#"> <i class="fa fa-circle text-success"></i> Online</a>
+                </div>
+            </div>
+            <ul id="dc_accordion" class="sidebar-menu tree">
+                <li class="menu_sub">
+                    <a href="index.html"> <i class="fa fa-home"></i> <span>Index</span></a>
+
+                </li>
+                <li class="menu_sub">
+                    <a href="#"> <i class="fa fa-file text-aqua"></i> <span>Extra Pages</span> <span class="icon-arrow-down styleicon"></span> </a>
+                    <ul class="down_menu">
+                        <li>
+                            <a href="course-list.html">Course List</a>
+                        </li>
+                        <li>
+                            <a href="courses-details.html">Courses Details</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact us</a>
+                        </li>
+                        <li>
+                            <a href="profile.html">User Profile</a>
+                        </li>
+                        <li>
+                            <a href="page-login.html">Sign In</a>
+                        </li>
+                        <li>
+                            <a href="page-register.html">Sign Up</a>
+                        </li>
+                        <li>
+                            <a href="invoice.html">Invoice</a>
+                        </li>
+                        <li>
+                            <a href="page_404.html">404</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li class="menu_sub">
+                    <a href="#"> <i class="fa fa-newspaper-o"></i> <span>UI Elements </span> <span class="badge badge-pill badge-danger float-right">New</span>  </a>
+                    <ul class="down_menu">
+                        <li>
+                            <a href="alert.html">Alerts</a>
+                        </li>
+                        <li>
+                            <a href="buttons.html">Buttons</a>
+                        </li>
+                        <li>
+                            <a href="cards.html">Cards</a>
+                        </li>
+                        <li>
+                            <a href="dropdown.html">Dropdowns</a>
+                        </li>
+                        <li>
+                            <a href="grid.html">Grids</a>
+                        </li>
+                        <li>
+                            <a href="lists.html">Lists</a>
+                        </li>
+                        <li>
+                            <a href="modal.html">Modals</a>
+                        </li>
+                        <li>
+                            <a href="progress.html"> Progress</a>
+                        </li>
+                        <li>
+                            <a href="popover-tooltips.html">Popover &amp; Tooltips</a>
+                        </li>
+                        <li>
+                            <a href="typography.html">Typography</a>
+                        </li>
+                        <li>
+                            <a href="tabs.html">Tabs</a>
+                        </li>
+                        <li>
+                            <a href="tree.html">Tree</a>
+                        </li>
+                        <li>
+                            <a href="toastr.html">Toastr Notification</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu_sub">
+                    <a href="#"> <i class="fa fa-pie-chart"></i> <span>Portlets</span> <span class="icon-arrow-down styleicon"></span> </a>
+                    <ul class="down_menu">
+                        <li>
+                            <a href="portlet-base.html">Portlets Base</a>
+                        </li>
+                        <li>
+                            <a href="portlet-advanced.html">Portlets Advanced</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu_sub">
+                    <a href="#"> <i class="fa fa-laptop"></i> <span>Icons</span> <span class="icon-arrow-down styleicon"></span> </a>
+                    <ul class="down_menu">
+                        <li>
+                            <a href="icon-font-awesome.html">Fontawesome Icons</a>
+                        </li>
+                        <li>
+                            <a href="icon-simple-line.html">Simple line Icons</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu_sub">
+                    <a href="#"> <i class="fa fa-table"></i> <span>Widgets </span> <span class="badge badge-pill badge-danger float-right">2</span> </a>
+                    <ul class="down_menu">
+                        <li>
+                            <a href="widgets-base.html">Widgets Base</a>
+                        </li>
+                        <li>
+                            <a href="widgets-chart.html">Widgets Chart</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu_sub">
+                    <a href="#"> <i class="fa fa-calendar"></i> <span>Calendar </span> <span class="icon-arrow-down styleicon"></span> </a>
+                    <ul class="down_menu">
+                        <li>
+                            <a href="calendar-basic.html">Basic Calendar</a>
+                        </li>
+                        <li>
+                            <a href="calendar-external-events.html">External Events Calendar</a>
+                        </li>
+                        <li>
+                            <a href="calendar-list.html">List Calendar</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu_sub">
+                    <a href="#"> <i class="fa fa-wpforms"></i> <span>Forms</span> <span class="badge badge-pill badge-success float-right">8</span> </a>
+                    <ul class="down_menu">
+                        <li class="menu_sub">
+                            <a href="#">Form Control <span class="icon-arrow-down styleicon"></span> </a>
+                            <ul class="down_menu lavel3">
+                                <li>
+                                    <a href="form-basic-input.html">Basic Input</a>
+                                </li>
+                                <li>
+                                    <a href="form-input-group.html">Input Group</a>
+                                </li>
+                                <li>
+                                    <a href="form-checkbox-radio.html">Checkbox & Radio</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu_sub">
+                            <a href="#">Form Validation <span class="icon-arrow-down styleicon"></span> </a>
+                            <ul class="down_menu lavel3">
+                                <li>
+                                    <a href="form-validation-basic.html">Basic Validation</a>
+                                </li>
+                                <li>
+                                    <a href="form-validation-jquery.html">jQuery Validation</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu_sub">
+                    <a href="#"> <i class="icon-grid"></i> <span>Data Tables</span> <span class="icon-arrow-down styleicon"></span> </a>
+                    <ul class="down_menu">
+                        <li>
+                            <a href="table-basic.html">Basic Table</a>
+                        </li>
+                        <li class="menu_sub">
+                            <a href="#">Data Tables <span class="icon-arrow-down styleicon"></span> </a>
+                            <ul class="down_menu">
+                                <li>
+                                    <a href="table-datatable.html">Basic Datatable</a>
+                                </li>
+                                <li>
+                                    <a href="table-datatable-show-hide.html">Toggle Col Datatable</a>
+                                </li>
+                                <li>
+                                    <a href="table-datatable-ajax.html">Ajax Datatable</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu_sub">
+                    <a href="#"> <i class="fa fa-bar-chart text-aqua"></i> <span>Charts</span> <span class="badge badge-pill badge-info float-right">New</span> </a>
+                    <ul class="down_menu">
+                        <li>
+                            <a href="flot-chart.html">Flot Charts</a>
+                        </li>
+                        <li>
+                            <a href="echart.html">eCharts</a>
+                        </li>
+                        <li>
+                            <a href="morris-chart.html">Morris Charts</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+            </ul>
+
+        </div>
+
+        <div class="content_wrapper">
+
+            <div class="banner-img d-flex align-items-center">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="search_box">
+                                <form class="header-subscribe-form">
+                                    <div class="header-form-subscribe">
+                                        <input type="search" class="form-contorl" placeholder="搜索">
+                                        <button class="header-btn icon-magnifier"></button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="course_listhome mt-30">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="heading_view">
+                                <h2>分类</h2>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap plr">
+                            <div class="fl-col">
+                                <div class="course_box">
+                                    <a href="course-list.html">
+                                        <div class="icon_relative">
+                                            <i class="la la-cubes" aria-hidden="true"></i>
+                                            <span>游戏代练</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="fl-col">
+                                <div class="course_box">
+                                    <a href="course-list.html">
+                                        <div class="icon_relative">
+                                            <i class="la la-bar-chart" aria-hidden="true"></i>
+                                            <span>Business</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="fl-col">
+                                <div class="course_box">
+                                    <a href="course-list.html">
+                                        <div class="icon_relative">
+                                            <i class="la la-flask" aria-hidden="true"></i>
+                                            <span>Chemistry</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <div class="fl-col">
+                                <div class="course_box">
+                                    <a href="course-list.html">
+                                        <div class="icon_relative">
+                                            <i class="la la-desktop" aria-hidden="true"></i>
+                                            <span>Computer Sc.</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <div class="fl-col">
+                                <div class="course_box">
+                                    <a href="course-list.html">
+                                        <div class="icon_relative">
+                                            <i class="la la-diamond" aria-hidden="true"></i>
+                                            <span>Design</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <div class="fl-col">
+                                <div class="course_box">
+                                    <a href="course-list.html">
+                                        <div class="icon_relative">
+                                            <i class="la la-sort-amount-asc" aria-hidden="true"></i>
+                                            <span>Economics</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <div class="fl-col">
+                                <div class="course_box">
+                                    <a href="course-list.html">
+                                        <div class="icon_relative">
+                                            <i class="la la-institution" aria-hidden="true"></i>
+                                            <span>History</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <div class="fl-col">
+                                <div class="course_box">
+                                    <a href="course-list.html">
+                                        <div class="icon_relative">
+                                            <i class="la la-cube" aria-hidden="true"></i>
+                                            <span>Marketing</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-12 mb-3 mt-30">
+                            <div class="heading_view">
+                                <h2>popular course</h2>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="mb-4">
+
+                    <div class="popular_couse owl-carousel">
+
+                        <div class="items_test">
+                            <a href="courses-details.html">
+                                <div class="say_client">
+                                    <img src="../assets/images/index/course_de1.jpg" alt="" />
+                                    <span class="price_top bg_red">$ 48</span>
+                                </div>
+                                <div class="saying_box">
+                                    <h3>Development</h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="items_test">
+                            <a href="courses-details.html">
+                                <div class="say_client">
+                                    <img src="../assets/images/index/course_de2.jpg" alt="" />
+                                    <span class="price_top bg_red">$ 32</span>
+                                </div>
+                                <div class="saying_box">
+                                    <h3>Web Design</h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="items_test">
+                            <a href="courses-details.html">
+                                <div class="say_client">
+                                    <img src="../assets/images/index/course_de3.jpg" alt="" />
+                                    <span class="price_top bg_green">Free</span>
+                                </div>
+                                <div class="saying_box">
+                                    <h3>SEO</h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="items_test">
+                            <a href="courses-details.html">
+                                <div class="say_client">
+                                    <img src="../assets/images/index/course_de4.jpg" alt="" />
+                                    <span class="price_top bg_red">$ 72</span>
+                                </div>
+                                <div class="saying_box">
+                                    <h3>Marketing</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="items_test">
+                            <a href="courses-details.html">
+                                <div class="say_client">
+                                    <img src="../assets/images/index/course_de5.jpg" alt="" />
+                                    <span class="price_top bg_green">Free</span>
+                                </div>
+                                <div class="saying_box">
+                                    <h3>Branding</h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="items_test">
+                            <a href="courses-details.html">
+                                <div class="say_client">
+                                    <img src="../assets/images/index/course_de6.jpg" alt="" />
+                                    <span class="price_top bg_red">$ 64</span>
+                                </div>
+                                <div class="saying_box">
+                                    <h3>Digital marketing</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <!-- Content_right_End -->
+    <!-- Footer -->
+    <footer class="footer ptb-20">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="copy_right">
+                    <p>
+                        2019 © Copyright by
+                        <a href="http://coorperation.objectspace.cn/">万物</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- Footer_End -->
+</div>
+<script type="text/javascript" src="../assets/js/common/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/js/common/popper.min.js"></script>
+<script type="text/javascript" src="../assets/js/common/bootstrap.min.js"></script>
+<script type="text/javascript" src="../assets/js/common/owl.carousel.js"></script>
+<script type="text/javascript" src="../assets/js/common/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+
+<script type="text/javascript" src="../assets/js/common/jquery.dcjqaccordion.2.7.js"></script>
+<script src="../assets/js/common/custom.js" type="text/javascript"></script>
+
+</body>
+
+</html>

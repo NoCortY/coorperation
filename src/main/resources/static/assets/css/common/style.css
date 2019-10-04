@@ -4536,7 +4536,7 @@ box-shadow: -13px 20px 0 rgba(0, 82, 236, 0.2), 13px 20px 0 rgba(0, 82, 236, 0.2
 
 /* HOME_PAGE */
 .banner-img {
-	background-image: url(../../images/bg1.jpg);
+	background-image: url("../../images/common/bg1.jpg");
 	width: 100%;
 	min-height: 150px;
 	background-size: cover;
