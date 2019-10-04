@@ -1,7 +1,11 @@
 package com.objectspace.coorperation.config;
 
+import com.objectspace.coorperation.dao.ShiroDao;
+import com.objectspace.coorperation.entity.UrlFilter;
 import com.objectspace.coorperation.shiro.DatabaseRealm;
 import com.objectspace.coorperation.shiro.URLPathMatchingFilter;
+import com.objectspace.coorperation.util.RedisUtil;
+import com.objectspace.coorperation.util.SpringUtil;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.session.mgt.ExecutorServiceSessionValidationScheduler;
 import org.apache.shiro.session.mgt.SessionManager;
@@ -18,10 +22,12 @@ import org.springframework.beans.factory.config.MethodInvokingFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.apache.shiro.mgt.SecurityManager;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.Lazy;
 
 import javax.servlet.Filter;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -36,8 +42,9 @@ public class ShiroConfig {
      * @param securityManager
      * @return
      */
+
     @Bean(name="shiroFilter")
-    public ShiroFilterFactoryBean shiroFilterFactoryBean(SecurityManager securityManager) {
+    public ShiroFilterFactoryBean shiroFilterFactoryBean(SecurityManager securityManager,LinkedHashMap<String,String> filterChainDefinitionMap) {
         //配置shiro的过滤器工厂类
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         //设置过滤器的安全管理器
@@ -47,7 +54,10 @@ public class ShiroConfig {
         //如果访问到未授权url，跳转到403界面
         shiroFilterFactoryBean.setUnauthorizedUrl("/403");
         //设置免认证url
-        LinkedHashMap<String,String> filterChainDefinitionMap = new LinkedHashMap<String,String>();
+        /*
+        2019.10.4 改为在数据库中进行配置
+
+        LinkedHashMap<String,String> filterChainDefinitionMap = new LinkedHashMap<String, String>();
         filterChainDefinitionMap.put("/frontend/index", "anon");
         filterChainDefinitionMap.put("/frontend/register","anon");
         filterChainDefinitionMap.put("/usercontroller/registeruser", "anon");
@@ -55,12 +65,10 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/captchacontroller/getcaptcha","anon");
         filterChainDefinitionMap.put("/captchacontroller/iscaptchaexist","anon");
         filterChainDefinitionMap.put("/frontend/login", "anon");
-        filterChainDefinitionMap.put("/unauthorized", "anon");
-        filterChainDefinitionMap.put("/static/**", "anon");
-        filterChainDefinitionMap.put("../static/**", "anon");
+        filterChainDefinitionMap.put("/views/unauthorized", "anon");
         filterChainDefinitionMap.put("/views/**","anon");
         filterChainDefinitionMap.put("/captcha/**","anon");
-        filterChainDefinitionMap.put("/assets/**","anon");
+        filterChainDefinitionMap.put("/assets/**","anon");*/
         //配置退出
         filterChainDefinitionMap.put("/logout", "logout");
         //除以上以外所有url都必须通过认证才可以访问
@@ -225,5 +233,16 @@ public class ShiroConfig {
     public LifecycleBeanPostProcessor lifecycleBeanPostProcessor() {
         LifecycleBeanPostProcessor lifecycleBeanPostProcessor = new LifecycleBeanPostProcessor();
         return lifecycleBeanPostProcessor;
+    }
+    @Bean("filterChainDefinitionMap")
+    @DependsOn({"shiroDao","springUtil"})
+    LinkedHashMap<String,String> filterChainDefinitionMap(){
+        ShiroDao shiroDao = SpringUtil.getBean(ShiroDao.class);
+        List<UrlFilter> urlFilterList = shiroDao.listUrlFilter();
+        LinkedHashMap<String,String> filterChainDefinitionMap = new LinkedHashMap<String,String>();
+        for(UrlFilter urlFilter:urlFilterList){
+            filterChainDefinitionMap.put(urlFilter.getUrl(),urlFilter.getFilterName());
+        }
+        return filterChainDefinitionMap;
     }
 }

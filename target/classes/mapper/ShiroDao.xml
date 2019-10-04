@@ -46,6 +46,10 @@
         <result property="profileImg" column="profile_img"/>
         <result property="salt" column="salt"/>
     </resultMap>
+    <resultMap id="UrlFilter" type="com.objectspace.coorperation.entity.UrlFilter">
+        <id property="url" column="url"/>
+        <result property="filterName" column="filter_name"/>
+    </resultMap>
     <select id="queryPermissionByUserName" parameterType="com.objectspace.coorperation.entity.User" resultMap="PermissionMap">
         SELECT
         *
@@ -68,5 +72,9 @@
         <where>
             user_name = #{userName}
         </where>
+    </select>
+    <select id="listUrlFilter" resultMap="UrlFilter">
+        SELECT *
+        FROM tb_urlfilter
     </select>
 </mapper>

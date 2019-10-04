@@ -1,5 +1,5 @@
 $(function(){
-    var loginRequestUrl = "/usercontroller/login";w
+    var loginRequestUrl = "/usercontroller/login";
     var rightFlag = true;
     $("#login").bind("click",function () {
         var username = $("#username").val();
@@ -19,7 +19,7 @@ $(function(){
             userInfo.password = password;
             var formData = new FormData();
             formData.append("userInfo",JSON.stringify(userInfo));
-            formData.append("captcha",JSON.stringify(captcha));
+            formData.append("captcha",captcha);
             $.ajax({
                 url:loginRequestUrl,
                 type:'POST',
@@ -33,6 +33,7 @@ $(function(){
                         window.location.href="/frontend/index";
                     }else{
                         alert(data.message);
+                        $("#captchaImg").click();
                     }
                 }
             });
