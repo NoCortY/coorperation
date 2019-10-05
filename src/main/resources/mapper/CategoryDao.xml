@@ -18,6 +18,9 @@
         SELECT *
         FROM
         tb_category
+        <where>
+            parent_id = 0
+        </where>
     </select>
 
 </mapper>

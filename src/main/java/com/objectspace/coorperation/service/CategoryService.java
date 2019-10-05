@@ -8,5 +8,12 @@ import com.objectspace.coorperation.dto.CategoryExecution;
 * @Date: 2019/10/4
 */
 public interface CategoryService {
+    /**
+     * @Description: 获取最高级分类列表
+     * @Param:
+     * @return:
+     * @Author: NoCortY
+     * @Date: 2019/10/5
+     */
     public CategoryExecution getCategoryList();
 }

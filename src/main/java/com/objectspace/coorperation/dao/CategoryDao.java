@@ -12,7 +12,7 @@ import java.util.List;
 @Mapper
 public interface CategoryDao {
     /**
-     * @Description: 查询分类列表
+     * @Description: 查询最高级分类列表
      * @Param: []
      * @return: List
      * @Author: NoCortY

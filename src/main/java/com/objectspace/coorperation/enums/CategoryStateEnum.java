@@ -10,7 +10,8 @@ public enum CategoryStateEnum {
     ADDCATEGORY_SUCCESS("1003","新增分类成功"),
     DELCATEGORY_SUCCESS("1005","删除分类成功"),
     MODIFYCATEGORY_SUCCESS("1006","修改分类成功"),
-    CATEGORY_ISNULL("-1001","分类为空");
+    CATEGORY_ISNULL("-1001","分类为空"),
+    SYSTEM_ERROR("-1010","系统内部异常，请稍后再试");
     private String state;
     private String stateInfo;
     private CategoryStateEnum(String state,String stateInfo){
