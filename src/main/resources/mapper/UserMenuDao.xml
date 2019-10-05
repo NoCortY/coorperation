@@ -2,27 +2,27 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.objectspace.coorperation.dao.CategoryDao">
+<mapper namespace="com.objectspace.coorperation.dao.UserMenuDao">
     <!--开启二级缓存-->
     <cache eviction="LRU" type="com.objectspace.coorperation.cache.RedisCache"/>
-    <resultMap id="Category" type="com.objectspace.coorperation.entity.Category">
-        <id property="categoryId" column="category_id"/>
-        <result property="categoryName" column="category_name"/>
-        <result property="categoryIconCode" column="category_icon_code"/>
+    <resultMap type="com.objectspace.coorperation.entity.UserMenu" id="UserMenu">
+        <id property="menuItemId" column="menu_item_id"/>
+        <result property="menuItemName" column="menu_item_name"/>
+        <result property="menuItemIconCode" column="menu_item_icon_code"/>
         <result property="parentId" column="parent_id"/>
+        <result property="isNew" column="is_new"/>
         <result property="priority" column="priority"/>
         <result property="createTime" column="create_time"/>
         <result property="lastModifyTime" column="last_modify_time"/>
     </resultMap>
-    <select id="listCategory" resultMap="Category">
+    <select id="getAllUserMenu" resultMap="UserMenu">
         SELECT *
         FROM
-        tb_category
+        tb_usermenu
         <where>
-            parent_id = 0
+            parent_id=0
         </where>
         ORDER BY
-        priority DESC
+        priority DESC;
     </select>
-
 </mapper>

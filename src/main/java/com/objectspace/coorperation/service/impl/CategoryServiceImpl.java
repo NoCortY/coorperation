@@ -35,6 +35,7 @@ public class CategoryServiceImpl implements CategoryService {
         List<Category> categoryList = null;
         try{
             categoryList = categoryDao.listCategory();
+            logger.info("分类信息："+categoryList);
         }catch (Exception e){
             logger.error("获取分类信息异常");
             logger.error("异常信息："+e.getMessage());

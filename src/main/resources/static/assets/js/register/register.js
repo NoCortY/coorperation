@@ -79,7 +79,7 @@ $(function(){
         //同步ajax，必须同步执行，先验证是否已经发送了验证码。
         $.ajax({
             url:getCaptchaStatusUrl,
-            type:'GET',
+            type:'POST',
             data:{userEmail:email},
             async:false,
             success:function(data){

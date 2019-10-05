@@ -6,6 +6,7 @@ import com.objectspace.coorperation.service.CaptchaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -29,7 +30,7 @@ public class CaptchaController {
      * @Author: NoCortY
      * @Date: 2019/10/4
      */
-    @RequestMapping("/getcaptcha")
+    @RequestMapping(value = "/getcaptcha",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> getCaptcha(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<String,Object>();
@@ -53,7 +54,7 @@ public class CaptchaController {
      * @Author: NoCortY
      * @Date: 2019/10/4
      */
-    @RequestMapping("/iscaptchaexist")
+    @RequestMapping(value = "/iscaptchaexist",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> isCaptchaExist(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<String,Object>();

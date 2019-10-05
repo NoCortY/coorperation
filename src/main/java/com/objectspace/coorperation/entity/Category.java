@@ -1,12 +1,15 @@
 package com.objectspace.coorperation.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 /**
 * @Description: 类别 实体类
 * @Author: NoCortY
 * @Date: 2019/10/4
 */
-public class Category {
+public class Category implements Serializable {
+
+    private static final long serialVersionUID = 3000430683427379313L;
     private Integer categoryId;
     private String categoryName;
     private String categoryIconCode;
