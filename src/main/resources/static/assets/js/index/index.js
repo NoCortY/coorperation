@@ -1,21 +1,36 @@
 $(function(){
     var getCategoryRequestUrl = "/categorycontroller/getallcategory";
+    var getUserMenuRequestUrl = "/usermenucontroller/getusermenulist";
     getCategoryCard();
 
 
+    /**
+     * 获取用户侧边栏菜单
+     */
+    function getUserMenuList(){
+        $.ajax({
+            url:getUserMenuRequestUrl,
+            type:'GET',
+            success:function(data){
+                if(data.successFlag==true){
+                    var htmlStr="";
+                    $.each(data.userMenuList,function(index,item){
+                        htmlStr="";
+                    });
+                }
+            }
 
-
-
-
-
-
-
+        })
+    }
+    /**
+     * 获取分类卡片
+     */
     function getCategoryCard(){
         $.ajax({
             url:getCategoryRequestUrl,
             type:'GET',
             success:function(data){
-                if(data.successFlag){
+                if(data.successFlag==true){
                     var htmlStr = "";
                     $.each(data.categoryList,function(index,item){
                         htmlStr+="<div class='fl-col'>" +
