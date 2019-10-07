@@ -2,6 +2,7 @@ package com.objectspace.coorperation.aop;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.shiro.SecurityUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -47,7 +48,7 @@ public class AutoLogAop {
         RequestAttributes ra = RequestContextHolder.getRequestAttributes();
         ServletRequestAttributes sra = (ServletRequestAttributes)ra;
         HttpServletRequest request = sra.getRequest();
-        String loginInfo = (String) request.getSession().getAttribute("shiroSessionId");
+        String loginInfo = (String) SecurityUtils.getSubject().getPrincipal();
         if(loginInfo == null || "".equals(loginInfo)) {
             userName = "游客";
         }else {

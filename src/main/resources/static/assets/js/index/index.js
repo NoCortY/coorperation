@@ -1,11 +1,21 @@
 $(function(){
     var getCategoryRequestUrl = "/categorycontroller/getallcategory";
     var getUserMenuRequestUrl = "/usermenucontroller/getusermenulist";
+    var userInfo = getCurrentUserInfo();
     getCategoryCard();
     getUserMenuList();
-    getCurrentUserInfo();
+    if(userInfo!=null){
+        initUserInfo();
+    }
 
 
+    /**
+     * 初始化用户侧边栏用户信息
+     */
+    function initUserInfo(){
+        $("#userName").html(userInfo.userName);
+        $("#onlineStatus").html("<i class='fa fa-circle text-success'></i> 在线")
+    }
 
     /**
      * 获取用户侧边栏菜单
