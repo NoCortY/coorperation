@@ -49,11 +49,23 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserExecution getUserByUserName(User user) {
         UserExecution userExecution = null;
-        if (user == null || "".equals(user.getUserName())) {
+        User userInDB = null;
+        if (user == null || "".equals(user.getUserName())||user.getUserName() == null) {
             userExecution = new UserExecution(UserStateEnum.ISUSERNULL);
             return userExecution;
+        }else{
+            try{
+                userInDB = userDao.queryUserByUserName(user);
+            }catch(Exception e){
+                userExecution = new UserExecution(UserStateEnum.SYSTEMERROR);
+                logger.error("查询用户异常 by username");
+                logger.error("异常信息:"+e.getMessage());
+                return userExecution;
+            }
+            userExecution = new UserExecution(UserStateEnum.QUERYUSERINFOSUCCESS,userInDB);
+            logger.info("查询用户信息成功");
+            logger.info("用户信息"+userInDB);
         }
-        userExecution = new UserExecution(UserStateEnum.QUERYUSERINFOSUCCESS,userDao.queryUserByUserName(user));
         return userExecution;
     }
 

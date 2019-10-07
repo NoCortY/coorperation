@@ -97,7 +97,7 @@
     <select id="queryUserByUserName" parameterType="com.objectspace.coorperation.entity.User" resultMap="User">
         SELECT *
         FROM
-        tb_sdzs_user
+        tb_user
         <where>
             user_name = #{userName}
         </where>

@@ -2,6 +2,9 @@ $(function(){
     var getCategoryRequestUrl = "/categorycontroller/getallcategory";
     var getUserMenuRequestUrl = "/usermenucontroller/getusermenulist";
     getCategoryCard();
+    getUserMenuList();
+    getCurrentUserInfo();
+
 
 
     /**
@@ -15,8 +18,12 @@ $(function(){
                 if(data.successFlag==true){
                     var htmlStr="";
                     $.each(data.userMenuList,function(index,item){
-                        htmlStr="";
+                        console.log(item.menuItemName);
+                        htmlStr+="<li class='menu_sub' id='"+item.menuItemHtmlId+"'>" +
+                            "<a href=‘"+item.menuItemUrl+"’> <i class='fa fa-home'></i> <span>"+item.menuItemName+"</span></a>" +
+                            "</li>";
                     });
+                    $("#userMenuList").html(htmlStr);
                 }
             }
 

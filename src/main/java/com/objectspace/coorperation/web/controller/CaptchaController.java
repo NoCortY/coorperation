@@ -40,10 +40,10 @@ public class CaptchaController {
         boolean flag = captchaService.sendCaptcha(captcha);
         if(flag){
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG,true);
-            modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE,"发送成功");
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE,"发送成功");
         }else{
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG,false);
-            modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE,"发送失败");
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE,"发送失败");
         }
         return modelMap;
     }

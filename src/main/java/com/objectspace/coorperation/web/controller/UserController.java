@@ -8,6 +8,7 @@ import com.objectspace.coorperation.dto.UserExecution;
 import com.objectspace.coorperation.entity.User;
 import com.objectspace.coorperation.enums.UserStateEnum;
 import com.objectspace.coorperation.service.UserService;
+import org.apache.shiro.SecurityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,19 +62,19 @@ public class UserController {
             logger.error("前台传递的JSON串语法错误!");
             logger.error(e.getMessage());
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG, false);
-            modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE, "系统错误，请稍后再试");
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE, "系统错误，请稍后再试");
             return modelMap;
         } catch (JsonMappingException e) {
             logger.error("JSON转换对象时映射失败!");
             logger.error(e.getMessage());
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG, false);
-            modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE, "系统错误，请稍后再试");
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE, "系统错误，请稍后再试");
             return modelMap;
         } catch (IOException e) {
             logger.error("User.class读取失败");
             logger.error(e.getMessage());
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG, false);
-            modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE, "系统错误，请稍后再试");
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE, "系统错误，请稍后再试");
             return modelMap;
         }
         if(commonsMultipartResolver.isMultipart(request)) {
@@ -84,11 +85,11 @@ public class UserController {
         userExecution = userService.addUser(user, captchaCode,userProfile);
         if(userExecution.getUserState()== UserStateEnum.REGISTERSUCCESS) {
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG, true);
-            modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE, "注册成功!");
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE,userExecution.getUserState().getStateInfo());
         }else {
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG, false);
             logger.debug(userExecution.getUserState().getStateInfo());
-            modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE, userExecution.getUserState().getStateInfo());
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE, userExecution.getUserState().getStateInfo());
         }
         return modelMap;
     }
@@ -113,28 +114,53 @@ public class UserController {
             logger.error("前台传递的JSON串语法错误!");
             logger.error(e.getMessage());
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG, false);
-            modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE, "系统错误，请稍后再试");
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE, "系统错误，请稍后再试");
             return modelMap;
         } catch (JsonMappingException e) {
             logger.error("JSON转换对象时映射失败!");
             logger.error(e.getMessage());
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG, false);
-            modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE, "系统错误，请稍后再试");
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE, "系统错误，请稍后再试");
             return modelMap;
         } catch (IOException e) {
             logger.error("User.class读取失败");
             logger.error(e.getMessage());
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG, false);
-            modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE, "系统错误，请稍后再试");
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE, "系统错误，请稍后再试");
             return modelMap;
         }
         userExecution = userService.userLogin(user,captcha);
         if(userExecution.getUserState() == UserStateEnum.LOGINSUCCESS) {
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG, true);
-            modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE, userExecution.getUserState().getStateInfo());
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE, userExecution.getUserState().getStateInfo());
         }else {
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG, false);
-            modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE, userExecution.getUserState().getStateInfo());
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE, userExecution.getUserState().getStateInfo());
+        }
+        return modelMap;
+    }
+
+    @RequestMapping(value="/getuserinfo",method=RequestMethod.GET)
+    @ResponseBody
+    public Map<String,Object> getUserInfo(HttpServletRequest request){
+        Map<String,Object> modelMap = new HashMap<String, Object>();
+        User user =  new User();
+        UserExecution userExecution = null;
+        user.setUserName(SecurityUtils.getSubject().getPrincipal().toString());
+        try{
+            userExecution = userService.getUserByUserName(user);
+        }catch(Exception e){
+            modelMap.put(ConstantValue.TO_FRONTEND_FLAG,false);
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE,userExecution.getUserState().getStateInfo());
+            return modelMap;
+        }
+        if(userExecution.getUser()!=null){
+            modelMap.put("userInfo",userExecution.getUser());
+            modelMap.put(ConstantValue.TO_FRONTEND_FLAG,true);
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE,userExecution.getUserState().getStateInfo());
+        }else{
+            modelMap.put(ConstantValue.TO_FRONTEND_FLAG,false);
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE,userExecution.getUserState().getStateInfo());
         }
         return modelMap;
     }

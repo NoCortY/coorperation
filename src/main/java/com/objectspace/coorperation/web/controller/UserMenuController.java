@@ -34,10 +34,10 @@ public class UserMenuController {
         List<UserMenu> userMenuList = userMenuExecution.getUserMenuList();
         if(!userMenuExecution.getUserMenuStateEnum().getState().equals(UserMenuStateEnum.GETUSERMENULIST_SUCCESS.getState())){
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG,false);
-            modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE,userMenuExecution.getUserMenuStateEnum().getStateInfo());
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE,userMenuExecution.getUserMenuStateEnum().getStateInfo());
         }else{
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG,true);
-            modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE,userMenuExecution.getUserMenuStateEnum().getStateInfo());
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE,userMenuExecution.getUserMenuStateEnum().getStateInfo());
             modelMap.put("userMenuList",userMenuList);
         }
         return modelMap;

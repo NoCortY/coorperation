@@ -41,11 +41,11 @@ public class CategoryController {
         List<Category> categoryList = categoryExecution.getCategoryList();
         if(!categoryExecution.getCategoryStateEnum().getState().equals(CategoryStateEnum.GETCATEGORYLIST_SUCCESS.getState())){
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG,false);
-            modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE,categoryExecution.getCategoryStateEnum().getStateInfo());
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE,categoryExecution.getCategoryStateEnum().getStateInfo());
         }else{
             modelMap.put("categoryList",categoryList);
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG,true);
-            modelMap.put(ConstantValue.TO_FRONTEND_MASSAGE,categoryExecution.getCategoryStateEnum().getStateInfo());
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE,categoryExecution.getCategoryStateEnum().getStateInfo());
         }
         return modelMap;
     }

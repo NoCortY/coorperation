@@ -12,11 +12,13 @@ public class UserMenu implements Serializable {
 
     private static final long serialVersionUID = -1866627179438315255L;
     private Integer menuItemId;
-    private String munuItemName;
+    private String menuItemName;
     private String menuItemIconCode;
     private Integer parentId;
     private Boolean isNew;
     private Integer priority;
+    private String menuItemUrl;
+    private String menuItemHtmlId;
     private Date createTime;
     private Date lastModifyTime;
 
@@ -28,12 +30,12 @@ public class UserMenu implements Serializable {
         this.menuItemId = menuItemId;
     }
 
-    public String getMunuItemName() {
-        return munuItemName;
+    public String getMenuItemName() {
+        return menuItemName;
     }
 
-    public void setMunuItemName(String munuItemName) {
-        this.munuItemName = munuItemName;
+    public void setMenuItemName(String menuItemName) {
+        this.menuItemName = menuItemName;
     }
 
     public String getMenuItemIconCode() {
@@ -68,6 +70,22 @@ public class UserMenu implements Serializable {
         this.priority = priority;
     }
 
+    public String getMenuItemUrl() {
+        return menuItemUrl;
+    }
+
+    public void setMenuItemUrl(String menuItemUrl) {
+        this.menuItemUrl = menuItemUrl;
+    }
+
+    public String getMenuItemHtmlId() {
+        return menuItemHtmlId;
+    }
+
+    public void setMenuItemHtmlId(String menuItemHtmlId) {
+        this.menuItemHtmlId = menuItemHtmlId;
+    }
+
     public Date getCreateTime() {
         return createTime;
     }
@@ -88,7 +106,7 @@ public class UserMenu implements Serializable {
     public String toString() {
         return "UserMenu{" +
                 "menuItemId=" + menuItemId +
-                ", munuItemName='" + munuItemName + '\'' +
+                ", menuItemName='" + menuItemName + '\'' +
                 ", menuItemIconCode='" + menuItemIconCode + '\'' +
                 ", parentId=" + parentId +
                 ", isNew=" + isNew +

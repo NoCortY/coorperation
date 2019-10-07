@@ -12,6 +12,8 @@
         <result property="parentId" column="parent_id"/>
         <result property="isNew" column="is_new"/>
         <result property="priority" column="priority"/>
+        <result property="menuItemUrl" column="menu_item_url"/>
+        <result property="menuItemHtmlId" column="menu_item_html_id"/>
         <result property="createTime" column="create_time"/>
         <result property="lastModifyTime" column="last_modify_time"/>
     </resultMap>

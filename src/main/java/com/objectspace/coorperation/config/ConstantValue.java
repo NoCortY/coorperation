@@ -42,5 +42,5 @@ public final class ConstantValue {
     /**
      * 后端给前端的额外信息
      */
-    public final static String TO_FRONTEND_MASSAGE = "message";
+    public final static String TO_FRONTEND_MESSAGE = "message";
 }
