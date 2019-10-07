@@ -30,7 +30,7 @@ public class ShiroServiceImpl implements ShiroService {
      */
     @Override
     public Set<Permission> getPermissionByUserName(User user) {
-        if(user==null || "".equals(user.getUserId()))
+        if(user==null || "".equals(user.getUserName()))
             return null;
         Set<Permission> permissions = shiroDao.queryPermissionByUserName(user);
         return permissions;

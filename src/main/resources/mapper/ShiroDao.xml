@@ -61,6 +61,8 @@
         LEFT JOIN tb_permission p ON rp.permission_id = p.permission_id
         <where>
             u.user_name = #{userName}
+            and
+            p.permission_id is not null
         </where>
     </select>
     <select id="listPermission" resultMap="PermissionMap">

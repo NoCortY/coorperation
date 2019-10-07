@@ -14,15 +14,11 @@ import java.util.Properties;
 */
 public class EmailUtil {
     private static Properties properties;
-    private static HtmlEmail httpEmail;
     static {
         InputStream in = EmailUtil.class.getResourceAsStream("/config/config.properties");
         properties = new Properties();
-        httpEmail = new HtmlEmail();
         try {
             properties.load(in);
-            httpEmail.setHostName(properties.getProperty("emailHost"));
-            httpEmail.setCharset("utf-8");
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -36,6 +32,10 @@ public class EmailUtil {
      * @Date: 2019/10/4
      */
     public static synchronized void sendEmail(String userEmail,String emailTitle,String emailContent) throws EmailException {
+
+        HtmlEmail httpEmail = new HtmlEmail();
+        httpEmail.setHostName(properties.getProperty("emailHost"));
+        httpEmail.setCharset("utf-8");
         //设置邮箱名
         String emailName = properties.getProperty("emailName");
         emailName = emailName.substring(0, emailName.length() - 1);

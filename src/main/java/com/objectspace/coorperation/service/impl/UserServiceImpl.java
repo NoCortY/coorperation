@@ -112,7 +112,7 @@ public class UserServiceImpl implements UserService {
             //配置文件proerties
             Properties pro = getConfigProperties();
             //头像文件目录
-            String profileDirPath = pro.getProperty("profilePath")+"\\"+user.getUserId();
+            String profileDirPath = pro.getProperty("profilePath")+"\\"+user.getUserName();
             //一路创建头像目录文件夹
             createFolders(profileDirPath);
             FileOutputStream fileOutStream = null;

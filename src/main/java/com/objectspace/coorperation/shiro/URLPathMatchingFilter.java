@@ -26,7 +26,6 @@ public class URLPathMatchingFilter extends PathMatchingFilter {
         String requestURI = getPathWithinApplication(request);
 
         System.out.println("requestURI:" + requestURI);
-
         Subject subject = SecurityUtils.getSubject();
         // 如果没有登录，就跳转到登录页面
         if (!subject.isAuthenticated()) {
@@ -47,7 +46,7 @@ public class URLPathMatchingFilter extends PathMatchingFilter {
 
             subject.getSession().setAttribute("ex", ex);
 
-            WebUtils.issueRedirect(request, response, "/unauthorized");
+            WebUtils.issueRedirect(request, response, "/error/403");
             return false;
         }
 

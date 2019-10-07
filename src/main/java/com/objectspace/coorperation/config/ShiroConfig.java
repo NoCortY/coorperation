@@ -51,9 +51,9 @@ public class ShiroConfig {
         //设置过滤器的安全管理器
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         //配置登录请求地址
-        shiroFilterFactoryBean.setLoginUrl("/login");
+        shiroFilterFactoryBean.setLoginUrl("/usercontroller/login");
         //如果访问到未授权url，跳转到403界面
-        shiroFilterFactoryBean.setUnauthorizedUrl("/403");
+        shiroFilterFactoryBean.setUnauthorizedUrl("/frontend/403");
         //设置免认证url
         /*
         2019.10.4 改为在数据库中进行配置

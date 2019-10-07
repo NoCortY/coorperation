@@ -40,10 +40,13 @@ public class DatabaseRealm extends AuthorizingRealm {
         //从数据库中获取角色和权限
         Set<Permission> permissions = shiroService.getPermissionByUserName(user);
         Set<String> stringPermissions = new HashSet<String>();
+        /*
+        Exception: null pointer:
+
         if(permissions == null || permissions.size()<=0) {
             System.out.println("权限列表为空");
             throw new AuthorizationException();
-        }
+        }*/
         for(Permission p:permissions) {
             stringPermissions.add(p.getPermissionUrl());
         }
