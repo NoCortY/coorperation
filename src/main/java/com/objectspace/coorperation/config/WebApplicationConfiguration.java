@@ -2,6 +2,7 @@ package com.objectspace.coorperation.config;
 import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
@@ -10,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 * @Date: 2019/10/7
 */
 @Configuration
-public class WebApplicationConfiguration extends WebMvcConfigurerAdapter {
+public class WebApplicationConfiguration implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         /**
@@ -21,7 +22,6 @@ public class WebApplicationConfiguration extends WebMvcConfigurerAdapter {
          * @Author: NoCortY
          * @Date: 2019/10/7
          */
-        registry.addResourceHandler("/userprofile/**").addResourceLocations("file:/F:/project/upload/");
-        super.addResourceHandlers(registry);
+        registry.addResourceHandler("/userprofile/**").addResourceLocations("file:C:/NoCortY_Pad/WorkSpace/userprofile/**");
     }
 }

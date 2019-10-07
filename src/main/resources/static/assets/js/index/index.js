@@ -14,7 +14,7 @@ $(function(){
      */
     function initUserInfo(){
         $("#userName").html(userInfo.userName);
-        $("#userProfile").attr('src',userInfo.profileImg);
+        $("#userProfile").attr('src',"/userprofile"+userInfo.profileImg);
         $("#onlineStatus").html("<i class='fa fa-circle text-success'></i> 在线")
     }
 

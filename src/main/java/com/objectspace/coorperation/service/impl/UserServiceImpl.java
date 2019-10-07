@@ -130,7 +130,7 @@ public class UserServiceImpl implements UserService {
                 while((len=inStream.read(buffer))!=-1) {
                     fileOutStream.write(buffer,0,len);
                 }
-                user.setProfileImg(profilePath);
+                user.setProfileImg("/"+user.getUserName()+"/"+userProfile.getOriginalFilename());
             } catch (FileNotFoundException e) {
                 logger.error("文件未找到");
                 logger.error("异常信息："+e.getMessage());
