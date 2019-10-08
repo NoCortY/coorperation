@@ -43,8 +43,8 @@ $(function(){
            processData:false,
            cache:false,
            success:function(data){
-               alert(data.message);
                if(data.successFlag==true){
+                   toastr.success(data.message,"提示");
                    var count = 60;
                    var btn = $('#getcaptcha');
                    btn.val(count+'秒后可重新获取').attr('disabled',true).css('cursor','not-allowed');
@@ -61,7 +61,7 @@ $(function(){
                    }, 1000);
                    btn.attr('disabled',true).css('cursor','not-allowed');
                }else{
-                   alert("邮箱验证码发送失败，请检查网络设置。")
+                   toastr.error("邮箱验证码发送失败，请检查网络设置。","提示");
                }
            }
        });
@@ -107,9 +107,9 @@ $(function(){
             rightFlag=false;
         }
         if(captchaFlag==false){
-            alert("请先获取验证码");
+            toastr.warning("请先获取验证码","提示");
         }else if(captchaFlag==true&&(captcha==""||captcha==null)){
-            alert("请输入验证码");
+            toastr.warning("请输入验证码","提示");
         }
         if(rightFlag){
             var userInfo = {};
@@ -129,10 +129,10 @@ $(function(){
                 cache:false,
                 success:function (data) {
                     if(data.successFlag == true) {
-                        alert(data.message);
+                        toastr.success(data.message,"提示");
                         window.location.href = "/frontend/index";
                     }else{
-                        alert(data.message);
+                        toastr.error(data.message,"提示");
                     }
                 }
             });

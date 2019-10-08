@@ -1,7 +1,7 @@
 $(function(){
     var loginRequestUrl = "/usercontroller/login";
-    var rightFlag = true;
     $("#login").bind("click",function () {
+        var rightFlag = true;
         var username = $("#username").val();
         var password = $("#password").val();
         var captcha = $("#captcha").val();
@@ -29,10 +29,10 @@ $(function(){
                 cache:false,
                 success:function(data){
                     if(data.successFlag==true){
-                        alert(data.message);
+                        toastr.success(data.message,"提示");
                         window.location.href="/frontend/index";
                     }else{
-                        alert(data.message);
+                        toastr.error(data.message,"提示");
                         $("#captchaImg").click();
                     }
                 }

@@ -1,4 +1,24 @@
 /**
+ * toastr配置
+ * @type {{hideEasing: string, positionClass: string, hideDuration: string, debug: boolean, showMethod: string, closeButton: boolean, extendedTimeOut: string, showEasing: string, onclick: null, showDuration: string, hideMethod: string, timeOut: string}}
+ */
+toastr.options = {
+    "closeButton": false,
+    "debug": false,
+    "positionClass": "toast-top-center",
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "3000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+}
+
+
+/**
  * 获取当前用户信息
  */
 function getCurrentUserInfo(){

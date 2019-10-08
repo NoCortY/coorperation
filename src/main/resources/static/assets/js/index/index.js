@@ -64,7 +64,7 @@ $(function(){
                     });
                     $("#categorylist").html(htmlStr);
                 }else{
-                    alert(data.message);
+                    toastr.error(data.message);
                 }
             }
         });
