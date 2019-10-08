@@ -4,7 +4,6 @@ import com.objectspace.coorperation.entity.Permission;
 import com.objectspace.coorperation.entity.User;
 import com.objectspace.coorperation.service.ShiroService;
 import org.apache.shiro.authc.*;
-import org.apache.shiro.authz.AuthorizationException;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;

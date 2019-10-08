@@ -1,9 +1,8 @@
 package com.objectspace.coorperation.config;
-import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration;
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
 * @Description: 解决 Not allowed to load local resource 问题，配置虚拟路径映射
