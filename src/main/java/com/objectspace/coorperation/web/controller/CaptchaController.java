@@ -1,5 +1,6 @@
 package com.objectspace.coorperation.web.controller;
 
+import com.objectspace.coorperation.annotation.DefendRepeatRequest;
 import com.objectspace.coorperation.config.ConstantValue;
 import com.objectspace.coorperation.entity.Captcha;
 import com.objectspace.coorperation.service.CaptchaService;
@@ -32,6 +33,7 @@ public class CaptchaController {
      */
     @RequestMapping(value = "/getcaptcha",method = RequestMethod.POST)
     @ResponseBody
+    @DefendRepeatRequest
     public Map<String,Object> getCaptcha(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<String,Object>();
         Captcha captcha = new Captcha();
@@ -43,7 +45,7 @@ public class CaptchaController {
             modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE,"发送成功");
         }else{
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG,false);
-            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE,"发送失败");
+            modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE,"发送失败,请联系管理员");
         }
         return modelMap;
     }

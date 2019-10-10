@@ -1,4 +1,6 @@
 $(function(){
+    //初始化Toastr组件
+    initToastrConfig();
     //注册用户
     var registerUrl = "/usercontroller/registeruser";
     //获取验证码
@@ -61,7 +63,7 @@ $(function(){
                    }, 1000);
                    btn.attr('disabled',true).css('cursor','not-allowed');
                }else{
-                   toastr.error("邮箱验证码发送失败，请检查网络设置。","提示");
+                   toastr.error(data.message,"提示");
                }
            }
        });
@@ -108,8 +110,10 @@ $(function(){
         }
         if(captchaFlag==false){
             toastr.warning("请先获取验证码","提示");
+            rightFlag = false;
         }else if(captchaFlag==true&&(captcha==""||captcha==null)){
             toastr.warning("请输入验证码","提示");
+            rightFlag = false;
         }
         if(rightFlag){
             var userInfo = {};

@@ -25,6 +25,28 @@ public class RedisUtil{
 
 
     private Logger logger = LoggerFactory.getLogger(RedisUtil.class);
+    /**
+     * @Description: redis设置分布式锁
+     * @Param: [key, value]
+     * @return: java.lang.Long
+     * @Author: NoCortY
+     * @Date: 2019/10/10
+     */
+    public Long setNx(String key, String value){
+
+        Jedis jedis = null;
+        try{
+            jedis=jedisPool.getResource();
+            return jedis.setnx(key,value);
+        }catch (Exception e){
+            logger.error("设置分布式锁异常");
+            logger.error("异常信息:"+e.getMessage());
+            return 0L;
+        }finally {
+            if(jedis!=null)
+                jedis.close();
+        }
+    }
 
     /**
      * @Description:  设置有过期时间的String key value

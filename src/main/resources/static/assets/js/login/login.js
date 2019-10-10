@@ -1,4 +1,6 @@
 $(function(){
+    //初始化Toastr组件
+    initToastrConfig();
     var loginRequestUrl = "/usercontroller/login";
     $("#login").bind("click",function () {
         var rightFlag = true;

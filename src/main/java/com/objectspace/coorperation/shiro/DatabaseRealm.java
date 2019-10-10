@@ -46,8 +46,10 @@ public class DatabaseRealm extends AuthorizingRealm {
             System.out.println("权限列表为空");
             throw new AuthorizationException();
         }*/
-        for(Permission p:permissions) {
-            stringPermissions.add(p.getPermissionUrl());
+        if(permissions!=null) {
+            for (Permission p : permissions) {
+                stringPermissions.add(p.getPermissionUrl());
+            }
         }
 
         //建立简单授权对象

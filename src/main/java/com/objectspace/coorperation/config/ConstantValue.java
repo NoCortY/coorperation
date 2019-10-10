@@ -6,7 +6,10 @@ package com.objectspace.coorperation.config;
 * @Date: 2019/10/4
 */
 public final class ConstantValue {
-
+    /**
+     * 页面请求锁 key
+     */
+    public final static String REQUEST_LOCK_KEY = "RequestLock";
     /**
      * 用户：超级管理员
      */
