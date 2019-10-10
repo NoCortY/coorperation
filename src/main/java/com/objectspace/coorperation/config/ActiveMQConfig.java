@@ -1,16 +1,11 @@
 package com.objectspace.coorperation.config;
 
 import org.apache.activemq.command.ActiveMQQueue;
-import org.apache.activemq.command.ActiveMQTopic;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.annotation.EnableJms;
 
 import javax.jms.Queue;
-import javax.jms.Topic;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
 /** 
 * @Description: ActiveMQ配置类
 * @Author: NoCortY

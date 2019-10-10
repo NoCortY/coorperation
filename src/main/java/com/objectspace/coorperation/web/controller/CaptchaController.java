@@ -1,14 +1,12 @@
 package com.objectspace.coorperation.web.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.objectspace.coorperation.activemq.QueueProduce;
 import com.objectspace.coorperation.annotation.DefendRepeatRequest;
 import com.objectspace.coorperation.config.ConstantValue;
 import com.objectspace.coorperation.entity.Captcha;
 import com.objectspace.coorperation.service.CaptchaService;
-import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -40,18 +38,16 @@ public class CaptchaController {
     @RequestMapping(value = "/getcaptcha",method = RequestMethod.POST)
     @ResponseBody
     @DefendRepeatRequest
-    public Map<String,Object> getCaptcha(HttpServletRequest request){
+    public Map<String,Object> getCaptcha(HttpServletRequest request) throws JsonProcessingException {
         Map<String,Object> modelMap = new HashMap<String,Object>();
         Captcha captcha = new Captcha();
         String recUserEmail = request.getParameter("userEmail");
         captcha.setRecUserEmail(recUserEmail);
-        boolean flag = queueProduce.captchaQueueProduce(captcha);
         /*
-        2019.10.10改为发送给消息队列
-
-        String recUserEmail = request.getParameter("userEmail");
-        captcha.setRecUserEmail(recUserEmail);
+        2019.10.10改为发送给消息队列,由消息队列的消费者来完成发送邮件的操作。;
+        //调用业务逻辑 发送验证码
         boolean flag = captchaService.sendCaptcha(captcha);*/
+        boolean flag = queueProduce.captchaQueueProduce(captcha);
         if(flag){
             modelMap.put(ConstantValue.TO_FRONTEND_FLAG,true);
             modelMap.put(ConstantValue.TO_FRONTEND_MESSAGE,"发送成功");

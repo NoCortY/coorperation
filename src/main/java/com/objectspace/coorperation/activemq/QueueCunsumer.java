@@ -1,6 +1,5 @@
 package com.objectspace.coorperation.activemq;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.objectspace.coorperation.config.ConstantValue;
 import com.objectspace.coorperation.entity.Captcha;
 import com.objectspace.coorperation.service.CaptchaService;
@@ -11,10 +10,6 @@ import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
 import javax.jms.JMSException;
-import javax.jms.ObjectMessage;
-import javax.jms.TextMessage;
-import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
 
 /**
  * @Description: ActiveMQ队列消费者

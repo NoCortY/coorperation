@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jms.core.JmsMessagingTemplate;
 import org.springframework.stereotype.Component;
 
-import javax.jms.ObjectMessage;
 import javax.jms.Queue;
 /**
 * @Description:  MQ生产者

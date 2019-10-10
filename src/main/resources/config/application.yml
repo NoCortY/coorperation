@@ -9,6 +9,9 @@ spring:
     broker-url: tcp://47.98.165.84:61616
     user: Object
     password: Object971103.
+    # 传输对象需要开启
+    packages:
+      trust-all: true
     # 在考虑结束之前等待的时间
     close-timeout: 15s
     pool:
