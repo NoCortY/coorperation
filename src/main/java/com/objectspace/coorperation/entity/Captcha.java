@@ -1,11 +1,14 @@
 package com.objectspace.coorperation.entity;
 
+import java.io.Serializable;
+
 /**
 * @Description: 邮件验证码实体类
 * @Author: NoCortY
 * @Date: 2019/10/3
 */
-public class Captcha {
+public class Captcha implements Serializable {
+    private static final long serialVersionUID = -5147848042251679765L;
     private Integer id;
     private String code;
     private String recUserEmail;

@@ -3,6 +3,21 @@ server:
   port: 7301
 #Spring Bean
 spring:
+
+  #ActiveMQ配置
+  activemq:
+    broker-url: tcp://47.98.165.84:61616
+    user: Object
+    password: Object971103.
+    # 在考虑结束之前等待的时间
+    close-timeout: 15s
+    pool:
+      enabled: true
+      max-connections: 10
+  jms:
+    #false: queue   true:topic 不写默认是队列
+    pub-sub-domain: false
+  #mvc配置
   mvc:
     view:
       suffix: .html

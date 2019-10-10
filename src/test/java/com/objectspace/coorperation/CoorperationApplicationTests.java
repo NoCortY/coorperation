@@ -1,5 +1,6 @@
 package com.objectspace.coorperation;
 
+import com.objectspace.coorperation.activemq.QueueProduce;
 import com.objectspace.coorperation.util.RedisUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.annotation.Resource;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CoorperationApplicationTests {
@@ -16,7 +19,8 @@ public class CoorperationApplicationTests {
     Logger logger = LoggerFactory.getLogger(System.class);
     @Autowired
     RedisUtil redisUtil;
-
+    @Autowired
+    QueueProduce queueProduce;
     /*已测试成功
     @Autowired
     HeadLineImgDao headLineImgDao;*/
@@ -74,5 +78,11 @@ public class CoorperationApplicationTests {
 		System.out.println("=========================================================");
 		System.out.println();*/
     }
-
+    @Test
+    public void activeMQTest(){
+        System.out.println("=========================================================");
+        System.out.println("ActiveMQ测试");
+        System.out.println("发送成功");
+        System.out.println("=========================================================");
+    }
 }

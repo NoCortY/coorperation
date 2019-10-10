@@ -7,6 +7,10 @@ package com.objectspace.coorperation.config;
 */
 public final class ConstantValue {
     /**
+     * 消息队列队列名称
+     */
+    public final static String ACTIVEMQ_QUEUE_CAPTCHA="CaptchaQueue";
+    /**
      * 页面请求锁 key
      */
     public final static String REQUEST_LOCK_KEY = "RequestLock";
