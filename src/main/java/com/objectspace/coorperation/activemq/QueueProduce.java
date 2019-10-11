@@ -21,7 +21,7 @@ public class QueueProduce {
     @Autowired
     @Qualifier("captchaQueue")
     private Queue captchaQueue;
-    Logger logger = LoggerFactory.getLogger(QueueProduce.class);
+    private Logger logger = LoggerFactory.getLogger(QueueProduce.class);
     /**
      * @Description: 发送消息
      * @Param: [message]

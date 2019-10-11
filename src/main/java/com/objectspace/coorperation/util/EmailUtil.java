@@ -32,7 +32,6 @@ public class EmailUtil {
      * @Date: 2019/10/4
      */
     public static synchronized void sendEmail(String userEmail,String emailTitle,String emailContent) throws EmailException {
-
         HtmlEmail httpEmail = new HtmlEmail();
         httpEmail.setHostName(properties.getProperty("emailHost"));
         httpEmail.setCharset("utf-8");
