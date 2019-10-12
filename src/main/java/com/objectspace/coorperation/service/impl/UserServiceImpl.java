@@ -86,8 +86,12 @@ public class UserServiceImpl implements UserService {
             return userExecution;
         }
         String code = redisUtil.get("captcha:"+user.getUserEmail());
-        if(!captchaCode.equals(code))
-        {
+        if("failure".equals(code)){
+            userExecution = new UserExecution(UserStateEnum.SYSTEMERROR);
+            logger.error("redis服务器故障，可能已经关闭");
+            return userExecution;
+        }
+        if(!captchaCode.equals(code)) {
             userExecution = new UserExecution(UserStateEnum.VIRIFYCODEERROR);
             return userExecution;
         }
