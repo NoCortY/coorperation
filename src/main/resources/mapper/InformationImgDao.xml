@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.objectspace.coorperation.dao.InformationImgDao">
+    <insert id="insertInformationImg" parameterType="com.objectspace.coorperation.entity.InformationImg">
+        INSERT INTO
+        tb_information_img
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="informationImgId!=null and informationImgId!=''">
+                information_id,
+            </if>
+            <if test="informationImgPath!=null and informationImgPath!=''">
+                information_path,
+            </if>
+            <if test="informationImgDesc!=null and informationImgDesc!=''">
+                information_desc,
+            </if>
+            <if test="informationOwner!=null and informationOwner!=''">
+                information_owner,
+            </if>
+            <if test="informationStatus!=null and informationStatus!=''">
+                information_status,
+            </if>
+            <if test="informationImgCreateTime!=null and informationImgCreateTime!=''">
+                information_img_create_time
+            </if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="informationImgId!=null and informationImgId!=''">
+                #{informationImgId},
+            </if>
+            <if test="informationImgPath!=null and informationImgPath!=''">
+                #{informationImgPath},
+            </if>
+            <if test="informationImgDesc!=null and informationImgDesc!=''">
+                #{informationImgDesc},
+            </if>
+            <if test="informationOwner!=null and informationOwner!=''">
+                #{informationOwner},
+            </if>
+            <if test="informationStatus!=null and informationStatus!=''">
+                #{informationStatus},
+            </if>
+            <if test="informationImgCreateTime!=null and informationImgCreateTime!=''">
+                #{informationImgCreateTime}
+            </if>
+        </trim>
+    </insert>
+
+</mapper>

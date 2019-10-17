@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.objectspace.coorperation.dao.InformationDao">
+    <insert id="insertInformation" parameterType="com.objectspace.coorperation.entity.Information">
+        INSERT INTO
+        tb_information
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="informationId!=null and informationId!=''">
+                information_id,
+            </if>
+            <if test="informationName!=null and informationName!=''">
+                information_name,
+            </if>
+            <if test="informationDesc!=null and informationDesc!=''">
+                information_type,
+            </if>
+            <if test="informationStatus!=null and informationStatus!=''">
+                information_status,
+            </if>
+            <if test="informationOwner!=null and informationOwner!=''">
+                information_owner,
+            </if>
+            <if test="informationCategory!=null and informationCategory!=''">
+                information_category,
+            </if>
+            <if test="informationCreateTime!=null and informationCreateTime!=''">
+                information_create_time,
+            </if>
+            <if test="informationModifyTime!=null and informationModifyTime!=''">
+                information_modify_time,
+            </if>
+            <if test="informationPriority!=null and informationPriority!=''">
+                information_priority
+            </if>
+        </trim>
+        VALUES
+        <trim suffixOverrides="," prefix="(" suffix=")">
+            <if test="informationId!=null and informationId!=''">
+                #{informationId},
+            </if>
+            <if test="informationName!=null and informationName!=''">
+                #{informationName},
+            </if>
+            <if test="informationDesc!=null and informationDesc!=''">
+                #{informationDesc},
+            </if>
+            <if test="informationStatus!=null and informationStatus!=''">
+                #{informationStatus},
+            </if>
+            <if test="informationOwner!=null and informationOwner!=''">
+                #{informationOwner},
+            </if>
+            <if test="informationCategory!=null and informationCategory!=''">
+                #{informationCategory},
+            </if>
+            <if test="informationCreateTime!=null and informationCreateTime!=''">
+                #{informationCreateTime},
+            </if>
+            <if test="informationModifyTime!=null and informationModifyTime!=''">
+                #{informationModifyTime},
+            </if>
+            <if test="informationPriority!=null and informationPriority!=''">
+                #{informationPriority}
+            </if>
+        </trim>
+    </insert>
+
+</mapper>

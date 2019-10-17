@@ -3,7 +3,6 @@ server:
   port: 7301
 #Spring Bean
 spring:
-
   #ActiveMQ配置
   activemq:
     broker-url: tcp://47.98.165.84:61616
