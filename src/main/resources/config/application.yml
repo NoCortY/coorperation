@@ -28,7 +28,7 @@ spring:
     database: 1
     host: 47.98.165.84
     port: 6379
-    password: Object971103.
+    password: NoCortY971103.
     timeout: 3000
     jedis:
       pool:
