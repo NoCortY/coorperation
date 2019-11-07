@@ -1,14 +1,16 @@
 package com.objectspace.coorperation.enums;
 
-
+/**
+* @Description: 信息详情图枚举状态类
+* @Author: NoCortY
+* @Date: 2019/11/7
+*/
 public enum InformationImgStateEnum {
-
     GETINFORMATIONIMG_SUCCESS("1001","获取信息详情图成功"),
-    INFORMATIONIMG_ISNULL("-1001","该信息没有详情图"),
+    INFORMATIONIMG_ISNULL("-1001","详情图为空"),
     SYSTEM_ISNULL("-1010","内部系统错误");
     private String state;
     private String stateInfo;
-    private InformationImgStateEnum(){ }
     private InformationImgStateEnum(String state,String stateInfo){
         this.state = state;
         this.stateInfo = stateInfo;

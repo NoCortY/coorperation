@@ -19,7 +19,7 @@ public class Information implements Serializable {
     /*信息状态：true正常，false不正常*/
     private Boolean informationStatus;
     /*发布者*/
-    private Integer informationOwner;
+    private User informationOwner;
     /*信息类型*/
     private Integer informationCategory;
     private Date informationCreateTime;
@@ -75,11 +75,11 @@ public class Information implements Serializable {
         this.informationStatus = informationStatus;
     }
 
-    public Integer getInformationOwner() {
+    public User getInformationOwner() {
         return informationOwner;
     }
 
-    public void setInformationOwner(Integer informationOwner) {
+    public void setInformationOwner(User informationOwner) {
         this.informationOwner = informationOwner;
     }
 

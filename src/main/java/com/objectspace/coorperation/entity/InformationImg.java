@@ -15,7 +15,7 @@ public class InformationImg implements Serializable {
     private String informationImgPath;
     private String informationImgDesc;
     /*图片所属信息*/
-    private String informationImgOwner;
+    private Information informationImgOwner;
     /*图片状态：false，禁用  true 正常*/
     private Boolean informationImgStatus;
     private Date informationImgCreateTime;
@@ -44,11 +44,11 @@ public class InformationImg implements Serializable {
         this.informationImgDesc = informationImgDesc;
     }
 
-    public String getInformationImgOwner() {
+    public Information getInformationImgOwner() {
         return informationImgOwner;
     }
 
-    public void setInformationImgOwner(String informationImgOwner) {
+    public void setInformationImgOwner(Information informationImgOwner) {
         this.informationImgOwner = informationImgOwner;
     }
 
