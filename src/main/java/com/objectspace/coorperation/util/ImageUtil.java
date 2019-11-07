@@ -33,7 +33,7 @@ public class ImageUtil {
         String relativeAddr = targetAddr + realFileName + extension;
         File dest = new File(PathUtil.getImgBasePath() + relativeAddr);
         try {
-            Thumbnails.of(thumbnail.getInputStream()).size(700, 700).outputQuality(0.7).toFile(dest);
+            Thumbnails.of(thumbnail.getInputStream()).size(512, 512).outputQuality(0.7).toFile(dest);
         } catch (IOException e) {
             e.printStackTrace();
         }

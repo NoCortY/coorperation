@@ -24,9 +24,12 @@ public class PathUtil {
         String os = System.getProperty("os.name");
         String basePath="";
         if(os.toLowerCase().startsWith("win")) {
-            basePath = "G:/Program/gitHub/Coorperation/FileRepository/images";
+            //PC路径
+            //basePath = "G:/";
+            //平板路径
+            basePath = "C:/Users/nocor/Desktop/coorperationImg/";
         }else {
-            basePath="/home/DataRepository/images";
+            basePath="/WorkSpace/Data/coorperationImg/";
         }
         basePath = basePath.replace("/", seperator);
         return basePath;

@@ -32,12 +32,12 @@ public class InformationImgServiceImpl implements InformationImgService {
             return informationImgExecution;
         }
         for(InformationImg informationImg:informationImgList){
-            if(informationImg.getInformationImgOwner().getInformationOwner().getUserId())
+            /*if(informationImg.getInformationImgOwner().getInformationOwner().getUserId())
             informationImg.setInformationImgCreateTime(new Date());
             informationImg.setInformationImgStatus(true);
-            informationImg.setInformationImgDesc("商品:"+informationImg.getInformationImgOwner()+"详情图");
+            informationImg.setInformationImgDesc("商品:"+informationImg.getInformationImgOwner()+"详情图");*/
         }
-
+        return null;
 
     }
 }

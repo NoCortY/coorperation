@@ -7,6 +7,7 @@ import com.objectspace.coorperation.dto.UserExecution;
 import com.objectspace.coorperation.entity.User;
 import com.objectspace.coorperation.enums.UserStateEnum;
 import com.objectspace.coorperation.service.UserService;
+import com.objectspace.coorperation.util.ImageUtil;
 import com.objectspace.coorperation.util.RedisUtil;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -24,6 +25,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import java.io.*;
+import java.util.Date;
 import java.util.Properties;
 
 /**
@@ -113,6 +115,9 @@ public class UserServiceImpl implements UserService {
         user.setSalt(salt);
         //如果存在用户头像，则创建头像文件
         if (userProfile != null) {
+            String relativeAddr = ImageUtil.generateUserProfile(userProfile,user.getUserName()+System.currentTimeMillis()+"/");
+            user.setProfileImg(relativeAddr);
+            /*2019年11月7日  修改为使用Thumbnail存储头像，无需手动转换流
             //配置文件proerties
             Properties pro = getConfigProperties();
             //头像文件目录
@@ -123,7 +128,7 @@ public class UserServiceImpl implements UserService {
             InputStream inStream = null;
             String profilePath = null;
             try {
-                /*在硬盘中存储用户头像*/
+                *//*在硬盘中存储用户头像*//*
                 //文件头像 = “文件基础路径\用户id\用户头像名”
                 profilePath = profileDirPath+"\\"+userProfile.getOriginalFilename();
                 fileOutStream = new FileOutputStream(profilePath);
@@ -148,7 +153,7 @@ public class UserServiceImpl implements UserService {
                     logger.error("流关闭失败");
                     logger.error("异常信息："+e.getMessage());
                 }
-            }
+            }*/
         }
         //记录有效行数
         int effectiveCount = 0;
