@@ -6,6 +6,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import javax.imageio.ImageIO;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -26,17 +27,13 @@ public class ImageUtil {
      * @Author: NoCortY
      * @Date: 2019/10/4
      */
-    public static String generateUserProfile(CommonsMultipartFile thumbnail, String targetAddr) {
+    public static String generateUserProfile(CommonsMultipartFile thumbnail, String targetAddr) throws IOException {
         String realFileName = getRandomFileName();
         String extension = getFileExtension(thumbnail);
         makeDirPath(targetAddr);
         String relativeAddr = targetAddr + realFileName + extension;
         File dest = new File(PathUtil.getImgBasePath() + relativeAddr);
-        try {
-            Thumbnails.of(thumbnail.getInputStream()).size(512, 512).outputQuality(0.7).toFile(dest);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Thumbnails.of(thumbnail.getInputStream()).size(512, 512).outputQuality(0.7).toFile(dest);
         return relativeAddr;
     }
 

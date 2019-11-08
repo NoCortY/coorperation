@@ -22,6 +22,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import java.io.*;
@@ -113,10 +114,32 @@ public class UserServiceImpl implements UserService {
         String encodedPassword = new SimpleHash(algorithmName, password, salt, times).toString();
         user.setPassword(encodedPassword);
         user.setSalt(salt);
+        //记录有效行数
+        int effectiveCount = 0;
+        try{
+            effectiveCount = userDao.insertUser(user);
+        }catch(Exception e) {
+            e.printStackTrace();
+            logger.error("UserAccount重复");
+            logger.error("错误信息:用户在输入一个库中已存在的UserAccount");
+            userExecution = new UserExecution(UserStateEnum.USERACCOUNTREPEAT);
+            //回滚事务
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+            return userExecution;
+        }
         //如果存在用户头像，则创建头像文件
-        if (userProfile != null) {
-            String relativeAddr = ImageUtil.generateUserProfile(userProfile,user.getUserName()+System.currentTimeMillis()+"/");
-            user.setProfileImg(relativeAddr);
+        if (userProfile != null&&effectiveCount != 0) {
+            try {
+                String relativeAddr = ImageUtil.generateUserProfile(userProfile,user.getUserId()+"/");
+                user.setProfileImg(relativeAddr);
+                System.out.println(user.getUserId());
+                effectiveCount = userDao.updateUserByUserId(user);
+            }catch (Exception e){
+                //回滚事务
+                TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+                userExecution = new UserExecution(UserStateEnum.SYSTEMERROR);
+                return userExecution;
+            }
             /*2019年11月7日  修改为使用Thumbnail存储头像，无需手动转换流
             //配置文件proerties
             Properties pro = getConfigProperties();
@@ -155,20 +178,9 @@ public class UserServiceImpl implements UserService {
                 }
             }*/
         }
-        //记录有效行数
-        int effectiveCount = 0;
-        try{
-            effectiveCount = userDao.insertUser(user);
-        }catch(Exception e) {
-            e.printStackTrace();
-            logger.error("UserAccount重复");
-            logger.error("错误信息:用户在输入一个库中已存在的UserAccount");
-            userExecution = new UserExecution(UserStateEnum.USERACCOUNTREPEAT);
-            return userExecution;
-        }
-
         if(effectiveCount<=0) {
             userExecution = new UserExecution(UserStateEnum.SYSTEMERROR);
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }else {
             userExecution = new UserExecution(UserStateEnum.REGISTERSUCCESS,user);
         }

@@ -18,7 +18,7 @@
         <result property="profileImg" column="profile_img"/>
         <result property="salt" column="salt"/>
     </resultMap>
-    <insert id="insertUser" parameterType="com.objectspace.coorperation.entity.User">
+    <insert id="insertUser" parameterType="com.objectspace.coorperation.entity.User" useGeneratedKeys="true" keyProperty="userId" keyColumn="user_id">
         INSERT INTO
         tb_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -103,4 +103,42 @@
             user_name = #{userName}
         </where>
     </select>
+    <update id="updateUserByUserId" parameterType="com.objectspace.coorperation.entity.User">
+        UPDATE
+        tb_user
+        <set>
+            <trim suffixOverrides=",">
+                <if test="userName!=null and userName!=''">
+                    user_name = #{userName},
+                </if>
+                <if test="password!=null and password!=''">
+                    password = #{password},
+                </if>
+                <if test="userGender!=null and userGender!=''">
+                    user_gender = #{userGender},
+                </if>
+                <if test="userType!=null and userType!=''">
+                    user_type = #{userType},
+                </if>
+                <if test="userPhoneNumber!=null and userPhoneNumber!=''">
+                    user_phone_number=#{userPhoneNumber},
+                </if>
+                <if test="userEmail!=null and userEmail!=''">
+                    user_email = #{userEmail},
+                </if>
+                <if test="realName!=null and realName!=''">
+                    real_name=#{realName},
+                </if>
+                <if test="profileImg!=null and profileImg!=''">
+                    profile_img=#{profileImg},
+                </if>
+                <if test="salt!=null and salt!=''">
+                    salt=#{salt}
+                </if>
+            </trim>
+        </set>
+        <where>
+            user_id = #{userId}
+        </where>
+    </update>
 </mapper>

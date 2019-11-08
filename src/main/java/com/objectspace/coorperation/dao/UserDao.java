@@ -26,4 +26,12 @@ public interface UserDao {
      * @Date: 2019/10/4
      */
     public Integer insertUser(User user) throws Exception;
+    /**
+     * @Description: 更新用户到数据库
+     * @Param: user 用户对象
+     * @return: 影响的行数
+     * @Author: NoCortY
+     * @Date: 2019/11/8
+     */
+    public Integer updateUserByUserId(User user);
 }
