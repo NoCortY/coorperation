@@ -45,7 +45,7 @@ public class ImageUtil {
      * @Author: NoCortY
      * @Date: 2019/10/4
      */
-    public static String generateInfomationImg(CommonsMultipartFile thumbnail, String targetAddr) {
+    public static String generateInfomationDescImg(CommonsMultipartFile thumbnail, String targetAddr) {
         String realFileName = getRandomFileName();
         String extension = getFileExtension(thumbnail);
         makeDirPath(targetAddr);

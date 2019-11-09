@@ -128,7 +128,7 @@ public class UserServiceImpl implements UserService {
             return userExecution;
         }
         //如果存在用户头像，则创建头像文件
-        if (userProfile != null&&effectiveCount != 0) {
+        if (userProfile != null&&effectiveCount >0) {
             try {
                 String relativeAddr = ImageUtil.generateUserProfile(userProfile,user.getUserId()+"/");
                 user.setProfileImg(relativeAddr);
@@ -136,6 +136,7 @@ public class UserServiceImpl implements UserService {
                 effectiveCount = userDao.updateUserByUserId(user);
             }catch (Exception e){
                 //回滚事务
+                logger.error("新增用户头像出现异常，事务回滚。");
                 TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
                 userExecution = new UserExecution(UserStateEnum.SYSTEMERROR);
                 return userExecution;
@@ -180,6 +181,7 @@ public class UserServiceImpl implements UserService {
         }
         if(effectiveCount<=0) {
             userExecution = new UserExecution(UserStateEnum.SYSTEMERROR);
+            logger.error("注册失败，事务回滚。");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }else {
             userExecution = new UserExecution(UserStateEnum.REGISTERSUCCESS,user);
@@ -225,15 +227,19 @@ public class UserServiceImpl implements UserService {
             return userExecution;
         }
         userExecution = new UserExecution(UserStateEnum.LOGINSUCCESS,user);
+        //如果登录成功了，那么直接从数据库中获取用户id，将用户id放入session中
+        Integer userId = userDao.queryUserByUserName(user).getUserId();
+        session.setAttribute("userId",userId);
         return userExecution;
     }
     /**
-     * @Description: 获取config.properties文件
+     * @Description: 获取config.properties文件,2019/11/9日，废弃该方法，引入PathUtil和Thumbnail
      * @Param: []
      * @return: java.util.Properties
      * @Author: NoCortY
      * @Date: 2019/10/4
      */
+    @Deprecated
     public Properties getConfigProperties() {
         Properties pro = new Properties();
         InputStream inStream = this.getClass().getResourceAsStream("/config/config.properties");
@@ -246,12 +252,13 @@ public class UserServiceImpl implements UserService {
         return pro;
     }
     /**
-     * @Description:  如果文件不存在则直接从根路径一路创建
+     * @Description:  如果文件不存在则直接从根路径一路创建,2019/11/9日，废弃该方法，引入PathUtil和Thumbnail
      * @Param: [path]
      * @return: void
      * @Author: NoCortY
      * @Date: 2019/10/4
      */
+    @Deprecated
     public void createFolders(String path) {
         File file = new File(path);
         if (!file.exists()) {

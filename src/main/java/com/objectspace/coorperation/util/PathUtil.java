@@ -47,6 +47,10 @@ public class PathUtil {
         return imagePath.replace("/", seperator);
     }
 
+    public static String getInformationImgPath(Integer informationId){
+        String imagePath = "/informationImg/"+informationId+"/";
+        return imagePath.replace("/",seperator);
+    }
     /**
      * @Description:  获取供需信息详情图路径
      * @Param: [infomationId]
@@ -54,8 +58,8 @@ public class PathUtil {
      * @Author: NoCortY
      * @Date: 2019/10/4
      */
-    public static String getInfomationImgPath(Integer infomationId) {
-        String imagePath = "/infomationimg/"+infomationId+"/";
+    public static String getInformationDescImgPath(Integer infomationId) {
+        String imagePath = "/informationDescImg/"+infomationId+"/";
         return imagePath.replace("/", seperator);
     }
 }
