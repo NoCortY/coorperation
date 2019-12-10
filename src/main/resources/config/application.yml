@@ -5,9 +5,9 @@ server:
 spring:
   #ActiveMQ配置
   activemq:
-    broker-url: tcp://47.98.165.84:61616
-    user: Object
-    password: Object971103.
+    broker-url: 
+    user: 
+    password: 
     # 传输对象需要开启
     packages:
       trust-all: true
@@ -26,9 +26,9 @@ spring:
       prefix: /views
   redis:
     database: 1
-    host: 47.98.165.84
-    port: 6379
-    password: NoCortY971103.
+    host: 
+    port: 
+    password: 
     timeout: 3000
     jedis:
       pool:
@@ -44,9 +44,9 @@ spring:
       filters: stat
       driverClassName: com.mysql.cj.jdbc.Driver
       #配置基本属性
-      url: jdbc:mysql://rm-bp1capfjz96r8hhm6go.mysql.rds.aliyuncs.com:3306/coorperation?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
-      username: testsqlobject
-      password: TestObject971103
+      url: jdbc:mysql://?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+      username: 
+      password: 
       #配置初始化大小/最小/最大
       initialSize: 1
       minIdle: 1
